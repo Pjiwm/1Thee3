@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+    node:
+        container_name: 1_thee_3
+        build: .
+        command: npm run serve
+        volumes: 
+            - .:/usr/src/app
+        ports: 
+            - 80:8080
