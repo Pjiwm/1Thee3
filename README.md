@@ -1,6 +1,7 @@
 # 1-thee-3
 
-## Project setup
+
+## Project setup - No Docker
 ```
 npm install
 ```
@@ -10,6 +11,29 @@ npm install
 npm run serve
 ```
 
+
+## Project setup - Docker
+```
+https://www.docker.com/get-started
+```
+
+### Builds docker container
+```
+docker-compose build
+```
+
+### Starts container and starts application
+```
+docker-compose up
+```
+
+### Access container
+```
+docker exec -it 1_thee_3 /bin/sh
+```
+
+## Usage
+
 ### Compiles and minifies for production
 ```
 npm run build
@@ -18,6 +42,12 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### For documentation Vue and Bootstrap Vue
+```
+https://vuejs.org/v2/guide/
+https://bootstrap-vue.org/docs/
 ```
 
 ### Customize configuration
