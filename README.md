@@ -3,6 +3,11 @@
 
 ## Project setup - No Docker
 ```
+https://nodejs.org/en/download/
+```
+
+### Installs all packages
+```
 npm install
 ```
 
