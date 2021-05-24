@@ -1,30 +1,38 @@
 <template>
-  <div>{{ name }}</div>
-  <button v-on:click="reverseMessage">reverse</button>
+  <div id="app">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <div>
+      <Nav />
+    </div>
+    <Jumbotron />
+    <Index />
+    <Footer />
+  </div>
 </template>
 
 <script>
+import Nav from "@/components/Nav.vue";
+import Index from "@/components/Index.vue";
+import Jumbotron from "@/components/Jumbotron.vue";
+import Footer from "@/components/Footer.vue";
+
 export default {
   name: "App",
-  data() {
-    return {
-      name: "1Thee3",
-      reverseMessage: function () {
-        this.name = this.name.split("").reverse().join("");
-      },
-    };
+  components: {
+    Nav,
+    Index,
+    Jumbotron,
+    Footer,
   },
 };
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
+} */
 </style>
-// https://vuejs.org/v2/guide/#Declarative-Rendering
