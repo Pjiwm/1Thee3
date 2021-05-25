@@ -1,7 +1,7 @@
 # 1-thee-3
 
 
-## Project setup - No Docker
+## Project setup - without Docker
 ```
 https://nodejs.org/en/download/
 ```
@@ -22,7 +22,7 @@ npm run serve
 ```
 
 
-## Project setup - Docker
+## Project setup - with Docker
 ```
 https://www.docker.com/get-started
 ```
