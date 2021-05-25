@@ -11,7 +11,7 @@ https://nodejs.org/en/download/
 npm install -g @vue/cli @vue/cli-service-global
 ```
 
-### Installs all packages
+### Installs all packages (Node 16 required)
 ```
 npm install
 ```
