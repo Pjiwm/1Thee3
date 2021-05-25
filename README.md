@@ -6,6 +6,11 @@
 https://nodejs.org/en/download/
 ```
 
+### Install Vue CLI
+```
+npm install -g @vue/cli @vue/cli-service-global
+```
+
 ### Installs all packages
 ```
 npm install
