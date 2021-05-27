@@ -6,19 +6,17 @@
       <b-col><Carousel /></b-col>
     </b-row>
     <b-row>
-      <b-col><Input /></b-col>
+      <b-col><h1>Routing demonstration</h1></b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
-import Carousel from "../components/Carousel";
-import Input from "../components/Input"
+import Carousel from "../Carousel";
 export default {
-  name: "Index",
+  name: "Router",
   components: {
-    Carousel,
-    Input
+    Carousel
   },
 };
 </script>
