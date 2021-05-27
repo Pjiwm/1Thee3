@@ -18,7 +18,7 @@ import RouterTest from './components/pages/RouterTestPage'
 import Index from './components/pages/Index'
 
 const RouterTestRoute = { path: '/router', component: RouterTest }
-const IndexRoute = { path: '/', component: Index}
+const IndexRoute = { path: '/', component: Index }
 
 
 const routes = [
@@ -26,7 +26,10 @@ const routes = [
   IndexRoute
 ]
 
-const router = new VueRouter({ routes })
+const router = new VueRouter({
+  routes,
+  mode: 'history'
+})
 
 Vue.config.productionTip = false
 
