@@ -4,7 +4,7 @@
       <Nav />
     </div>
     <Header />
-    <Jumbotron />
+    <!-- <Jumbotron /> -->
     <Main />
     <router-view></router-view>
     <Footer />
@@ -15,7 +15,7 @@
 <script>
 import Nav from "@/components/Nav.vue";
 import Header from "@/components/Header.vue";
-import Jumbotron from "@/components/Jumbotron.vue";
+// import Jumbotron from "@/components/Jumbotron.vue";
 import Main from "@/components/HomeMain.vue";
 import Footer from "@/components/Footer.vue";
 
@@ -24,7 +24,7 @@ export default {
   components: {
     Nav,
     Header,
-    Jumbotron,
+    // Jumbotron,
     Main,
     Footer,
   },
@@ -33,9 +33,9 @@ export default {
       if (window.scrollY > 50) {
         document.getElementById("header").classList.add("scroll");
       }
-      return window.scrollY > 100
-    }
-  }
+      return window.scrollY > 100;
+    },
+  },
 };
 </script>
 
