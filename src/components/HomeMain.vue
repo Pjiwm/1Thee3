@@ -1,7 +1,7 @@
 <template>
-  <main class="container-fluid main-bg py-5">
+  <main class="container-fluid main-bg py-4">
     <div class="row py-5">
-      <div class="col-xl-5 offset-xl-2 col-12">
+      <div class="col-xl-5 offset-xl-2 col-10 offset-1 mb-5">
         <h1>Impressie</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque
@@ -14,12 +14,12 @@
         <img src="../../non-code/thee1-home.jpg" width="100%" />
       </div>
     </div>
-    <hr class="solid col-xl-8 offset-xl-2 col-12" />
+    <hr class="solid col-xl-8 offset-xl-2 col-10 offset-1" />
     <div class="row py-5">
-      <div class="col-xl-3 offset-xl-2 col-12">
+      <div class="col-xl-3 offset-xl-2 col-10 offset-1 mb-5">
         <img src="../../non-code/thee2-home.jpg" width="100%" />
       </div>
-      <div class="col-xl-5 col-12">
+      <div class="col-xl-5 offset-xl-0 col-10 offset-1">
         <h1>Ons doel</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
@@ -57,5 +57,10 @@ hr {
 
 p {
   font-size: 20px;
+}
+
+img {
+  border: solid 3px #aaa199;
+  border-radius: 4px;
 }
 </style>
