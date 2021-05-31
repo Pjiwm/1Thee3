@@ -5,6 +5,7 @@
       <Nav />
     </div>
     <Jumbotron />
+    <Main />
     <router-view></router-view>
     <Footer />
   </div>
@@ -13,13 +14,15 @@
 <script>
 import Nav from "@/components/Nav.vue";
 import Jumbotron from "@/components/Jumbotron.vue";
+import Main from "@/components/HomeMain.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
-  name: "App",
+  name: "app",
   components: {
     Nav,
     Jumbotron,
+    Main,
     Footer,
   },
 };
