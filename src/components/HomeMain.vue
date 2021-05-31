@@ -15,11 +15,11 @@
       </div>
     </div>
     <hr class="col-lg-8 offset-lg-2 col-10 offset-1" />
-    <div class="row py-5">
+    <div class="row pt-5 pb-3">
       <div class="col-lg-3 offset-lg-2 col-10 offset-1 mb-5">
         <img src="../../non-code/thee2-home.jpg" width="100%" />
       </div>
-      <div class="col-lg-5 offset-lg-0 col-10 offset-1">
+      <div class="col-lg-5 offset-lg-0 col-10 offset-1 pb-0 mb-0">
         <h1>Ons doel</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
@@ -45,7 +45,7 @@ main {
 }
 
 h1 {
-  margin-bottom: 5;
+  margin-bottom: 15px;
 }
 
 hr {
