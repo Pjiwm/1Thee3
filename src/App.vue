@@ -5,6 +5,7 @@
     </div>
     <Header />
     <Jumbotron />
+    <Main />
     <router-view></router-view>
     <Footer />
   </div>
@@ -15,19 +16,20 @@
 import Nav from "@/components/Nav.vue";
 import Header from "@/components/Header.vue";
 import Jumbotron from "@/components/Jumbotron.vue";
+import Main from "@/components/HomeMain.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
-  name: "App",
+  name: "app",
   components: {
     Nav,
     Header,
     Jumbotron,
+    Main,
     Footer,
   },
   methods: {
     handleScroll: function () {
-      console.log("")
       if (window.scrollY > 50) {
         document.getElementById("header").classList.add("scroll");
       }
