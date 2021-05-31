@@ -14,31 +14,15 @@ Vue.use(IconsPlugin)
 // install router
 Vue.use(VueRouter)
 
-<<<<<<< HEAD
-import RouterTest from './components/RouterTestPage.vue'
-import Index from './components/Index.vue'
-
-const RouterTestRoute = { path: '/router', component: RouterTest }
-// const NotFoundRoute = { template: '<p>Page not found</p>' }
-const IndexRoute = { path: '/', component: Index}
-=======
 import RouterTest from './components/pages/RouterTestPage'
 import Index from './components/pages/Index'
 
 const RouterTestRoute = { path: '/router', component: RouterTest }
 const IndexRoute = { path: '/', component: Index }
->>>>>>> routing
 
 
 const routes = [
   RouterTestRoute,
-<<<<<<< HEAD
-  // NotFoundRoute,
-  IndexRoute
-]
-
-const router = new VueRouter({ routes })
-=======
   IndexRoute
 ]
 
@@ -46,7 +30,6 @@ const router = new VueRouter({
   routes,
   mode: 'history'
 })
->>>>>>> routing
 
 Vue.config.productionTip = false
 
@@ -54,3 +37,14 @@ new Vue({
   router,
   render: function (h) { return h(App) },
 }).$mount('#app')
+
+Vue.directive("scroll", {
+  inserted: function (el, binding) {
+    let f = function (evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener("scroll", f);
+      }
+    };
+    window.addEventListener("scroll", f);
+  },
+});
