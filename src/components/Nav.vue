@@ -1,31 +1,95 @@
 <template>
-<div>
-  <b-navbar type="dark" variant="dark">
-    <b-navbar-nav>
-      <b-nav-item href="#">Home</b-nav-item>
-
-      <!-- Navbar dropdowns -->
-      <b-nav-item-dropdown text="Lang" right>
-        <b-dropdown-item href="#">EN</b-dropdown-item>
-        <b-dropdown-item href="#">ES</b-dropdown-item>
-        <b-dropdown-item href="#">RU</b-dropdown-item>
-        <b-dropdown-item href="#">FA</b-dropdown-item>
-      </b-nav-item-dropdown>
-
-      <b-nav-item-dropdown text="User" right>
-        <b-dropdown-item href="#">Account</b-dropdown-item>
-        <b-dropdown-item href="#">Settings</b-dropdown-item>
-      </b-nav-item-dropdown>
-    </b-navbar-nav>
+  <b-navbar toggleable="lg" type="dark" variant="dark" fixed="top">
+    <b-navbar-brand href="#" class="d-block d-md-none">
+       <img
+            class="img-fluid mobile-logo"
+            src="../assets/1thee3logo.png"
+            alt="1T3 logo"
+          />
+    </b-navbar-brand>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-collapse id="nav-collapse" is-nav class="d-md-flex justify-content-center">
+      <b-navbar-nav class="d-flex align-items-center">
+        <b-nav-item href="#">Impressie</b-nav-item>
+        <b-nav-item href="#">Ons doel</b-nav-item>
+        <a class="navbar-brand d-none d-md-block" href="#">
+          <img
+            class="img-fluid"
+            src="../assets/1thee3logo.png"
+            alt="1T3 logo"
+          />
+        </a>
+        <b-nav-item href="#">Quiz</b-nav-item>
+        <b-nav-item href="#">Webshop</b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
   </b-navbar>
-</div>
 </template>
 
 <script>
 export default {
   name: "Nav",
-  methods: []
+  methods: {},
 };
 </script>
 
+<style scoped>
+.navbar-brand {
+  width: 60px;
+  margin: 0 10px;
+}
+
+.mobile-logo {
+  width: 45px;
+}
+
+.nav-item {
+  font-weight: bold;
+  width: 120px;
+  text-align: center;
+}
+
+nav.bg-dark {
+  background-color: #262524 !important;
+}
+
+nav.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+nav.navbar-dark .navbar-nav .nav-link:hover {
+  color: #bfa253;
+}
+
+nav.navbar-dark .navbar-toggler {
+  border: none;
+  margin-right: 5px;
+}
+
+nav.navbar-dark .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  nav.bg-dark {
+    background-color: transparent !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+</style>
 

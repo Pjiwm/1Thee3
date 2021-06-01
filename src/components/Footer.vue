@@ -1,11 +1,19 @@
 <template>
-  <footer>
-    <p>
-      Author: Appelsap<br />
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        >Gamer177013@n.com</a
-      >
+  <footer id="footer">
+    <p class="footer-text-left">
+      Kvk nummer | 17240186 <br />
+      Email | info@1t3 <br />
     </p>
+    <p class="footer-text-right">
+      <img
+        src="../../non-code/Jobs_gestuurde_files/logos/Logo_1T3_beeldmerk.png"
+        width="30px"
+      />
+      <br />
+      <img src="../../non-code/twitter.png" width="15px" />
+      <img src="../../non-code/email.png" width="15px" />
+    </p>
+    <p class="footer-text-bottom">© IT3.nl | 2021</p>
   </footer>
 </template>
 
@@ -17,9 +25,31 @@ export default {
 
 <style scoped>
 footer {
-  text-align: center;
+  text-align: left;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 3px;
+  height: 90px;
   background-color: rgb(59, 59, 59);
   color: white;
+}
+.footer-text-left {
+  font-size: 11px;
+  padding: 20px;
+  float: left;
+}
+.footer-text-right {
+  font-size: 11px;
+  width: 10%;
+  padding-right: 40px;
+  margin-top: 20px;
+  float: right;
+}
+.footer-text-bottom {
+  font-size: 11px;
+  padding-bottom: 20px;
+  text-align:center;
+  height: 50px;
 }
 </style>
