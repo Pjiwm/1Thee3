@@ -53,7 +53,7 @@
   </b-container>
 </template>
 <script>
-
+import strawberry from "../assets/strawberry.png";
 export default {
   name: "question",
   data: function () {
