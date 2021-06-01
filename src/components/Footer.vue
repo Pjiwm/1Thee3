@@ -8,12 +8,17 @@
         >
         <b-col cols="6"
           ><p class="footer-text-right">
-            <img class="d-block"  src="../../src/assets/1thee3logo.png" width="30px" />
-            
+            <img
+              class="d-block"
+              src="../../src/assets/1thee3logo.png"
+              width="30px"
+            />
             <img src="../../src/assets/twitter.png" width="15px" />
             <img src="../../src/assets/email.png" width="15px" /></p
         ></b-col>
-        <b-col class="pt-1" cols="12"> <p class="footer-text-bottom m-0">© IT3.nl | 2021</p></b-col>
+        <b-col class="pt-1" cols="12">
+          <p class="footer-text-bottom m-0">© IT3.nl | 2021</p></b-col
+        >
       </b-row>
     </b-container>
   </footer>
@@ -40,12 +45,11 @@ footer {
 }
 .footer-text-right {
   font-size: 11px;
-  
+
   float: right;
 }
 .footer-text-bottom {
   font-size: 11px;
   text-align: center;
-
 }
 </style>
