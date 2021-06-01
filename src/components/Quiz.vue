@@ -1,40 +1,56 @@
 <template>
   <div>
-    <component v-bind:is="component" />
+    <component v-bind:is="component" ref="question" />
     <button v-on:click="toggle">Toggle</button>
   </div>
 </template>
 <script>
-import q0 from "./quiz-questions/q0";
-import q1 from "./quiz-questions/q1";
+import question from "./Question";
+import strawberry from "../assets/strawberry.png";
+import banana from "../assets/banana.png";
 export default {
   name: "app",
   components: {
-    q0,
-    q1,
+    question,
   },
   data() {
     return {
       questionIndex: 0,
       answers: [],
-      component: "q0",
+      component: "question",
+      strawberry: strawberry,
+      banana: banana,
     };
   },
   methods: {
     toggle() {
       switch (this.questionIndex) {
         case 0:
-          // this.component = q1;
-          alert("1")
-          this.component.setText("1","1","1","1")
+          this.$refs.question.setText("banana", "banana", "banana", "banana");
+          this.$refs.question.setImage(
+            this.banana,
+            this.banana,
+            this.banana,
+            this.banana
+          );
           this.questionIndex++;
           break;
         case 1:
-          this.component = q0;
+          this.$refs.question.setText(
+            "strawberry",
+            "strawberry",
+            "strawberry",
+            "strawberry"
+          );
+          this.$refs.question.setImage(
+            this.strawberry,
+            this.strawberry,
+            this.strawberry,
+            this.strawberry
+          );
           this.questionIndex++;
           break;
       }
-      
     },
   },
 };

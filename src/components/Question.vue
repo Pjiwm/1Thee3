@@ -53,12 +53,12 @@
   </b-container>
 </template>
 <script>
-import strawberry from "../../assets/strawberry.png";
+
 export default {
-  name: "q0",
+  name: "question",
   data: function () {
     return {
-      strawberry: strawberry,
+      
       itemNames: ["strawberry", "strawberry", "strawberry", "strawberry"],
       images: [strawberry, strawberry, strawberry, strawberry],
     };
