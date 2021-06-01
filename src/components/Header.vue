@@ -79,7 +79,7 @@ header .arrow {
   background-size: contain;
   animation: arrow 3s infinite;
   position: absolute;
-  z-index: 5000;
+  z-index: 30;
 }
 
 @keyframes arrow {
