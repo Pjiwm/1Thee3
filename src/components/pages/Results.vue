@@ -4,14 +4,18 @@
       <b-col><br /></b-col>
     </b-row>
     <b-row>
-      <b-col><h1>results demonstration</h1></b-col>
+      <b-col><QuizResults /></b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
+import QuizResults from "../QuizResult";
 export default {
   name: "Results",
+  components: {
+    QuizResults,
+  },
 };
 </script>
 
