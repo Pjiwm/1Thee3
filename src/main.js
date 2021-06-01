@@ -9,48 +9,32 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
+    // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
-// install router
+    // install router
 Vue.use(VueRouter)
 
-<<<<<<< HEAD
-import RouterTest from './components/RouterTestPage.vue'
-import Index from './components/Index.vue'
+import RouterTest from './components/pages/RouterTestPage.vue'
+import Index from './components/pages/Index.vue'
 
 const RouterTestRoute = { path: '/router', component: RouterTest }
-// const NotFoundRoute = { template: '<p>Page not found</p>' }
-const IndexRoute = { path: '/', component: Index}
-=======
-import RouterTest from './components/pages/RouterTestPage'
-import Index from './components/pages/Index'
-
-const RouterTestRoute = { path: '/router', component: RouterTest }
+    // const NotFoundRoute = { template: '<p>Page not found</p>' }
 const IndexRoute = { path: '/', component: Index }
->>>>>>> routing
 
 
 const routes = [
-  RouterTestRoute,
-<<<<<<< HEAD
-  // NotFoundRoute,
-  IndexRoute
-]
-
-const router = new VueRouter({ routes })
-=======
-  IndexRoute
+    RouterTestRoute,
+    IndexRoute
 ]
 
 const router = new VueRouter({
-  routes,
-  mode: 'history'
+    routes,
+    mode: 'history'
 })
->>>>>>> routing
 
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  render: function (h) { return h(App) },
+    router,
+    render: function(h) { return h(App) },
 }).$mount('#app')
