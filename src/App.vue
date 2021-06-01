@@ -62,6 +62,10 @@ body {
   font-weight: bold !important;
 }
 
+.btn-primary:focus {
+  box-shadow: none !important;
+}
+
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
 
