@@ -11,10 +11,10 @@
             <img
               class="d-block"
               src="../../src/assets/1thee3logo.png"
-              width="30px"
+              width="60px"
             />
-            <img src="../../src/assets/twitter.png" width="15px" />
-            <img src="../../src/assets/email.png" width="15px" /></p
+            <img src="../../src/assets/twitter.png" width="30px" />
+            <img src="../../src/assets/email.png" width="30px" /></p
         ></b-col>
         <b-col class="pt-1" cols="12">
           <p class="footer-text-bottom m-0">© IT3.nl | 2021</p></b-col
@@ -36,7 +36,7 @@ footer {
   bottom: 0;
   left: 0;
   padding: 3px;
-  background-color: rgb(59, 59, 59);
+  background-color: #262524;
   color: white;
 }
 .footer-text-left {

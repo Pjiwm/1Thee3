@@ -1,8 +1,10 @@
 <template>
-  <b-container class="p-4 text-center quiz-background">
+<div class="quiz-background py-5">
+  <b-container class="text-center">
     <component v-bind:is="component" ref="question" />
     <button v-on:click="toggle">Toggle</button>
     </b-container>
+    </div>
 </template>
 <script>
 import question from "./Question";
@@ -60,5 +62,7 @@ export default {
 
 .quiz-background {
   background-color: #403d3b;
+  border-top: 2px solid #aaa199;
+  border-bottom: 2px solid #aaa199;
 }
 </style>

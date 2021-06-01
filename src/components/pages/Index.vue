@@ -1,20 +1,23 @@
 <template>
-  <b-container class="content">
-    <b-row>
-      <b-col> <Header /></b-col>
-      <b-col><Quiz /></b-col>
-    </b-row>
-  </b-container>
+<div>
+
+      <Header />
+    <Main />
+    <Quiz />
+</div>
 </template>
 
 <script>
-import Quiz from "../Quiz";
 import Header from "@/components/Header.vue";
+import Quiz from "../Quiz";
+import Main from "@/components/HomeMain.vue";
+
 export default {
   name: "Index",
   components: {
-    Quiz,
     Header,
+    Main,
+    Quiz,
   },
 };
 </script>
