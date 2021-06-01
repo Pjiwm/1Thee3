@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <b-container class="p-4 text-center quiz-background">
     <component v-bind:is="component" ref="question" />
     <button v-on:click="toggle">Toggle</button>
-  </div>
+    </b-container>
 </template>
 <script>
 import question from "./Question";
@@ -55,3 +55,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+.quiz-background {
+  background-color: #403d3b;
+}
+</style>
