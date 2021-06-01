@@ -13,7 +13,7 @@
             <img src="../../src/assets/twitter.png" width="15px" />
             <img src="../../src/assets/email.png" width="15px" /></p
         ></b-col>
-        <b-col class="pt-0" cols="12"> <p class="footer-text-bottom m-0">© IT3.nl | 2021</p></b-col>
+        <b-col class="pt-1" cols="12"> <p class="footer-text-bottom m-0">© IT3.nl | 2021</p></b-col>
       </b-row>
     </b-container>
   </footer>
