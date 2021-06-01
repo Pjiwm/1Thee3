@@ -24,7 +24,9 @@ export default {
     toggle() {
       switch (this.questionIndex) {
         case 0:
-          this.component = q1;
+          // this.component = q1;
+          alert("1")
+          this.component.setText("1","1","1","1")
           this.questionIndex++;
           break;
         case 1:

@@ -1,56 +1,56 @@
 <template>
-    <b-container class="p-4 quiz-background text-center">
-      <b-row class="d-flex justify-content-center">
-        <b-col class="col-6 col-md-2">
-          <div class="image-box">
-            <b-img
-              :src="strawberry"
-              alt="Image 1"
-              class="mx-auto d-block"
-            ></b-img>
-            <div class="text-background">
-            <p class="text-white">Aardbei</p>
-            </div>
+  <b-container class="p-4 quiz-background text-center">
+    <b-row class="d-flex justify-content-center">
+      <b-col class="col-6 col-lg-2">
+        <div class="image-box my-2">
+          <b-img
+            :src="images[0]"
+            alt="Image 1"
+            class="mx-auto d-block"
+          ></b-img>
+          <div class="text-background p-1">
+            <p class="text-white">{{itemNames[0]}}</p>
           </div>
-        </b-col>
-        <b-col class="col-6 col-md-2">
-          <div class="image-box">
-            <b-img
-              :src="strawberry"
-              alt="Image 2"
-              class="mx-auto d-block"
-            ></b-img>
-            <div class="text-background">
-            <p class="text-white">Aardbei</p>
-            </div>
+        </div>
+      </b-col>
+      <b-col class="col-6 col-lg-2">
+        <div class="image-box my-2">
+          <b-img
+            :src="images[1]"
+            alt="Image 2"
+            class="mx-auto d-block"
+          ></b-img>
+          <div class="text-background p-1">
+            <p class="text-white">{{itemNames[1]}}</p>
           </div>
-        </b-col>
-        <b-col class="col-6 col-md-2">
-          <div class="image-box">
-            <b-img
-              :src="strawberry"
-              alt="Image 3"
-              class="mx-auto d-block"
-            ></b-img>
-            <div class="text-background">
-            <p class="text-white">Aardbei</p>
-            </div>
+        </div>
+      </b-col>
+      <b-col class="col-6 col-lg-2">
+        <div class="image-box my-2">
+          <b-img
+            :src="images[2]"
+            alt="Image 3"
+            class="mx-auto d-block"
+          ></b-img>
+          <div class="text-background p-1">
+            <p class="text-white">{{itemNames[2]}}</p>
           </div>
-        </b-col>
-        <b-col class="col-6 col-md-2">
-          <div class="image-box">
-            <b-img
-              :src="strawberry"
-              alt="Image 3"
-              class="mx-auto d-block"
-            ></b-img>
-            <div class="text-background">
-            <p class=" text-white">Aardbei</p>
-            </div>
+        </div>
+      </b-col>
+      <b-col class="col-6 col-lg-2">
+        <div class="image-box my-2">
+          <b-img
+            :src="images[3]"
+            alt="Image 3"
+            class="mx-auto d-block"
+          ></b-img>
+          <div class="text-background p-1">
+            <p class="text-white">{{itemNames[3]}}</p>
           </div>
-        </b-col>
-      </b-row>
-    </b-container>
+        </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 <script>
 import strawberry from "../../assets/strawberry.png";
@@ -59,7 +59,17 @@ export default {
   data: function () {
     return {
       strawberry: strawberry,
+      itemNames: ["strawberry", "strawberry", "strawberry", "strawberry"],
+      images: [strawberry, strawberry, strawberry, strawberry],
     };
+  },
+  methods: {
+    setText(itemOne, itemTwo, itemThree, itemFour) {
+      this.itemNames = [itemOne, itemTwo, itemThree, itemFour];
+    },
+    setImage(imageOne, imageTwo, imageThree, imageFour) {
+      this.images = [imageOne, imageTwo, imageThree, imageFour];
+    },
   },
 };
 </script>
@@ -71,7 +81,6 @@ export default {
   border-radius: 5px;
 }
 .text-background {
-  vertical-align: bottom;
   background-color: rgb(44, 43, 43);
 }
 
@@ -79,7 +88,7 @@ export default {
   background-color: #403d3b;
 }
 .text-vertical-align {
-      display: flex;
-    align-items:center;
+  display: flex;
+  align-items: center;
 }
 </style>
