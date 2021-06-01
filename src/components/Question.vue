@@ -1,5 +1,5 @@
 <template>
-  <b-container class="p-4 quiz-background text-center">
+
     <b-row class="d-flex justify-content-center">
       <b-col class="col-6 col-lg-2">
         <div class="image-box my-2">
@@ -50,7 +50,6 @@
         </div>
       </b-col>
     </b-row>
-  </b-container>
 </template>
 <script>
 import strawberry from "../assets/strawberry.png";
@@ -84,9 +83,6 @@ export default {
   background-color: rgb(44, 43, 43);
 }
 
-.quiz-background {
-  background-color: #403d3b;
-}
 .text-vertical-align {
   display: flex;
   align-items: center;
