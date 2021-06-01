@@ -1,7 +1,7 @@
 <template>
 
     <b-row class="d-flex justify-content-center">
-      <b-col class="col-6 col-lg-2">
+      <b-col v-on:click="$emit('click', 0, itemNames[0])" class="col-6 col-lg-2">
         <div class="image-box my-2">
           <b-img
             :src="images[0]"
@@ -13,7 +13,7 @@
           </div>
         </div>
       </b-col>
-      <b-col class="col-6 col-lg-2">
+      <b-col v-on:click="$emit('click', itemNames[1])" class="col-6 col-lg-2">
         <div class="image-box my-2">
           <b-img
             :src="images[1]"
@@ -25,7 +25,7 @@
           </div>
         </div>
       </b-col>
-      <b-col class="col-6 col-lg-2">
+      <b-col v-on:click="$emit('click', 0, itemNames[0])" class="col-6 col-lg-2">
         <div class="image-box my-2">
           <b-img
             :src="images[2]"
@@ -37,7 +37,7 @@
           </div>
         </div>
       </b-col>
-      <b-col class="col-6 col-lg-2">
+      <b-col v-on:click="$emit('click', 0, itemNames[0])" class="col-6 col-lg-2">
         <div class="image-box my-2">
           <b-img
             :src="images[3]"
@@ -57,7 +57,6 @@ export default {
   name: "question",
   data: function () {
     return {
-      
       itemNames: ["strawberry", "strawberry", "strawberry", "strawberry"],
       images: [strawberry, strawberry, strawberry, strawberry],
     };
