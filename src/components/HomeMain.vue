@@ -1,5 +1,5 @@
 <template>
-  <main class="container-fluid main-bg py-4">
+  <main id="main" class="container-fluid main-bg py-4">
     <div class="row py-5">
       <div class="col-lg-5 offset-lg-2 mb-lg-0 col-10 offset-1 mb-5">
         <h1>Impressie</h1>
