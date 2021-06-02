@@ -14,13 +14,12 @@ Vue.use(IconsPlugin);
 // install router
 Vue.use(VueRouter);
 
-import RouterTest from "./components/pages/RouterTestPage";
+import Results from "./components/pages/Results";
 import Index from "./components/pages/Index";
 
-const RouterTestRoute = { path: "/router", component: RouterTest };
+const ResultsRoute = { path: "/results", component: Results };
 const IndexRoute = { path: "/", component: Index };
-
-const routes = [RouterTestRoute, IndexRoute];
+const routes = [ResultsRoute, IndexRoute];
 
 const router = new VueRouter({
   routes,
