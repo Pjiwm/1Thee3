@@ -6,12 +6,12 @@
     </p>
     <p class="footer-text-right">
       <img
-        src="../../non-code/Jobs_gestuurde_files/logos/Logo_1T3_beeldmerk.png"
+        src="./../assets/1thee3logo.png"
         width="30px"
       />
       <br />
-      <img src="../../non-code/twitter.png" width="15px" />
-      <img src="../../non-code/email.png" width="15px" />
+      <!-- <img src="../../non-code/twitter.png" width="15px" />
+      <img src="../../non-code/email.png" width="15px" /> -->
     </p>
     <p class="footer-text-bottom">© IT3.nl | 2021</p>
   </footer>

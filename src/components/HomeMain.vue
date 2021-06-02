@@ -52,13 +52,11 @@ hr {
   background-color: #aaa199;
   opacity: 1;
   height: 2px !important;
-  /* border-bottom: solid 1px #000000; */
   border-radius: 20px;
 }
 
 p {
   font-size: 20px;
-  text-align: justify;
 }
 
 img {
