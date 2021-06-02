@@ -1,5 +1,5 @@
 <template>
-  <main id="main" class="container-fluid main-bg py-4">
+  <main id="impressie" class="container-fluid main-bg py-4">
     <div class="row py-5">
       <div class="col-lg-5 offset-lg-2 mb-lg-0 col-10 offset-1 mb-5">
         <h1>Impressie</h1>
@@ -14,7 +14,7 @@
         <img src="../../non-code/thee1-home.jpg" width="100%" />
       </div>
     </div>
-    <hr class="col-lg-8 offset-lg-2 col-10 offset-1" />
+    <hr class="col-lg-8 offset-lg-2 col-10 offset-1" id="ons_doel" />
     <div class="row py-5">
       <div class="col-lg-3 offset-lg-2 mb-lg-0 col-10 offset-1 mb-5">
         <img src="../../non-code/thee2-home.jpg" width="100%" />

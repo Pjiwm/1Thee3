@@ -1,5 +1,5 @@
 <template>
-<div class="quiz-background py-5">
+<div class="quiz-background py-5" id="quiz">
   <b-container class="text-center">
     <component v-on:click="(...args)=>this.toggle(...args)" v-bind:is="component" ref="question" />
     </b-container>
