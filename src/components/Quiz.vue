@@ -1,5 +1,5 @@
 <template>
-  <div class="quiz-background py-5" id="quiz">
+  <div class="quiz-background py-5" id="mood-finder">
     <b-container class="text-center">
       <component
         v-on:click="(chosenName) => this.answerQuestion(chosenName)"
