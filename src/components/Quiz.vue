@@ -1,5 +1,5 @@
 <template>
-  <div class="quiz-background py-5" id="quiz">
+  <div class="quiz py-3" id="quiz">
     <b-container class="text-center">
       <h1 class="text-white">Quiz</h1>
       <component
@@ -101,9 +101,8 @@ export default {
 </script>
 
 <style scoped>
-.quiz-background {
+.quiz {
   background-color: #403d3b;
   border-top: 2px solid #aaa199;
-  border-bottom: 2px solid #aaa199;
 }
 </style>
