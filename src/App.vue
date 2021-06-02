@@ -1,5 +1,5 @@
 <template>
-  <div v-scroll="handleScroll" id="app">
+  <div id="app">
     <div>
       <Nav />
     </div>
@@ -19,14 +19,6 @@ export default {
   components: {
     Nav,
     Footer,
-  },
-  methods: {
-    handleScroll: function () {
-      if (window.scrollY > 50) {
-        document.getElementById("header").classList.add("scroll");
-      }
-      return window.scrollY > 100;
-    },
   },
 };
 </script>
