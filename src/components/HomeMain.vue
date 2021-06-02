@@ -17,7 +17,7 @@
     <hr class="col-lg-8 offset-lg-2 col-10 offset-1" id="ons_doel" />
     <div class="row py-5">
       <b-col
-        class="col-lg-3 offset-lg-2 mb-lg-0 col-10 offset-1 mb-3 order-last order-md-1"
+        class="col-lg-3 offset-lg-2 mb-lg-0 col-10 offset-1 order-last order-md-1"
       >
         <img src="../../non-code/thee2-home.jpg" width="100%" />
       </b-col>
