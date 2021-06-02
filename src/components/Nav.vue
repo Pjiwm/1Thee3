@@ -1,21 +1,12 @@
 <template>
-<<<<<<< HEAD
   <b-navbar class="p-0" toggleable="lg" type="dark" variant="dark" fixed="top">
+    <!-- TODO fix href to return to root route index -->
     <b-navbar-brand href="/" class="d-block d-lg-none">
        <img
             class="img-fluid mobile-logo"
             src="../assets/1thee3logo.png"
             alt="1T3 logo"
           />
-=======
-  <b-navbar class="p-0 shadow" toggleable="lg" type="dark" variant="dark" fixed="top">
-    <b-navbar-brand href="#" class="d-block d-lg-none">
-      <img
-        class="img-fluid mobile-logo"
-        src="../assets/1thee3logo.png"
-        alt="1T3 logo"
-      />
->>>>>>> ade4f6f39bb0c0858354483e8483cb76ede98ab3
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse
