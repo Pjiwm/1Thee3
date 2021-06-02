@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-jumbotron
+    id="jumbo"
       header="BootstrapVue"
       lead="Bootstrap v4 Components for Vue.js 2"
       bg-variant="info"
@@ -20,5 +21,9 @@
 <script>
 export default {
   name: "Jumbotron",
+  methods: {
+
+  }
 };
+
 </script>
