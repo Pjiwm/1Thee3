@@ -4,7 +4,7 @@
       <b-col v-on:click="$emit('click', itemNames[0])" class="col-6 col-lg-2">
         <div class="card my-2">
           <div class="image-box">
-            <b-img fluid :src="images[0]" alt="Image 3" class="mx-auto d-block"></b-img>
+            <b-img fluid :src="images[0]" alt="Image 3" class="mx-auto d-block p-3"></b-img>
           </div>
           <div class="text-background p-1">
             <p class="text-white">{{ itemNames[0] }}</p>
@@ -14,7 +14,7 @@
       <b-col v-on:click="$emit('click', itemNames[1])" class="col-6 col-lg-2">
         <div class="card my-2">
           <div class="image-box">
-            <b-img fluid :src="images[1]" alt="Image 3" class="mx-auto d-block"></b-img>
+            <b-img fluid :src="images[1]" alt="Image 3" class="mx-auto d-block p-3"></b-img>
           </div>
           <div class="text-background p-1">
             <p class="text-white">{{ itemNames[1] }}</p>
@@ -24,7 +24,7 @@
       <b-col v-on:click="$emit('click', itemNames[2])" class="col-6 col-lg-2">
         <div class="card my-2">
           <div class="image-box">
-            <b-img fluid :src="images[2]" alt="Image 3" class="mx-auto d-block"></b-img>
+            <b-img fluid :src="images[2]" alt="Image 3" class="mx-auto d-block p-3"></b-img>
           </div>
           <div class="text-background p-1">
             <p class="text-white">{{ itemNames[2] }}</p>
@@ -34,7 +34,7 @@
       <b-col v-on:click="$emit('click', itemNames[3])" class="col-6 col-lg-2">
         <div class="card my-2">
           <div class="image-box">
-            <b-img fluid :src="images[3]" alt="Image 3" class="mx-auto d-block"></b-img>
+            <b-img fluid :src="images[3]" alt="Image 3" class="mx-auto d-block p-3"></b-img>
           </div>
           <div class="text-background p-1">
             <p class="text-white">{{ itemNames[3] }}</p>
@@ -75,13 +75,13 @@ export default {
   border-radius: 5px;
 }
 .image-box {
-  height: 7rem
+  height: 8rem
 }
 .text-background {
   background-color: rgb(44, 43, 43);
 }
 img {
-      height: auto;
+    height: 100%;
 }
 .text-vertical-align {
   display: flex;
