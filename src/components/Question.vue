@@ -1,5 +1,5 @@
 <template>
-    <b-row class="d-flex justify-content-center">
+    <b-row class="d-flex justify-content-center question-row">
       <p class="text-white">{{ question }}</p>
       <b-col v-on:click="$emit('click', itemNames[0])" class="col-6 col-lg-2">
         <div class="card my-2">
@@ -86,5 +86,21 @@ img {
 .text-vertical-align {
   display: flex;
   align-items: center;
+}
+
+.question-border:hover{
+  border: 2px solid;
+  border-color: #bfa253;
+  cursor: pointer;
+}
+
+.question-border{
+  border: 2px solid;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.question-row{
+  margin-bottom: 10px;
 }
 </style>
