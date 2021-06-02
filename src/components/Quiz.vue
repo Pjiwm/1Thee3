@@ -1,8 +1,7 @@
 <template>
 <div class="quiz-background py-5">
   <b-container class="text-center">
-    <component v-bind:is="component" ref="question" />
-    <button v-on:click="toggle">Toggle</button>
+    <component v-on:click="(...args)=>this.toggle(...args)" v-bind:is="component" ref="question" />
     </b-container>
     </div>
 </template>
