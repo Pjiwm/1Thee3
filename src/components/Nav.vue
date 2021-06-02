@@ -1,6 +1,6 @@
 <template>
   <b-navbar class="p-0" toggleable="lg" type="dark" variant="dark" fixed="top">
-    <b-navbar-brand href="#" class="d-block d-lg-none">
+    <b-navbar-brand href="/" class="d-block d-lg-none">
        <img
             class="img-fluid mobile-logo"
             src="../assets/1thee3logo.png"
@@ -12,7 +12,7 @@
       <b-navbar-nav class="d-flex align-items-center">
         <b-nav-item href="#">Impressie</b-nav-item>
         <b-nav-item href="#">Ons doel</b-nav-item>
-        <a class="navbar-brand d-none d-lg-block" href="#">
+        <a class="navbar-brand d-none d-lg-block" href="/">
           <img
             class="img-fluid"
             src="../assets/1thee3logo.png"

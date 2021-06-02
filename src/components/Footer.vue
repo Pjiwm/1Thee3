@@ -38,6 +38,7 @@ footer {
   padding: 3px;
   background-color: #262524;
   color: white;
+  border-top: 2px solid #aaa199;
 }
 .footer-text-left {
   font-size: 11px;

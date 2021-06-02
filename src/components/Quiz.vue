@@ -65,6 +65,5 @@ export default {
 .quiz-background {
   background-color: #403d3b;
   border-top: 2px solid #aaa199;
-  border-bottom: 2px solid #aaa199;
 }
 </style>
