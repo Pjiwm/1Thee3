@@ -1,8 +1,9 @@
 <template>
-  <b-container class="p-4 text-center quiz-background">
-    <component v-bind:is="component" ref="question" />
-    <button v-on:click="toggle">Toggle</button>
+<div class="quiz-background py-5">
+  <b-container class="text-center">
+    <component v-on:click="(...args)=>this.toggle(...args)" v-bind:is="component" ref="question" />
     </b-container>
+    </div>
 </template>
 <script>
 import question from "./Question";
@@ -23,7 +24,11 @@ export default {
     };
   },
   methods: {
-    toggle() {
+    toggle(...args) {
+      let chosenIndex = args[0]
+      let chosenName = args[1]
+      this.questionIndex = chosenIndex;
+      this.answers.push(chosenName);
       switch (this.questionIndex) {
         case 0:
           this.$refs.question.setText("banana", "banana", "banana", "banana");
@@ -57,8 +62,9 @@ export default {
 </script>
 
 <style scoped>
-
 .quiz-background {
   background-color: #403d3b;
+  border-top: 2px solid #aaa199;
+  border-bottom: 2px solid #aaa199;
 }
 </style>
