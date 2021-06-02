@@ -1,7 +1,7 @@
 <template>
   <main id="main" class="container-fluid main-bg py-4">
     <div class="row py-5">
-      <div class="col-lg-5 offset-lg-2 mb-lg-0 col-10 offset-1 mb-5">
+      <div class="col-lg-5 offset-lg-2 mb-lg-0 col-10 offset-1 mb-3">
         <h1>Impressie</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque
@@ -16,10 +16,10 @@
     </div>
     <hr class="col-lg-8 offset-lg-2 col-10 offset-1" />
     <div class="row py-5">
-      <div class="col-lg-3 offset-lg-2 mb-lg-0 col-10 offset-1 mb-5">
+      <b-col class="col-lg-3 offset-lg-2 mb-lg-0 col-10 offset-1 mb-3 order-last order-md-1">
         <img src="../../non-code/thee2-home.jpg" width="100%" />
-      </div>
-      <div class="col-lg-5 offset-lg-0 col-10 offset-1">
+      </b-col>
+      <b-col class="col-lg-5 offset-lg-0 col-10 offset-1 order-first mb-3 order-md-2">
         <h1>Ons doel</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
@@ -27,7 +27,7 @@
           necessitatibus quia et, alias maiores quibusdam ea sint nostrum quidem
           vel minima.
         </p>
-      </div>
+      </b-col>
     </div>
     <div id='collection-component-1622545848186'></div>
   </main>
