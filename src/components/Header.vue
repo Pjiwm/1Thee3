@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <a class="d-block" href="#main">
+    <a class="d-block" href="#impressie">
       <div class="arrow bounce"></div>
     </a>
   </header>

@@ -8,11 +8,7 @@
         >
         <b-col cols="6"
           ><p class="footer-text-right">
-            <img
-              class="d-block"
-              src="../../src/assets/1thee3logo.png"
-              width="60px"
-            />
+            <img class="d-block" src="../../src/assets/1thee3logo.png" width="60px" />
             <img src="../../src/assets/twitter.png" width="30px" />
             <img src="../../src/assets/email.png" width="30px" /></p
         ></b-col>
@@ -45,7 +41,6 @@ footer {
 }
 .footer-text-right {
   font-size: 11px;
-
   float: right;
 }
 .footer-text-bottom {
