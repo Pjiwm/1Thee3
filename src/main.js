@@ -16,10 +16,12 @@ Vue.use(VueRouter);
 
 import Results from "./components/pages/Results";
 import Index from "./components/pages/Index";
+import PageNotFound from "./components/pages/PageNotFound"
 
 const ResultsRoute = { path: "/results", component: Results };
 const IndexRoute = { path: "/", component: Index };
-const routes = [ResultsRoute, IndexRoute];
+const PageNotFoundRoute = { path: "*", component: PageNotFound };
+const routes = [ResultsRoute, IndexRoute, PageNotFoundRoute];
 
 const router = new VueRouter({
   routes,
