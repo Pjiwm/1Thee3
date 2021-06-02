@@ -16,10 +16,12 @@ Vue.use(VueRouter);
 
 import Results from "./components/pages/Results";
 import Index from "./components/pages/Index";
+import PageNotFound from "./components/pages/PageNotFound"
 
 const ResultsRoute = { path: "/results", component: Results };
 const IndexRoute = { path: "/", component: Index };
-const routes = [ResultsRoute, IndexRoute];
+const PageNotFoundRoute = { path: "*", component: PageNotFound };
+const routes = [ResultsRoute, IndexRoute, PageNotFoundRoute];
 
 const router = new VueRouter({
   routes,
@@ -27,18 +29,6 @@ const router = new VueRouter({
 });
 
 Vue.config.productionTip = false;
-
-Vue.directive("scroll", {
-  inserted: function (el, binding) {
-    let f = function (evt) {
-      if (binding.value(evt, el)) {
-        window.removeEventListener("scroll", f);
-      }
-    };
-    window.addEventListener("scroll", f);
-  },
-});
-
 
 new Vue({
   router,

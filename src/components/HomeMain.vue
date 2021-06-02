@@ -33,7 +33,6 @@
         </p>
       </b-col>
     </div>
-    <div id="collection-component-1622545848186"></div>
   </main>
 </template>
 

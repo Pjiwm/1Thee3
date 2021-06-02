@@ -1,5 +1,5 @@
 {
-  "name": "1-thee-3",
+  "name": "1T3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@vue/cli-service": "^2.6.11",
     "bootstrap": "^5.0.1",
     "bootstrap-vue": "^2.21.2",
