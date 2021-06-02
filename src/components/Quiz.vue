@@ -1,18 +1,29 @@
 <template>
-<div class="quiz-background py-5" id="quiz">
-  <b-container class="text-center">
-    <component v-on:click="(...args)=>this.toggle(...args)" v-bind:is="component" ref="question" />
+  <div class="quiz-background py-5">
+    <b-container class="text-center">
+      <component
+        v-on:click="(chosenName) => this.answerQuestion(chosenName)"
+        v-bind:is="component"
+        ref="question"
+      />
+      <b-row class="d-flex justify-content-center">
+        <b-col class="col-3">
+          <b-progress :value="progress" :max="maxProgress"></b-progress>
+        </b-col>
+      </b-row>
     </b-container>
-    </div>
+  </div>
 </template>
 <script>
 import question from "./Question";
 import strawberry from "../assets/strawberry.png";
 import banana from "../assets/banana.png";
+import quizFinished from "./QuizFinished.vue";
 export default {
   name: "app",
   components: {
     question,
+    quizFinished,
   },
   data() {
     return {
@@ -21,26 +32,22 @@ export default {
       component: "question",
       strawberry: strawberry,
       banana: banana,
+      progress: 0,
+      maxProgress: 99,
     };
   },
   methods: {
-    toggle(...args) {
-      let chosenIndex = args[0]
-      let chosenName = args[1]
-      this.questionIndex = chosenIndex;
+    answerQuestion(chosenName) {
       this.answers.push(chosenName);
+      this.switchQuestion();
+    },
+
+    switchQuestion() {
+      //questionIndex stands for the question the user would like to go to. So e.g questionIndex = 1 is going to the second question (counting from 0)
       switch (this.questionIndex) {
+        //For question 1, see Question.Vue data field
         case 0:
-          this.$refs.question.setText("banana", "banana", "banana", "banana");
-          this.$refs.question.setImage(
-            this.banana,
-            this.banana,
-            this.banana,
-            this.banana
-          );
-          this.questionIndex++;
-          break;
-        case 1:
+          this.$refs.question.setQuestion("Question 1");
           this.$refs.question.setText(
             "strawberry",
             "strawberry",
@@ -54,7 +61,40 @@ export default {
             this.strawberry
           );
           this.questionIndex++;
+          this.progress = 0;
           break;
+        case 1:
+          this.$refs.question.setQuestion("Question 2");
+          this.$refs.question.setText("banana", "banana", "banana", "banana");
+          this.$refs.question.setImage(
+            this.banana,
+            this.banana,
+            this.banana,
+            this.banana
+          );
+          this.questionIndex++;
+          this.progress = 33;
+          break;
+        case 2:
+          this.$refs.question.setQuestion("Question 3");
+          this.$refs.question.setText(
+            "strawberry",
+            "strawberry",
+            "strawberry",
+            "banana"
+          );
+          this.$refs.question.setImage(
+            this.strawberry,
+            this.strawberry,
+            this.strawberry,
+            this.banana
+          );
+          this.progress = 66;
+          this.questionIndex++;
+          break;
+        case 3:
+          this.component = quizFinished;
+          this.progress = 99;
       }
     },
   },

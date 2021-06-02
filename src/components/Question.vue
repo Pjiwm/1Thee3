@@ -1,51 +1,35 @@
 <template>
-
     <b-row class="d-flex justify-content-center">
-      <b-col v-on:click="$emit('click', 0, itemNames[0])" class="col-6 col-lg-2">
+      <p class="text-white">{{ question }}</p>
+      <b-col v-on:click="$emit('click', itemNames[0])" class="col-6 col-lg-2">
         <div class="image-box my-2">
-          <b-img
-            :src="images[0]"
-            alt="Image 1"
-            class="mx-auto d-block"
-          ></b-img>
+          <b-img :src="images[0]" alt="Image 1" class="mx-auto d-block"></b-img>
           <div class="text-background p-1">
-            <p class="text-white">{{itemNames[0]}}</p>
+            <p class="text-white">{{ itemNames[0] }}</p>
           </div>
         </div>
       </b-col>
       <b-col v-on:click="$emit('click', itemNames[1])" class="col-6 col-lg-2">
         <div class="image-box my-2">
-          <b-img
-            :src="images[1]"
-            alt="Image 2"
-            class="mx-auto d-block"
-          ></b-img>
+          <b-img :src="images[1]" alt="Image 2" class="mx-auto d-block"></b-img>
           <div class="text-background p-1">
-            <p class="text-white">{{itemNames[1]}}</p>
+            <p class="text-white">{{ itemNames[1] }}</p>
           </div>
         </div>
       </b-col>
-      <b-col v-on:click="$emit('click', 0, itemNames[0])" class="col-6 col-lg-2">
+      <b-col v-on:click="$emit('click', itemNames[2])" class="col-6 col-lg-2">
         <div class="image-box my-2">
-          <b-img
-            :src="images[2]"
-            alt="Image 3"
-            class="mx-auto d-block"
-          ></b-img>
+          <b-img :src="images[2]" alt="Image 3" class="mx-auto d-block"></b-img>
           <div class="text-background p-1">
-            <p class="text-white">{{itemNames[2]}}</p>
+            <p class="text-white">{{ itemNames[2] }}</p>
           </div>
         </div>
       </b-col>
-      <b-col v-on:click="$emit('click', 0, itemNames[0])" class="col-6 col-lg-2">
+      <b-col v-on:click="$emit('click', itemNames[3])" class="col-6 col-lg-2">
         <div class="image-box my-2">
-          <b-img
-            :src="images[3]"
-            alt="Image 3"
-            class="mx-auto d-block"
-          ></b-img>
+          <b-img :src="images[3]" alt="Image 3" class="mx-auto d-block"></b-img>
           <div class="text-background p-1">
-            <p class="text-white">{{itemNames[3]}}</p>
+            <p class="text-white">{{ itemNames[3] }}</p>
           </div>
         </div>
       </b-col>
@@ -55,10 +39,11 @@
 import strawberry from "../assets/strawberry.png";
 export default {
   name: "question",
-  data: function () {
+  data: function() {
     return {
-      itemNames: ["strawberry", "strawberry", "strawberry", "strawberry"],
+      question: "Question 1",
       images: [strawberry, strawberry, strawberry, strawberry],
+      itemNames: ["strawberry", "strawberry", "strawberry", "strawberry"],
     };
   },
   methods: {
@@ -67,6 +52,9 @@ export default {
     },
     setImage(imageOne, imageTwo, imageThree, imageFour) {
       this.images = [imageOne, imageTwo, imageThree, imageFour];
+    },
+    setQuestion(text) {
+      this.question = text;
     },
   },
 };
