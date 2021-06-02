@@ -1,6 +1,7 @@
 <template>
   <div class="quiz-background py-5" id="quiz">
     <b-container class="text-center">
+      <h1 class="text-white">Quiz</h1>
       <component
         v-on:click="(chosenName) => this.answerQuestion(chosenName)"
         v-bind:is="component"
@@ -44,6 +45,7 @@ export default {
 
     switchQuestion() {
       //questionIndex stands for the question the user would like to go to. So e.g questionIndex = 1 is going to the second question (counting from 0)
+      this.questionIndex++;
       switch (this.questionIndex) {
         //For question 1, see Question.Vue data field
         case 0:
@@ -60,7 +62,6 @@ export default {
             this.strawberry,
             this.strawberry
           );
-          this.questionIndex++;
           this.progress = 0;
           break;
         case 1:
@@ -72,7 +73,6 @@ export default {
             this.banana,
             this.banana
           );
-          this.questionIndex++;
           this.progress = 33;
           break;
         case 2:
@@ -90,7 +90,6 @@ export default {
             this.banana
           );
           this.progress = 66;
-          this.questionIndex++;
           break;
         case 3:
           this.component = quizFinished;
