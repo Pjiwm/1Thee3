@@ -10,8 +10,8 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav class="d-lg-flex justify-content-center">
       <b-navbar-nav class="d-flex align-items-center">
-        <b-nav-item href="#">Impressie</b-nav-item>
-        <b-nav-item href="#">Ons doel</b-nav-item>
+        <b-nav-item href="#impressie">Impressie</b-nav-item>
+        <b-nav-item href="#ons_doel">Ons doel</b-nav-item>
         <a class="navbar-brand d-none d-lg-block" href="#">
           <img
             class="img-fluid"
@@ -19,7 +19,7 @@
             alt="1T3 logo"
           />
         </a>
-        <b-nav-item href="#">Quiz</b-nav-item>
+        <b-nav-item href="#quiz">Quiz</b-nav-item>
         <b-nav-item href="#">Webshop</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
