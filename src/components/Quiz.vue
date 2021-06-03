@@ -3,7 +3,7 @@
     <b-container class="text-center">
       <h1 class="text-white">Quiz</h1>
       <component
-        v-on:click="(chosenName) => this.answerQuestion(chosenName)"
+        v-on:click="(chosenName) => this._answerQuestion(chosenName)"
         v-bind:is="component"
         ref="question"
       />
@@ -38,14 +38,17 @@ export default {
     };
   },
   methods: {
-    answerQuestion(chosenName) {
+    /**
+     * @description
+     * saved pressed answer text in answers array
+     */
+    _answerQuestion(chosenName) {
       this.answers.push(chosenName);
       this.switchQuestion();
     },
     /**
      * @description switches the questions when the user performs an action in the quiz
      * it swaps out the quiz images, text and quiz question for each question.
-     * The quiz also saves each answer in the answers array.
      */
     switchQuestion() {
       /**
