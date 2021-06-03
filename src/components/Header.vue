@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <a class="d-block" href="#impressie">
+    <a alt="Link naar het impressie gedeelte" class="d-block" href="#impressie">
       <div class="arrow bounce"></div>
     </a>
   </header>
@@ -31,7 +31,7 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/header-image.jpg");
+  background-image: url("../assets/header-image.webp");
   position: relative;
   padding-top: 71px;
 }
@@ -74,7 +74,7 @@ header .arrow {
   margin-left: -20px;
   width: 40px;
   height: 40px;
-  background-image: url("../assets/chevron_down.png");
+  background-image: url("../assets/chevron_down.webp");
   background-repeat: no-repeat;
   background-size: contain;
   animation: arrow 3s infinite;
