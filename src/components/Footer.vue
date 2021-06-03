@@ -4,17 +4,27 @@
       <b-row>
         <b-col cols="6">
           <p class="footer-text-left">Kvk nummer | 17240186</p>
-          <p class="footer-text-left">Email | info@1t3</p></b-col
-        >
-        <b-col cols="6"
-          ><p class="footer-text-right">
+          <p class="footer-text-left">Email | info@1t3</p>
+        </b-col>
+        <b-col cols="6">
+          <p class="footer-text-right">
             <img class="d-block" src="../../src/assets/1thee3logo.png" width="60px" />
-            <img src="../../src/assets/twitter.png" width="30px" />
-            <img src="../../src/assets/email.png" width="30px" /></p
-        ></b-col>
+
+            <img
+              src="../../src/assets/facebook-square-brands.svg"
+              a href="www.facebook.com"
+              width="30px"
+            />
+            <img
+              src="../../src/assets/instagram-brands.svg"
+              a href="instagram.com"
+              width="30px"
+            />
+          </p>
+        </b-col>
         <b-col class="pt-1" cols="12">
-          <p class="footer-text-bottom m-0">© IT3.nl | 2021</p></b-col
-        >
+          <p class="footer-text-bottom m-0">© IT3.nl | 2021</p>
+        </b-col>
       </b-row>
     </b-container>
   </footer>
