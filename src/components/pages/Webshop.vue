@@ -32,11 +32,11 @@ export default {
     script.onload = ShopifyBuyInit;
   }
   function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
+    var client = window.ShopifyBuy.buildClient({
       domain: '1t3-nl.myshopify.com',
       storefrontAccessToken: '9bc45730908a4fbfe63a973eef74d5cc',
     });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
+    window.ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
         id: '266373529807',
         node: document.getElementById('collection-component-1622713024168'),
