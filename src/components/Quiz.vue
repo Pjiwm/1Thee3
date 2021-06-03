@@ -115,4 +115,8 @@ export default {
   background-color: #403d3b;
   border-top: 2px solid #aaa199;
 }
+
+.quiz-background{
+  background-color: #403d3b;
+}
 </style>
