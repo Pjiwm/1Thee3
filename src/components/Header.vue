@@ -6,14 +6,14 @@
           <div class="main-title">
             <h1>Tea is like a hug in a mug</h1>
             <p class="pb-3">
-              Wil jij weten welke thee bij jou past? Doe dan hieronder de quiz!
+              Wil jij weten welke thee bij jou past? Doe dan hieronder de mood finder!
             </p>
           </div>
-          <button type="button" class="btn btn-primary">Doe de quiz</button>
+          <button type="button" class="btn btn-primary">Doe de mood finder</button>
         </div>
       </div>
     </div>
-    <a class="d-block" href="#impressie">
+    <a alt="Link naar het impressie gedeelte" class="d-block" href="#impressie">
       <div class="arrow bounce"></div>
     </a>
   </header>
@@ -31,7 +31,7 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/header-image.jpg");
+  background-image: url("../assets/header-image.webp");
   position: relative;
   padding-top: 71px;
 }
@@ -74,7 +74,7 @@ header .arrow {
   margin-left: -20px;
   width: 40px;
   height: 40px;
-  background-image: url("../assets/chevron_down.png");
+  background-image: url("../assets/chevron_down.webp");
   background-repeat: no-repeat;
   background-size: contain;
   animation: arrow 3s infinite;
