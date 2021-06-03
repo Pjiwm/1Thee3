@@ -19,7 +19,7 @@
         <a class="navbar-brand d-none d-lg-block" href="/">
           <img
             class="img-fluid"
-            src="../assets/1thee3logo.png"
+            src="../assets/1thee3logo.webp"
             alt="1T3 logo"
           />
         </a>

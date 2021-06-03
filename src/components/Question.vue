@@ -64,7 +64,7 @@
   </b-row>
 </template>
 <script>
-import strawberry from "../assets/strawberry.png";
+import strawberry from "../assets/strawberry.webp";
 export default {
   name: "question",
   data: function () {
