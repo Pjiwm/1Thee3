@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
   <div class="quiz-background py-5" id="mood-finder">
-=======
-  <div class="quiz py-3" id="quiz">
->>>>>>> ade4f6f39bb0c0858354483e8483cb76ede98ab3
     <b-container class="text-center">
       <h1 class="text-white">Quiz</h1>
       <component
@@ -46,9 +42,16 @@ export default {
       this.answers.push(chosenName);
       this.switchQuestion();
     },
-
+    /**
+     * @description switches the questions when the user performs an action in the quiz
+     * it swaps out the quiz images, text and quiz question for each question.
+     * The quiz also saves each answer in the answers array.
+     */
     switchQuestion() {
-      //questionIndex stands for the question the user would like to go to. So e.g questionIndex = 1 is going to the second question (counting from 0)
+      /**
+       * questionIndex stands for the question the user would like to go to.
+       * So e.g questionIndex = 1 is going to the second question (counting from 0)
+       */
       this.questionIndex++;
       switch (this.questionIndex) {
         //For question 1, see Question.Vue data field

@@ -1,6 +1,6 @@
 <template>
   <b-navbar class="p-0" toggleable="lg" type="dark" variant="dark" fixed="top">
-    <!-- TODO fix href to return to root route index -->
+    <!-- href to root route does not work in local server -->
     <b-navbar-brand href="/" class="d-block d-lg-none">
        <img
             class="img-fluid mobile-logo"
