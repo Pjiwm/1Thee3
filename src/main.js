@@ -14,14 +14,18 @@ Vue.use(IconsPlugin);
 // install router
 Vue.use(VueRouter);
 
-import Results from "./components/pages/Results";
-import Index from "./components/pages/Index";
-import PageNotFound from "./components/pages/PageNotFound"
+import results from "./components/pages/Results";
+import index from "./components/pages/Index";
+import pageNotFound from "./components/pages/PageNotFound"
+import webshop from "./components/pages/Webshop"
 
-const ResultsRoute = { path: "/results", component: Results };
-const IndexRoute = { path: "/", component: Index };
-const PageNotFoundRoute = { path: "*", component: PageNotFound };
-const routes = [ResultsRoute, IndexRoute, PageNotFoundRoute];
+const resultsRoute = { path: "/results", component: results };
+const indexRoute = { path: "/", component: index };
+const pageNotFoundRoute = { path: "*", component: pageNotFound };
+const webshopRoute = {path: "/webshop", component: webshop}
+
+const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
+
 
 const router = new VueRouter({
   routes,
