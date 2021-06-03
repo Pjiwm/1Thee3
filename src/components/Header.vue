@@ -13,7 +13,8 @@
         </div>
       </div>
     </div>
-    <a alt="Link naar het impressie gedeelte" class="d-block" href="#impressie">
+    <!-- Font size 0 is to make the text readable for text-readers, but not for other users -->
+    <a class="d-block" href="#impressie" style="font-size:0px"> Link naar impressie
       <div class="arrow bounce"></div>
     </a>
   </header>
