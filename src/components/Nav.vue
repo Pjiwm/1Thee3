@@ -3,7 +3,7 @@
     <b-navbar-brand href="/" class="d-block d-lg-none">
        <img
             class="img-fluid mobile-logo"
-            src="../assets/1thee3logo.png"
+            src="../assets/1thee3logo.webp"
             alt="1T3 logo"
           />
     </b-navbar-brand>
