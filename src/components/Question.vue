@@ -2,7 +2,7 @@
   <b-row class="d-flex justify-content-center question-row">
     <p class="text-white">{{ question }}</p>
     <b-col v-on:click="$emit('click', itemNames[0])" class="col-6 col-lg-2">
-      <div class="card my-2">
+      <div class="card my-2 question-border">
         <div class="image-box">
           <b-img
             fluid
@@ -17,7 +17,7 @@
       </div>
     </b-col>
     <b-col v-on:click="$emit('click', itemNames[1])" class="col-6 col-lg-2">
-      <div class="card my-2">
+      <div class="card my-2 question-border">
         <div class="image-box">
           <b-img
             fluid
@@ -32,7 +32,7 @@
       </div>
     </b-col>
     <b-col v-on:click="$emit('click', itemNames[2])" class="col-6 col-lg-2">
-      <div class="card my-2">
+      <div class="card my-2 question-border">
         <div class="image-box">
           <b-img
             fluid
@@ -47,7 +47,7 @@
       </div>
     </b-col>
     <b-col v-on:click="$emit('click', itemNames[3])" class="col-6 col-lg-2">
-      <div class="card my-2">
+      <div class="card my-2 question-border">
         <div class="image-box">
           <b-img
             fluid
@@ -64,7 +64,7 @@
   </b-row>
 </template>
 <script>
-import strawberry from "../assets/strawberry.png";
+import strawberry from "../assets/strawberry.webp";
 export default {
   name: "question",
   data: function () {

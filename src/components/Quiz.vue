@@ -9,7 +9,7 @@
       />
       <b-row class="d-flex justify-content-center">
         <b-col class="col-3">
-          <b-progress :value="progress" :max="maxProgress"></b-progress>
+          <b-progress aria-label="Voortgang van de Moodfinder" :value="progress" :max="maxProgress"></b-progress>
         </b-col>
       </b-row>
     </b-container>
@@ -17,8 +17,8 @@
 </template>
 <script>
 import question from "./Question";
-import strawberry from "../assets/strawberry.png";
-import banana from "../assets/banana.png";
+import strawberry from "../assets/strawberry.webp";
+import banana from "../assets/banana.webp";
 import quizFinished from "./QuizFinished.vue";
 export default {
   name: "app",
@@ -114,5 +114,9 @@ export default {
 .quiz {
   background-color: #403d3b;
   border-top: 2px solid #aaa199;
+}
+
+.quiz-background{
+  background-color: #403d3b;
 }
 </style>

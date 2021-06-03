@@ -11,7 +11,7 @@
         </p>
       </div>
       <div class="col-lg-3 offset-lg-0 col-10 offset-1">
-        <img src="../../non-code/thee1-home.jpg" width="100%" />
+        <img alt="Een open theefilter met losse thee erin op een tafel" src="../assets/thee1-home.jpg" width="100%" />
       </div>
     </div>
     <hr class="col-lg-8 offset-lg-2 col-10 offset-1" id="ons_doel" />
@@ -19,7 +19,7 @@
       <b-col
         class="col-lg-3 offset-lg-2 mb-lg-0 col-10 offset-1 order-last order-md-1"
       >
-        <img src="../../non-code/thee2-home.jpg" width="100%" />
+        <img alt="Thee wordt ingeschoken met een goudkleurige theepot in een Chinees kopje" src="../assets/thee2-home.jpg" width="100%" />
       </b-col>
       <b-col
         class="col-lg-5 offset-lg-0 col-10 offset-1 order-first mb-3 order-md-2"
