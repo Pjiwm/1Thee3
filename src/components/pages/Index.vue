@@ -1,7 +1,7 @@
 <template>
 <div>
 
-      <Header />
+    <Header />
     <Main />
     <Quiz />
 </div>

@@ -6,10 +6,10 @@
           <div class="main-title">
             <h1>Tea is like a hug in a mug</h1>
             <p class="pb-3">
-              Wil jij weten welke thee bij jou past? Doe dan hieronder de quiz!
+              Wil jij weten welke thee bij jou past? Doe dan hieronder de mood finder!
             </p>
           </div>
-          <button type="button" class="btn btn-primary">Doe de quiz</button>
+          <button type="button" class="btn btn-primary">Doe de mood finder</button>
         </div>
       </div>
     </div>

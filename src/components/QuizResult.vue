@@ -1,5 +1,5 @@
 <template>
-  <main class="container-fluid main-bg">
+  <main class="container-fluid main-bg mt-5 pt-5 pb-3">
     <div class="offset-lg-2 offset-md-2 offset-sm-1">
       <div class="row">
         <card class="col-lg-2 col-md-2 col-sm-3">
@@ -130,7 +130,6 @@ h1 {
 
 p {
   font-size: 20px;
-  text-align: justify;
 }
 
 img {

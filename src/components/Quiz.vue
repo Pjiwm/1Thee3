@@ -1,8 +1,9 @@
 <template>
-  <div class="quiz-background py-5" id="quiz">
+  <div class="quiz-background py-5" id="mood-finder">
     <b-container class="text-center">
+      <h1 class="text-white">Quiz</h1>
       <component
-        v-on:click="(chosenName) => this.answerQuestion(chosenName)"
+        v-on:click="(chosenName) => this._answerQuestion(chosenName)"
         v-bind:is="component"
         ref="question"
       />
@@ -37,13 +38,24 @@ export default {
     };
   },
   methods: {
-    answerQuestion(chosenName) {
+    /**
+     * @description
+     * saved pressed answer text in answers array
+     */
+    _answerQuestion(chosenName) {
       this.answers.push(chosenName);
       this.switchQuestion();
     },
-
+    /**
+     * @description switches the questions when the user performs an action in the quiz
+     * it swaps out the quiz images, text and quiz question for each question.
+     */
     switchQuestion() {
-      //questionIndex stands for the question the user would like to go to. So e.g questionIndex = 1 is going to the second question (counting from 0)
+      /**
+       * questionIndex stands for the question the user would like to go to.
+       * So e.g questionIndex = 1 is going to the second question (counting from 0)
+       */
+      this.questionIndex++;
       switch (this.questionIndex) {
         //For question 1, see Question.Vue data field
         case 0:
@@ -60,7 +72,6 @@ export default {
             this.strawberry,
             this.strawberry
           );
-          this.questionIndex++;
           this.progress = 0;
           break;
         case 1:
@@ -72,7 +83,6 @@ export default {
             this.banana,
             this.banana
           );
-          this.questionIndex++;
           this.progress = 33;
           break;
         case 2:
@@ -90,7 +100,6 @@ export default {
             this.banana
           );
           this.progress = 66;
-          this.questionIndex++;
           break;
         case 3:
           this.component = quizFinished;
@@ -102,8 +111,12 @@ export default {
 </script>
 
 <style scoped>
-.quiz-background {
+.quiz {
   background-color: #403d3b;
   border-top: 2px solid #aaa199;
+}
+
+.quiz-background{
+  background-color: #403d3b;
 }
 </style>
