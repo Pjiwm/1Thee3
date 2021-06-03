@@ -24,7 +24,7 @@
           />
         </a>
         <b-nav-item href="/#mood-finder">Mood finder</b-nav-item>
-        <b-nav-item href="#">Webshop</b-nav-item>
+        <b-nav-item href="/webshop">Webshop</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
