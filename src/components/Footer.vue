@@ -7,20 +7,17 @@
           <p class="footer-text-left">Email | info@1t3</p>
         </b-col>
         <b-col cols="6">
-          <p class="footer-text-right">
+          <div class="footer-text-right">
             <img class="d-block" src="../../src/assets/1thee3logo.png" width="60px" />
-
-            <img
-              src="../../src/assets/facebook-square-brands.svg"
-              a href="www.facebook.com"
-              width="30px"
-            />
-            <img
-              src="../../src/assets/instagram-brands.svg"
-              a href="instagram.com"
-              width="30px"
-            />
-          </p>
+            <div class="fontIcon">
+              <a href="facebook.com">
+                <font-awesome-icon class="fbIcon" :icon="['fab', 'facebook-square']" />
+              </a>
+              <a href="instagram.com">
+                <font-awesome-icon class="instaIcon" :icon="['fab', 'instagram']" />
+              </a>
+            </div>
+          </div>
         </b-col>
         <b-col class="pt-1" cols="12">
           <p class="footer-text-bottom m-0">© IT3.nl | 2021</p>
@@ -57,5 +54,22 @@ footer {
 .footer-text-bottom {
   font-size: 11px;
   text-align: center;
+}
+.fontIcon {
+  font-size: 35px;
+}
+.fbIcon {
+  padding: 3px;
+  color: #aaa199;
+}
+.fbIcon:hover{
+  padding: 2px;
+}
+.instaIcon {
+  padding: 3px;
+  color: #aaa199;
+}
+.instaIcon:hover{
+  padding: 2px;
 }
 </style>
