@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "npm install -g @vue/cli @vue/cli-service-global &&  vue-cli-service build"
+    "deploy": "-g @vue/cli @vue/cli-service-global && vue-cli-service build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
