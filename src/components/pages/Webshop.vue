@@ -1,15 +1,34 @@
 <template>
-  <div class="d-flex align-items-center vh-100">
-    <b-container class="text-center">
-      <h1>Thee smaken</h1>
-      <div id="collection-component-1622713024168"></div>
-    </b-container>
+  <div>
+    <WebshopHeader />
+    <div class="d-flex align-items-center">
+      <b-container class="webshop-main py-5 text-center">
+        <b-row class="d-flex justify-content-center py-4">
+          <b-col cols="12" lg="8">
+            <h1>Alle thee smaken</h1>
+            <p class="under-title">
+              Alle thee, behalve kruidenthee, wordt gemaakt van theeblaadjes die
+              van de theestruik afkomstig zijn. De theestruik groeit in een
+              tropisch of subtropisch klimaat. ... Ondanks dat er veel
+              verschillende soorten thee bestaan zijn ze allemaal afkomstig van
+              de bladeren van dezelfde theestruik: de Camellia Sinensis.
+            </p>
+          </b-col>
+        </b-row>
+          <hr class="" id="ons_doel" />
+        <div id="collection-component-1622713024168"></div>
+      </b-container>
+    </div>
   </div>
 </template>
 
 <script>
+import WebshopHeader from "@/components/WebshopHeader.vue";
 export default {
   name: "webshop",
+  components: {
+    WebshopHeader,
+  },
   created: function () {
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
@@ -290,13 +309,25 @@ export default {
 </script>
 
 <style scoped>
+.webshop-main {
+  min-height: 100vh;
+}
+
 h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
+
 div {
   background-color: #262524;
   color: #fff;
+}
+
+hr {
+  background-color: #aaa199;
+  opacity: 1;
+  height: 2px !important;
+  border-radius: 20px;
 }
 </style>
 
