@@ -22,20 +22,19 @@ import webshop from "./components/pages/Webshop"
 const resultsRoute = { path: "/results", component: results };
 const indexRoute = { path: "/", component: index };
 const pageNotFoundRoute = { path: "*", component: pageNotFound };
-const webshopRoute = {path: "/webshop", component: webshop}
+const webshopRoute = { path: "/webshop", component: webshop }
 
 const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
 
 
 const router = new VueRouter({
-  routes,
-  mode: "history",
+    routes,
+    mode: "history",
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  render: function (h) { return h(App) },
+    router,
+    render: function(h) { return h(App) },
 }).$mount('#app')
-
