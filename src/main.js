@@ -6,7 +6,14 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-
+// Import for fontAwesome : svg-core, brand icons and vue
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+// arraylist voor fontawesome
+library.add(fab)
+// fontawesome component neccesary to call
+Vue.component('font-awesome-icon', FontAwesomeIcon, fab)
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
@@ -22,20 +29,19 @@ import webshop from "./components/pages/Webshop"
 const resultsRoute = { path: "/results", component: results };
 const indexRoute = { path: "/", component: index };
 const pageNotFoundRoute = { path: "*", component: pageNotFound };
-const webshopRoute = {path: "/webshop", component: webshop}
+const webshopRoute = { path: "/webshop", component: webshop }
 
 const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
 
 
 const router = new VueRouter({
-  routes,
-  mode: "history",
+    routes,
+    mode: "history",
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  render: function (h) { return h(App) },
+    router,
+    render: function(h) { return h(App) },
 }).$mount('#app')
-

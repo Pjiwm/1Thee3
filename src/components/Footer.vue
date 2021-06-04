@@ -1,22 +1,46 @@
 <template>
   <footer id="footer">
-    <b-container class="bv-example-row pt-4">
-      <b-row>
-        <b-col cols="6">
-          <p class="footer-text-left">Kvk nummer | 17240186</p>
-          <p class="footer-text-left">Email | info@1t3</p></b-col
-        >
-        <b-col cols="6"
-          ><p class="footer-text-right">
-            <img aria-label="1 thee 3 logo" class="d-block" src="../assets/1thee3logo.webp" width="60px" />
-            <img aria-label="Twitter logo met link" src="../assets/twitter.png" width="30px" />
-            <img aria-label="Email logo met link" src="../assets/email.png" width="30px" /></p
-        ></b-col>
-        <b-col class="pt-1" cols="12">
-          <p class="footer-text-bottom m-0">© IT3.nl | 2021</p></b-col
-        >
-      </b-row>
-    </b-container>
+    <b-row class="py-4">
+      <b-col cols="6" md="8" lg="9">
+        <div class="padding-left-3">
+          <p>Kvk nummer | 17240186</p>
+          <p>Email | info@1t3</p>
+        </div>
+      </b-col>
+      <b-col
+        class="d-flex align-items-center flex-column"
+        cols="6"
+        md="4"
+        lg="3"
+      >
+        <div class="px-3">
+          <img
+            class="img-fluid"
+            src="../../src/assets/1thee3logo.png"
+            width="90rem"
+          />
+          <div class="iconBox">
+            <a href="facebook.com">
+              <font-awesome-icon
+                class="icon p-1"
+                :icon="['fab', 'facebook-square']"
+              />
+            </a>
+            <a href="instagram.com">
+              <font-awesome-icon
+                class="icon p-1"
+                :icon="['fab', 'instagram']"
+              />
+            </a>
+          </div>
+        </div>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col cols="12">
+        <p class="text-center">© IT3.nl | 2021</p>
+      </b-col>
+    </b-row>
   </footer>
 </template>
 
@@ -28,24 +52,22 @@ export default {
 
 <style scoped>
 footer {
-  text-align: left;
-  bottom: 0;
-  left: 0;
-  padding: 3px;
   background-color: #262524;
   color: white;
   border-top: 2px solid #aaa199;
 }
-.footer-text-left {
-  font-size: 11px;
-  text-align: left;
+
+.padding-left-3 {
+  padding-left: 1rem !important;
 }
-.footer-text-right {
-  font-size: 11px;
-  float: right;
+
+.iconBox {
+  font-size: 3.1rem;
 }
-.footer-text-bottom {
-  font-size: 11px;
-  text-align: center;
+.icon {
+  color: #aaa199;
+}
+.icon:hover {
+  padding: 0px !important;
 }
 </style>
