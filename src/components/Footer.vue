@@ -4,17 +4,24 @@
       <b-row>
         <b-col cols="6">
           <p class="footer-text-left">Kvk nummer | 17240186</p>
-          <p class="footer-text-left">Email | info@1t3</p></b-col
-        >
-        <b-col cols="6"
-          ><p class="footer-text-right">
-            <img aria-label="1 thee 3 logo" class="d-block" src="../assets/1thee3logo.webp" width="60px" />
-            <img aria-label="Twitter logo met link" src="../assets/twitter.png" width="30px" />
-            <img aria-label="Email logo met link" src="../assets/email.png" width="30px" /></p
-        ></b-col>
+          <p class="footer-text-left">Email | info@1t3</p>
+        </b-col>
+        <b-col cols="6">
+          <div class="footer-text-right">
+            <img class="d-block" src="../../src/assets/1thee3logo.png" width="60px" />
+            <div class="fontIcon">
+              <a href="facebook.com">
+                <font-awesome-icon class="fbIcon" :icon="['fab', 'facebook-square']" />
+              </a>
+              <a href="instagram.com">
+                <font-awesome-icon class="instaIcon" :icon="['fab', 'instagram']" />
+              </a>
+            </div>
+          </div>
+        </b-col>
         <b-col class="pt-1" cols="12">
-          <p class="footer-text-bottom m-0">© IT3.nl | 2021</p></b-col
-        >
+          <p class="footer-text-bottom m-0">© IT3.nl | 2021</p>
+        </b-col>
       </b-row>
     </b-container>
   </footer>
@@ -47,5 +54,22 @@ footer {
 .footer-text-bottom {
   font-size: 11px;
   text-align: center;
+}
+.fontIcon {
+  font-size: 35px;
+}
+.fbIcon {
+  padding: 3px;
+  color: #aaa199;
+}
+.fbIcon:hover{
+  padding: 0px;
+}
+.instaIcon {
+  padding: 3px;
+  color: #aaa199;
+}
+.instaIcon:hover{
+  padding: 0px;
 }
 </style>
