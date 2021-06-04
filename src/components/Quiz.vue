@@ -1,7 +1,7 @@
 <template>
   <div class="quiz-background py-5" id="mood-finder">
     <b-container class="text-center">
-      <h1 class="text-white">Quiz</h1>
+      <h1 class="text-white">Mood finder</h1>
       <component
         v-on:click="(chosenName) => this._answerQuestion(chosenName)"
         v-bind:is="component"

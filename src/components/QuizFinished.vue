@@ -1,7 +1,7 @@
 <template>
     <b-row class="d-flex justify-content-center py-3">
       <b-col class="col-6 col-lg-2">
-          <p class="text-white">De quiz is gemaakt. Je resultaten staan klaar!</p>
+          <p class="text-white">De Mood finder is gemaakt. Je resultaten staan klaar!</p>
           <router-link :to="{ path: '/results' }"><button class="btn btn-primary" type="button"> Verder naar resultaten</button></router-link>
       </b-col>
     </b-row>
