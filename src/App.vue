@@ -27,6 +27,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 
 body {
+  overflow-x:hidden;
   font-family: "Comfortaa", Helvetica, sans-serif !important;
 }
 
