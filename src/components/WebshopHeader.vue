@@ -27,7 +27,7 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/header-image.jpg");
+  background-image: url("../assets/header-image.webp");
   position: relative;
   padding-top: 71px;
 }
