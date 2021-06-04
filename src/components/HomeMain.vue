@@ -4,7 +4,7 @@
       <div class="col-lg-5 offset-lg-2 mb-lg-0 col-10 offset-1 mb-3">
         <h1>Impressie</h1>
         <p>
-          Dit is een deployment test Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque
+          Dit is een deployment test 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque
           corrupti repellendus, eveniet non earum illum nisi aliquid, nam eum
           explicabo. Iusto porro, minus doloremque doloribus earum laboriosam
           repudiandae labore?
