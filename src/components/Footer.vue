@@ -63,13 +63,13 @@ footer {
   color: #aaa199;
 }
 .fbIcon:hover{
-  padding: 2px;
+  padding: 0px;
 }
 .instaIcon {
   padding: 3px;
   color: #aaa199;
 }
 .instaIcon:hover{
-  padding: 2px;
+  padding: 0px;
 }
 </style>
