@@ -14,11 +14,13 @@
         lg="3"
       >
         <div class="px-3">
+          <a href="/">
           <img
             class="img-fluid"
             src="../../src/assets/1thee3logo.png"
             width="90rem"
           />
+          </a>
           <div class="iconBox">
             <a href="facebook.com">
               <font-awesome-icon
