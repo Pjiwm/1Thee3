@@ -15,7 +15,7 @@
             </p>
           </b-col>
         </b-row>
-          <hr class="" id="ons_doel" />
+        <hr class="" id="ons_doel" />
         <div id="collection-component-1622713024168"></div>
       </b-container>
     </div>
@@ -28,6 +28,10 @@ export default {
   name: "webshop",
   components: {
     WebshopHeader,
+  },
+  metaInfo: {
+    title: "1T3",
+    titleTemplate: "%s - Webshop",
   },
   created: function () {
     var scriptURL =

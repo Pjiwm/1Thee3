@@ -1,5 +1,6 @@
 <template>
   <footer id="footer">
+    <b-container>
     <b-row class="py-4">
       <b-col cols="6" md="8" lg="9">
         <div class="padding-left-3">
@@ -14,11 +15,13 @@
         lg="3"
       >
         <div class="px-3">
+          <a href="/">
           <img
             class="img-fluid"
             src="../../src/assets/1thee3logo.png"
             width="90rem"
           />
+          </a>
           <div class="iconBox">
             <a href="facebook.com">
               <font-awesome-icon
@@ -41,6 +44,7 @@
         <p class="text-center">© IT3.nl | 2021</p>
       </b-col>
     </b-row>
+    </b-container>
   </footer>
 </template>
 
@@ -53,7 +57,6 @@ export default {
 <style scoped>
 footer {
   background-color: #262524;
-  color: white;
   border-top: 2px solid #aaa199;
 }
 

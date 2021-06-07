@@ -21,6 +21,10 @@ export default {
   components: {
     QuizResults,
   },
+  metaInfo: {
+    title: "1T3",
+    titleTemplate: "%s - Results",
+  },
 };
 </script>
 

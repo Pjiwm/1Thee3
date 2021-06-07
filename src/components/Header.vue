@@ -6,15 +6,21 @@
           <div class="main-title">
             <h1>Tea is like a hug in a mug</h1>
             <p class="pb-3">
-              Wil jij weten welke thee bij jou past? Doe dan hieronder de mood finder!
+              Wil jij weten welke thee bij jou past? Doe dan hieronder de mood
+              finder!
             </p>
           </div>
-          <button type="button" class="btn btn-primary">Doe de mood finder</button>
+          <a href="/#mood-finder">
+            <button type="button" class="btn btn-primary">
+              Doe de mood finder
+            </button>
+          </a>
         </div>
       </div>
     </div>
     <!-- Font size 0 is to make the text readable for text-readers, but not for other users -->
-    <a class="d-block" href="#impressie" style="font-size:0px"> Link naar impressie
+    <a class="d-block" href="#impressie" style="font-size: 0px">
+      Link naar impressie
       <div class="arrow bounce"></div>
     </a>
   </header>
@@ -32,6 +38,7 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: url("../assets/header-image.webp");
   position: relative;
   padding-top: 71px;
@@ -50,7 +57,6 @@ header:after {
 
 .header-title {
   z-index: 50;
-  color: #fff;
 }
 
 h1 {

@@ -619,11 +619,6 @@ export default {
 </script>
 
 <style scoped>
-main {
-  color: #ffffff;
-  background-color: #262524;
-}
-
 .card {
   margin: 0;
   padding: 0;
@@ -639,23 +634,8 @@ hr {
   background-color: #aaa199;
   opacity: 1;
   height: 2px !important;
-  /* border-bottom: solid 1px #000000; */
   border-radius: 20px;
 }
-/* 
-.btn {
-  border: 2px solid white;
-  background-color: black;
-  color: white;
-  padding: 14px 28px;
-}
-
-.whitebtn:hover {
-  border: 2px solid black;
-  background-color: white;
-  color: black;
-}
-*/
 h1 {
   margin-bottom: 15px;
 }

@@ -39,12 +39,12 @@ export default {
 
 <style scoped>
 .navbar-brand {
-  width: 60px;
+  width: 90px;
   margin: 0 10px;
 }
 
 .mobile-logo {
-  width: 45px;
+  width: 60px;
 }
 
 .nav-item {
