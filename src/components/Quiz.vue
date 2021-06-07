@@ -16,6 +16,7 @@
   </div>
 </template>
 <script>
+import quizStart from "./QuizStart.vue";
 import question from "./Question";
 import strawberry from "../assets/strawberry.webp";
 import banana from "../assets/banana.webp";
@@ -23,6 +24,7 @@ import quizFinished from "./QuizFinished.vue";
 export default {
   name: "app",
   components: {
+    quizStart,
     question,
     quizFinished,
   },
@@ -30,7 +32,7 @@ export default {
     return {
       questionIndex: 0,
       answers: [],
-      component: "question",
+      component: "quizStart",
       strawberry: strawberry,
       banana: banana,
       progress: 0,
@@ -57,8 +59,12 @@ export default {
        */
       this.questionIndex++;
       switch (this.questionIndex) {
-        //For question 1, see Question.Vue data field
         case 0:
+          this.component = quizStart;
+          break;
+        //For question 1, see Question.Vue data field
+        case 1:
+          this.component = "question";
           this.$refs.question.setQuestion("Question 1");
           this.$refs.question.setText(
             "strawberry",
@@ -74,7 +80,7 @@ export default {
           );
           this.progress = 0;
           break;
-        case 1:
+        case 2:
           this.$refs.question.setQuestion("Question 2");
           this.$refs.question.setText("banana", "banana", "banana", "banana");
           this.$refs.question.setImage(
@@ -85,7 +91,7 @@ export default {
           );
           this.progress = 33;
           break;
-        case 2:
+        case 3:
           this.$refs.question.setQuestion("Question 3");
           this.$refs.question.setText(
             "strawberry",
@@ -101,7 +107,7 @@ export default {
           );
           this.progress = 66;
           break;
-        case 3:
+        case 4:
           this.component = quizFinished;
           this.progress = 99;
       }
