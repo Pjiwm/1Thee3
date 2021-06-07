@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import QuizResults from "../QuizResult";
+import QuizResults from "@/components/QuizResult.vue";
 export default {
   name: "Results",
   components: {
@@ -25,11 +25,10 @@ export default {
 </script>
 
 <style scoped>
-.dark-background{
+.dark-background {
   color: #ffffff;
   background-color: #262524;
 }
-
 </style>
 
 
