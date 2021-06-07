@@ -10,9 +10,11 @@
               finder!
             </p>
           </div>
-          <button type="button" class="btn btn-primary">
-            Doe de mood finder
-          </button>
+          <a href="/#mood-finder">
+            <button type="button" class="btn btn-primary">
+              Doe de mood finder
+            </button>
+          </a>
         </div>
       </div>
     </div>

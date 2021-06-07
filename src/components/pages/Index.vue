@@ -1,10 +1,9 @@
 <template>
-<div>
-
+  <div>
     <Header />
     <Main />
     <Quiz />
-</div>
+  </div>
 </template>
 
 <script>
@@ -18,6 +17,10 @@ export default {
     Header,
     Main,
     Quiz,
+  },
+  metaInfo: {
+    title: "1T3",
+    titleTemplate: "%s - Home",
   },
 };
 </script>

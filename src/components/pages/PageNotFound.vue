@@ -15,6 +15,10 @@
 <script>
 export default {
   name: "PageNotFound",
+  metaInfo: {
+    title: "1T3",
+    titleTemplate: "%s - 404",
+  },
 };
 </script>
 
