@@ -4,17 +4,18 @@ import VueRouter from "vue-router";
 import "./registerServiceWorker";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 // Import Bootstrap an BootstrapVue CSS files (order is important)
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import "../src/scss/bootstrap.css";
 // Import for fontAwesome : svg-core, brand icons and vue
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 // arraylist voor fontawesome
 library.add(fab)
-// fontawesome component neccesary to call
+    // fontawesome component neccesary to call
 Vue.component('font-awesome-icon', FontAwesomeIcon, fab)
-// Make BootstrapVue available throughout your project
+    // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
