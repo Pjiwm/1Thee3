@@ -3,23 +3,19 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 import "./registerServiceWorker";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
-// Import Bootstrap an BootstrapVue CSS files (order is important)
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-// Import for fontAwesome : svg-core, brand icons and vue
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-// arraylist voor fontawesome
+import VueMeta from 'vue-meta'
+
 library.add(fab)
-// fontawesome component neccesary to call
 Vue.component('font-awesome-icon', FontAwesomeIcon, fab)
-// Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
-// Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
-// install router
 Vue.use(VueRouter);
+Vue.use(VueMeta);
 
 import results from "./components/pages/Results";
 import index from "./components/pages/Index";
@@ -43,5 +39,5 @@ Vue.config.productionTip = false;
 
 new Vue({
     router,
-    render: function(h) { return h(App) },
+    render: function (h) { return h(App) },
 }).$mount('#app')

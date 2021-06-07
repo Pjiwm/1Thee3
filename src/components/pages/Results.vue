@@ -21,15 +21,18 @@ export default {
   components: {
     QuizResults,
   },
+  metaInfo: {
+    title: "1T3",
+    titleTemplate: "%s - Results",
+  },
 };
 </script>
 
 <style scoped>
-.dark-background{
+.dark-background {
   color: #ffffff;
   background-color: #262524;
 }
-
 </style>
 
 

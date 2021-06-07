@@ -16,6 +16,7 @@
     "bootstrap-vue": "^2.21.2",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.12",
+    "vue-meta": "^2.4.0",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
