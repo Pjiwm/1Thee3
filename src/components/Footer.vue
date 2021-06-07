@@ -1,5 +1,6 @@
 <template>
   <footer id="footer">
+    <b-container>
     <b-row class="py-4">
       <b-col cols="6" md="8" lg="9">
         <div class="padding-left-3">
@@ -43,6 +44,7 @@
         <p class="text-center">© IT3.nl | 2021</p>
       </b-col>
     </b-row>
+    </b-container>
   </footer>
 </template>
 

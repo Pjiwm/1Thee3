@@ -9,7 +9,12 @@
       />
       <b-row class="d-flex justify-content-center">
         <b-col cols="12" md="8" class="pt-3">
-          <b-progress variant="primary" aria-label="Voortgang van de Moodfinder" :value="progress" :max="maxProgress" ></b-progress>
+          <b-progress
+            variant="primary"
+            aria-label="Voortgang van de Moodfinder"
+            :value="progress"
+            :max="maxProgress"
+          ></b-progress>
         </b-col>
       </b-row>
     </b-container>
@@ -122,14 +127,7 @@ export default {
   border-top: 2px solid #aaa199;
 }
 
-.quiz-background{
+.quiz-background {
   background-color: #403d3b;
 }
-
-.progress-bar {
-  background-color: #bfa253 !important;
-}
-
-
-
 </style>

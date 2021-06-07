@@ -44,9 +44,6 @@ export default {
 </script>
 
 <style scoped>
-main {
-  color: #ffffff;
-}
 
 h1 {
   margin-bottom: 15px;
