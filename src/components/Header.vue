@@ -57,7 +57,6 @@ header:after {
 
 .header-title {
   z-index: 50;
-  color: #fff;
 }
 
 h1 {

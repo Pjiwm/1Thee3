@@ -46,7 +46,6 @@ export default {
 <style scoped>
 main {
   color: #ffffff;
-  background-color: #262524;
 }
 
 h1 {

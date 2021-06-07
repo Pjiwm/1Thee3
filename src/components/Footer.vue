@@ -55,7 +55,6 @@ export default {
 <style scoped>
 footer {
   background-color: #262524;
-  color: white;
   border-top: 2px solid #aaa199;
 }
 
