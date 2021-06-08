@@ -4,7 +4,6 @@ services:
         container_name: 1_thee_3
         build: .
         command: npm run serve
-        #command: npm i
         volumes: 
             - .:/usr/src/app
         ports: 
