@@ -125,9 +125,15 @@ export default {
 #mood-finder {
   background-color: #403d3b;
   border-top: 2px solid #aaa199;
+  min-height: 450px;
 }
 
 .quiz-background {
-  background-color: #403d3b;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("https://hetherdertje.nl/phpthumbsup/w/2545/h/900/zc/1/fltr[]/clr%7C35%7C000000/src/uploads/assets/uploads/tea.jpg");
+  position: relative;
 }
 </style>
