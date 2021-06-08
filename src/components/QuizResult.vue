@@ -34,7 +34,7 @@
             blanditiis accusantium neque iure id corrupti aperiam rem tempora,
             quasi ipsa dolorum totam!
           </p>
-          <div id="product-component-1623067632340"></div>
+          <div id="product-1"></div>
         </div>
       </div>
 
@@ -73,7 +73,7 @@
             blanditiis accusantium neque iure id corrupti aperiam rem tempora,
             quasi ipsa dolorum totam!
           </p>
-          <div id="product-component-1623067098495"></div>
+          <div id="product-2"></div>
         </div>
       </div>
     </div>
@@ -83,9 +83,10 @@
 <script>
 export default {
   name: "QuizResult",
-  components: {},
   /*<![CDATA[*/
   created: function () {
+    let productIds = [6710995452111, 6711744037071];
+    let i = 0;
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
     if (window.ShopifyBuy) {
@@ -112,476 +113,245 @@ export default {
         domain: "1t3-nl.myshopify.com",
         storefrontAccessToken: "9bc45730908a4fbfe63a973eef74d5cc",
       });
-      ui.createComponent("product", {
-          id: "6706664243407",
-          node: document.getElementById("product-component-1623067632340"),
-          moneyFormat: "%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D",
-          options: {
-            product: {
-              styles: {
-                product: {
-                  "@media (min-width: 601px)": {
-                    "max-width": "calc(25% - 20px)",
-                    "margin-left": "20px",
-                    "margin-bottom": "50px",
+      window.ShopifyBuy.UI.onReady(client).then(function (ui) {
+        productIds.forEach((id) => {
+          i++
+          ui.createComponent("product", {
+            id: id,
+            node: document.getElementById("product-" + i),
+            moneyFormat: "%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D",
+            options: {
+              product: {
+                styles: {
+                  product: {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px",
+                    },
                   },
-                },
-                title: {
-                  color: "#ffffff",
-                },
-                button: {
-                  ":hover": {
-                    "background-color": "#ac924b",
+                  title: {
+                    color: "#ffffff",
                   },
-                  "background-color": "#bfa253",
-                  ":focus": {
-                    "background-color": "#ac924b",
+                  button: {
+                    ":hover": {
+                      "background-color": "#ac924b",
+                    },
+                    "background-color": "#bfa253",
+                    ":focus": {
+                      "background-color": "#ac924b",
+                    },
                   },
-                  "padding-left": "100px",
-                  "padding-right": "100px",
-                },
-                price: {
-                  color: "#ffffff",
-                },
-                compareAt: {
-                  color: "#ffffff",
-                },
-                unitPrice: {
-                  color: "#ffffff",
-                },
-              },
-              contents: {
-                img: false,
-                title: false,
-                price: false,
-              },
-              text: {
-                button: "In winkelwagen",
-              },
-            },
-            productSet: {
-              styles: {
-                products: {
-                  "@media (min-width: 601px)": {
-                    "margin-left": "-20px",
+                  price: {
+                    color: "#ffffff",
                   },
-                },
-              },
-            },
-            modalProduct: {
-              contents: {
-                img: false,
-                imgWithCarousel: true,
-                button: false,
-                buttonWithQuantity: true,
-              },
-              styles: {
-                product: {
-                  "@media (min-width: 601px)": {
-                    "max-width": "100%",
-                    "margin-left": "0px",
-                    "margin-bottom": "0px",
+                  compareAt: {
+                    color: "#ffffff",
                   },
-                },
-                button: {
-                  ":hover": {
-                    "background-color": "#ac924b",
-                  },
-                  "background-color": "#bfa253",
-                  ":focus": {
-                    "background-color": "#ac924b",
-                  },
-                  "padding-left": "100px",
-                  "padding-right": "100px",
-                },
-                title: {
-                  "font-family": "Helvetica Neue, sans-serif",
-                  "font-weight": "bold",
-                  "font-size": "26px",
-                  color: "#4c4c4c",
-                },
-                price: {
-                  "font-family": "Helvetica Neue, sans-serif",
-                  "font-weight": "normal",
-                  "font-size": "18px",
-                  color: "#4c4c4c",
-                },
-                compareAt: {
-                  "font-family": "Helvetica Neue, sans-serif",
-                  "font-weight": "normal",
-                  "font-size": "15.299999999999999px",
-                  color: "#4c4c4c",
-                },
-                unitPrice: {
-                  "font-family": "Helvetica Neue, sans-serif",
-                  "font-weight": "normal",
-                  "font-size": "15.299999999999999px",
-                  color: "#4c4c4c",
-                },
-              },
-              text: {
-                button: "Add to cart",
-              },
-            },
-            option: {},
-            cart: {
-              styles: {
-                button: {
-                  ":hover": {
-                    "background-color": "#ac924b",
-                  },
-                  "background-color": "#bfa253",
-                  ":focus": {
-                    "background-color": "#ac924b",
-                  },
-                },
-                title: {
-                  color: "#ffffff",
-                },
-                header: {
-                  color: "#ffffff",
-                },
-                lineItems: {
-                  color: "#ffffff",
-                },
-                subtotalText: {
-                  color: "#ffffff",
-                },
-                subtotal: {
-                  color: "#ffffff",
-                },
-                notice: {
-                  color: "#ffffff",
-                },
-                currency: {
-                  color: "#ffffff",
-                },
-                close: {
-                  color: "#ffffff",
-                  ":hover": {
+                  unitPrice: {
                     color: "#ffffff",
                   },
                 },
-                empty: {
-                  color: "#ffffff",
+                contents: {
+                  img: false,
+                  title: false,
+                  price: false,
                 },
-                noteDescription: {
-                  color: "#ffffff",
-                },
-                discountText: {
-                  color: "#ffffff",
-                },
-                discountIcon: {
-                  fill: "#ffffff",
-                },
-                discountAmount: {
-                  color: "#ffffff",
-                },
-                cart: {
-                  "background-color": "#2d2828",
-                },
-                footer: {
-                  "background-color": "#2d2828",
+                text: {
+                  button: "In winkelwagen",
                 },
               },
-              text: {
-                title: "Winkelwagen",
-                total: "Subtotaal",
-                empty: "Winkelwagen is leeg",
-                notice:
-                  "Verzend- en kortingscodes worden toegevoegd bij het afrekenen.",
-                button: "Bestellen",
-              },
-              popup: false,
-            },
-            toggle: {
-              styles: {
-                toggle: {
-                  "background-color": "#bfa253",
-                  ":hover": {
-                    "background-color": "#ac924b",
-                  },
-                  ":focus": {
-                    "background-color": "#ac924b",
+              productSet: {
+                styles: {
+                  products: {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px",
+                    },
                   },
                 },
               },
-            },
-            lineItem: {
-              styles: {
-                variantTitle: {
-                  color: "#ffffff",
+              modalProduct: {
+                contents: {
+                  img: false,
+                  imgWithCarousel: true,
+                  button: false,
+                  buttonWithQuantity: true,
                 },
-                title: {
-                  color: "#ffffff",
+                styles: {
+                  product: {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px",
+                    },
+                  },
+                  button: {
+                    ":hover": {
+                      "background-color": "#ac924b",
+                    },
+                    "background-color": "#bfa253",
+                    ":focus": {
+                      "background-color": "#ac924b",
+                    },
+                    "padding-left": "100px",
+                    "padding-right": "100px",
+                  },
+                  title: {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px",
+                    color: "#4c4c4c",
+                  },
+                  price: {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    color: "#4c4c4c",
+                  },
+                  compareAt: {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    color: "#4c4c4c",
+                  },
+                  unitPrice: {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    color: "#4c4c4c",
+                  },
                 },
-                price: {
-                  color: "#ffffff",
-                },
-                fullPrice: {
-                  color: "#ffffff",
-                },
-                discount: {
-                  color: "#ffffff",
-                },
-                discountIcon: {
-                  fill: "#ffffff",
-                },
-                quantity: {
-                  color: "#ffffff",
-                },
-                quantityIncrement: {
-                  color: "#ffffff",
-                  "border-color": "#ffffff",
-                },
-                quantityDecrement: {
-                  color: "#ffffff",
-                  "border-color": "#ffffff",
-                },
-                quantityInput: {
-                  color: "#ffffff",
-                  "border-color": "#ffffff",
+                text: {
+                  button: "Add to cart",
                 },
               },
-            },
-          },
-        });
-        ui.createComponent("product", {
-          id: "6710995452111",
-          node: document.getElementById("product-component-1623067098495"),
-          moneyFormat: "%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D",
-          options: {
-            product: {
-              styles: {
-                product: {
-                  "@media (min-width: 601px)": {
-                    "max-width": "calc(25% - 20px)",
-                    "margin-left": "20px",
-                    "margin-bottom": "50px",
+              option: {},
+              cart: {
+                styles: {
+                  button: {
+                    ":hover": {
+                      "background-color": "#ac924b",
+                    },
+                    "background-color": "#bfa253",
+                    ":focus": {
+                      "background-color": "#ac924b",
+                    },
                   },
-                },
-                title: {
-                  color: "#ffffff",
-                },
-                button: {
-                  ":hover": {
-                    "background-color": "#ac924b",
-                  },
-                  "background-color": "#bfa253",
-                  ":focus": {
-                    "background-color": "#ac924b",
-                  },
-                  width: "100%",
-                },
-                price: {
-                  color: "#ffffff",
-                },
-                compareAt: {
-                  color: "#ffffff",
-                },
-                unitPrice: {
-                  color: "#ffffff",
-                },
-              },
-              contents: {
-                img: false,
-                title: false,
-                price: false,
-              },
-              text: {
-                button: "In winkelwagen",
-              },
-            },
-            productSet: {
-              styles: {
-                products: {
-                  "@media (min-width: 601px)": {
-                    "margin-left": "-20px",
-                  },
-                },
-              },
-            },
-            modalProduct: {
-              contents: {
-                img: false,
-                imgWithCarousel: true,
-                button: false,
-                buttonWithQuantity: true,
-              },
-              styles: {
-                product: {
-                  "@media (min-width: 601px)": {
-                    "max-width": "100%",
-                    "margin-left": "0px",
-                    "margin-bottom": "0px",
-                  },
-                },
-                button: {
-                  ":hover": {
-                    "background-color": "#ac924b",
-                  },
-                  "background-color": "#bfa253",
-                  ":focus": {
-                    "background-color": "#ac924b",
-                  },
-                  "padding-left": "100px",
-                  "padding-right": "100px",
-                },
-                title: {
-                  "font-family": "Helvetica Neue, sans-serif",
-                  "font-weight": "bold",
-                  "font-size": "26px",
-                  color: "#4c4c4c",
-                },
-                price: {
-                  "font-family": "Helvetica Neue, sans-serif",
-                  "font-weight": "normal",
-                  "font-size": "18px",
-                  color: "#4c4c4c",
-                },
-                compareAt: {
-                  "font-family": "Helvetica Neue, sans-serif",
-                  "font-weight": "normal",
-                  "font-size": "15.299999999999999px",
-                  color: "#4c4c4c",
-                },
-                unitPrice: {
-                  "font-family": "Helvetica Neue, sans-serif",
-                  "font-weight": "normal",
-                  "font-size": "15.299999999999999px",
-                  color: "#4c4c4c",
-                },
-              },
-              text: {
-                button: "Add to cart",
-              },
-            },
-            option: {},
-            cart: {
-              styles: {
-                button: {
-                  ":hover": {
-                    "background-color": "#ac924b",
-                  },
-                  "background-color": "#bfa253",
-                  ":focus": {
-                    "background-color": "#ac924b",
-                  },
-                },
-                title: {
-                  color: "#ffffff",
-                },
-                header: {
-                  color: "#ffffff",
-                },
-                lineItems: {
-                  color: "#ffffff",
-                },
-                subtotalText: {
-                  color: "#ffffff",
-                },
-                subtotal: {
-                  color: "#ffffff",
-                },
-                notice: {
-                  color: "#ffffff",
-                },
-                currency: {
-                  color: "#ffffff",
-                },
-                close: {
-                  color: "#ffffff",
-                  ":hover": {
+                  title: {
                     color: "#ffffff",
                   },
-                },
-                empty: {
-                  color: "#ffffff",
-                },
-                noteDescription: {
-                  color: "#ffffff",
-                },
-                discountText: {
-                  color: "#ffffff",
-                },
-                discountIcon: {
-                  fill: "#ffffff",
-                },
-                discountAmount: {
-                  color: "#ffffff",
-                },
-                cart: {
-                  "background-color": "#2d2828",
-                },
-                footer: {
-                  "background-color": "#2d2828",
-                },
-              },
-              text: {
-                title: "Winkelwagen",
-                total: "Subtotaal",
-                empty: "Winkelwagen is leeg",
-                notice:
-                  "Verzend- en kortingscodes worden toegevoegd bij het afrekenen.",
-                button: "Bestellen",
-              },
-              popup: false,
-            },
-            toggle: {
-              styles: {
-                toggle: {
-                  "background-color": "#bfa253",
-                  ":hover": {
-                    "background-color": "#ac924b",
+                  header: {
+                    color: "#ffffff",
                   },
-                  ":focus": {
-                    "background-color": "#ac924b",
+                  lineItems: {
+                    color: "#ffffff",
+                  },
+                  subtotalText: {
+                    color: "#ffffff",
+                  },
+                  subtotal: {
+                    color: "#ffffff",
+                  },
+                  notice: {
+                    color: "#ffffff",
+                  },
+                  currency: {
+                    color: "#ffffff",
+                  },
+                  close: {
+                    color: "#ffffff",
+                    ":hover": {
+                      color: "#ffffff",
+                    },
+                  },
+                  empty: {
+                    color: "#ffffff",
+                  },
+                  noteDescription: {
+                    color: "#ffffff",
+                  },
+                  discountText: {
+                    color: "#ffffff",
+                  },
+                  discountIcon: {
+                    fill: "#ffffff",
+                  },
+                  discountAmount: {
+                    color: "#ffffff",
+                  },
+                  cart: {
+                    "background-color": "#2d2828",
+                  },
+                  footer: {
+                    "background-color": "#2d2828",
+                  },
+                },
+                text: {
+                  title: "Winkelwagen",
+                  total: "Subtotaal",
+                  empty: "Winkelwagen is leeg",
+                  notice:
+                    "Verzend- en kortingscodes worden toegevoegd bij het afrekenen.",
+                  button: "Bestellen",
+                },
+                popup: false,
+              },
+              toggle: {
+                styles: {
+                  toggle: {
+                    "background-color": "#bfa253",
+                    ":hover": {
+                      "background-color": "#ac924b",
+                    },
+                    ":focus": {
+                      "background-color": "#ac924b",
+                    },
+                  },
+                },
+              },
+              lineItem: {
+                styles: {
+                  variantTitle: {
+                    color: "#ffffff",
+                  },
+                  title: {
+                    color: "#ffffff",
+                  },
+                  price: {
+                    color: "#ffffff",
+                  },
+                  fullPrice: {
+                    color: "#ffffff",
+                  },
+                  discount: {
+                    color: "#ffffff",
+                  },
+                  discountIcon: {
+                    fill: "#ffffff",
+                  },
+                  quantity: {
+                    color: "#ffffff",
+                  },
+                  quantityIncrement: {
+                    color: "#ffffff",
+                    "border-color": "#ffffff",
+                  },
+                  quantityDecrement: {
+                    color: "#ffffff",
+                    "border-color": "#ffffff",
+                  },
+                  quantityInput: {
+                    color: "#ffffff",
+                    "border-color": "#ffffff",
                   },
                 },
               },
             },
-            lineItem: {
-              styles: {
-                variantTitle: {
-                  color: "#ffffff",
-                },
-                title: {
-                  color: "#ffffff",
-                },
-                price: {
-                  color: "#ffffff",
-                },
-                fullPrice: {
-                  color: "#ffffff",
-                },
-                discount: {
-                  color: "#ffffff",
-                },
-                discountIcon: {
-                  fill: "#ffffff",
-                },
-                quantity: {
-                  color: "#ffffff",
-                },
-                quantityIncrement: {
-                  color: "#ffffff",
-                  "border-color": "#ffffff",
-                },
-                quantityDecrement: {
-                  color: "#ffffff",
-                  "border-color": "#ffffff",
-                },
-                quantityInput: {
-                  color: "#ffffff",
-                  "border-color": "#ffffff",
-                },
-              },
-            },
-          },
+          });
         });
+      });
     }
   },
-  /*]]>*/
 };
 </script>
 
