@@ -15,8 +15,9 @@
               type="button"
               class="btn btn-primary"
               alt="Doe de mood finder"
-              aria-label="Navigeer naar de mood finder">
-              Doe de mood finder!
+              aria-label="Navigeer naar de mood finder"
+            >
+              Doe de mood finder
             </button>
           </a>
         </div>
