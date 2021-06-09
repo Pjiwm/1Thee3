@@ -1,8 +1,8 @@
 <template>
   <b-row class="d-flex justify-content-center py-3">
-    <b-col class="col-6 col-lg-2">
+    <b-col class="col-6 col-lg-3">
       <p class="text-white">
-        De Mood finder is gemaakt. Je resultaten staan klaar!
+        De mood finder is afgerond.<br />Jouw theepakket staat klaar!
       </p>
       <router-link :to="{ path: '/results' }"
         ><button
@@ -11,7 +11,7 @@
           alt="Verder naar resultaat"
           aria-label="Navigeer naar resultaat"
         >
-          Verder naar resultaten
+          Verder naar theepakket
         </button></router-link
       >
     </b-col>
