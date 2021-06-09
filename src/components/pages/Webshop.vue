@@ -18,7 +18,7 @@
         <hr />
         <div
           id="collection-component-1622713024168"
-          alt="Tea collection not found"
+          alt="Theecollectie niet gevonden"
         ></div>
       </b-container>
     </div>

@@ -11,6 +11,7 @@
         <b-col cols="12" md="8" class="pt-3">
           <b-progress
             variant="primary"
+            alt="Voortgangmeter"
             aria-label="Voortgang van de Moodfinder"
             :value="progress"
             :max="maxProgress"

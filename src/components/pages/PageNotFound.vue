@@ -8,8 +8,8 @@
           <a
             href="/"
             class="btn btn-primary"
-            aria-label="Terug naar home"
-            alt="Navigeer terug naar home"
+            aria-label="Navigeer terug naar home"
+            alt="Navigeerknop terug naar home"
             >Terug naar home</a
           >
         </b-col>

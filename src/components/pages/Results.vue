@@ -8,7 +8,7 @@
         <b-col><br /></b-col>
       </b-row>
       <b-row>
-        <b-col alt="Quiz results not found"><QuizResults /></b-col>
+        <b-col alt="Quiz results niet gevonden"><QuizResults /></b-col>
       </b-row>
     </b-container>
   </div>
