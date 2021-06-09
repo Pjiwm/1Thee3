@@ -15,8 +15,11 @@
             </p>
           </b-col>
         </b-row>
-        <hr class="" id="ons_doel" />
-        <div id="collection-component-1622713024168"></div>
+        <hr />
+        <div
+          id="collection-component-1622713024168"
+          alt="Tea collection not found"
+        ></div>
       </b-container>
     </div>
   </div>
