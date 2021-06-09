@@ -64,14 +64,22 @@
   </b-row>
 </template>
 <script>
-import strawberry from "../assets/strawberry.webp";
+import mountains from "../assets/quiz-images/question-one-quiz/mountains.png";
+import forest from "../assets/quiz-images/question-one-quiz/forest.png";
+import party from "../assets/quiz-images/question-one-quiz/party.png";
+import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png";
 export default {
   name: "question",
   data: function () {
     return {
       question: "Question 1",
-      images: [strawberry, strawberry, strawberry, strawberry],
-      itemNames: ["strawberry", "strawberry", "strawberry", "strawberry"],
+      images: [mountains, forest, party, flowerField],
+      itemNames: [
+        "bergen",
+        "bossen",
+        "weiland met bloemen",
+        "uitgaansgelegenheid",
+      ],
     };
   },
   methods: {

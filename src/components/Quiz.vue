@@ -28,11 +28,20 @@ import question from "./Question";
 import quizFinished from "./QuizFinished.vue";
 
 // Question 1:
-import mountains from "../assets/quiz-images/question-one-quiz/mountains.png"
+import mountains from "../assets/quiz-images/question-one-quiz/mountains.png";
 import forest from "../assets/quiz-images/question-one-quiz/forest.png";
-import party from "../assets/quiz-images/question-one-quiz/party.png"
-import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png"
+import party from "../assets/quiz-images/question-one-quiz/party.png";
+import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png";
 // Question 2:
+import pepper from "../assets/quiz-images/question-two-quiz/pepper.png";
+import strawberry from "../assets/quiz-images/question-two-quiz/strawberry.png"
+import apple from "../assets/quiz-images/question-two-quiz/apple.png"
+import berry from "../assets/quiz-images/question-two-quiz/berry.png"
+// Question 3:
+import jus from "../assets/quiz-images/question-three-quiz/jus.jpg"
+import sangriaFruits from "../assets/quiz-images/question-three-quiz/sangria-met-fruit.jpg"
+import beer from "../assets/quiz-images/question-three-quiz/speciaal-bier.jpg"
+import wine from "../assets/quiz-images/question-three-quiz/wijn.jpg"
 
 export default {
   name: "app",
@@ -45,13 +54,24 @@ export default {
     return {
       questionIndex: 0,
       answers: [],
+      progress: 0,
+      maxProgress: 99,
       component: "quizStart",
+      // question 1
       mountains: mountains,
       forest: forest,
       party: party,
       flowerField: flowerField,
-      progress: 0,
-      maxProgress: 99,
+      // question 2
+      pepper: pepper,
+      strawberry: strawberry,
+      apple: apple,
+      berry: berry,
+      // question 3:
+      jus: jus,
+      sangriaFruits: sangriaFruits,
+      beer: beer,
+      wine: wine,
     };
   },
   methods: {
@@ -97,7 +117,7 @@ export default {
           break;
         case 2:
           this.$refs.question.setQuestion("Question 2");
-          this.$refs.question.setText("banana", "banana", "banana", "banana");
+          this.$refs.question.setText("a", "b", "c", "d");
           this.$refs.question.setImage(
             this.banana,
             this.banana,
