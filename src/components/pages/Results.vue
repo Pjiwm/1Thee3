@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import QuizResults from "../QuizResult";
+import QuizResults from "@/components/QuizResult.vue";
 export default {
   name: "Results",
   components: {
