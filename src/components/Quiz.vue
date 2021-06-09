@@ -116,7 +116,7 @@ export default {
             this.apple,
             this.berry
           );
-          this.progress = 33;
+          this.progress = 33.3;
           break;
         case 2:
           console.log(this.questionIndex);
@@ -136,7 +136,7 @@ export default {
             this.wine,
             this.jus
           );
-          this.progress = 66;
+          this.progress = 66.6;
           break;
         case 3:
           this.component = quizFinished;
