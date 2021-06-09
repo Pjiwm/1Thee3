@@ -2,6 +2,7 @@
   <b-row class="d-flex justify-content-center py-3 quiz-start">
     <b-col class="col-10 col-lg-8">
       <b class="text-white">
+<<<<<<< HEAD
         Niet zeker welke theesmaken bij jou passen of wil je simpelweg verrast
         worden?<br />Doe hier de Mood finder en wij kiezen een passende
         theepakket voor jou uit!
@@ -16,6 +17,15 @@
         aria-label="Start mood finder"
       >
         Start de Mood finder!
+=======
+        Niet zeker welke thee smaken bij jou passen of wil je simpelweg verrast
+        worden? Doe hier de mood finder en wij kiezen een assortiment dat goed
+        bij jou past
+      </b> 
+      <br> <br>
+      <button class="btn btn-primary" v-on:click="$emit('start') " type="button">
+        Start de moodfiner!
+>>>>>>> quiz-content
       </button>
     </b-col>
   </b-row>

@@ -3,7 +3,8 @@
     <b-container class="text-center">
       <h1 class="">Mood finder</h1>
       <component
-        v-on:click="(chosenName) => this._answerQuestion(chosenName)"
+        v-on:click="_answerQuestion($event)"
+        v-on:start="this.startQuiz"
         v-bind:is="component"
         ref="question"
       />
@@ -24,9 +25,26 @@
 <script>
 import quizStart from "./QuizStart.vue";
 import question from "./Question";
-import strawberry from "../assets/strawberry.webp";
-import banana from "../assets/banana.webp";
+// import strawberry from "../assets/strawberry.webp";
+// import banana from "../assets/banana.webp";
 import quizFinished from "./QuizFinished.vue";
+
+// Question 1:
+import mountains from "../assets/quiz-images/question-one-quiz/mountains.png";
+import forest from "../assets/quiz-images/question-one-quiz/forest.png";
+import party from "../assets/quiz-images/question-one-quiz/party.png";
+import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png";
+// Question 2:
+import pepper from "../assets/quiz-images/question-two-quiz/pepper.png";
+import strawberry from "../assets/quiz-images/question-two-quiz/strawberry.png"
+import apple from "../assets/quiz-images/question-two-quiz/apple.png"
+import berry from "../assets/quiz-images/question-two-quiz/berry.png"
+// Question 3:
+import jus from "../assets/quiz-images/question-three-quiz/jus.jpg"
+import sangriaFruits from "../assets/quiz-images/question-three-quiz/sangria-met-fruit.jpg"
+import beer from "../assets/quiz-images/question-three-quiz/speciaal-bier.jpg"
+import wine from "../assets/quiz-images/question-three-quiz/wijn.jpg"
+
 export default {
   name: "app",
   components: {
@@ -38,11 +56,24 @@ export default {
     return {
       questionIndex: 0,
       answers: [],
-      component: "quizStart",
-      strawberry: strawberry,
-      banana: banana,
       progress: 0,
       maxProgress: 99,
+      component: "quizStart",
+      // question 1
+      mountains: mountains,
+      forest: forest,
+      party: party,
+      flowerField: flowerField,
+      // question 2
+      pepper: pepper,
+      strawberry: strawberry,
+      apple: apple,
+      berry: berry,
+      // question 3:
+      jus: jus,
+      sangriaFruits: sangriaFruits,
+      beer: beer,
+      wine: wine,
     };
   },
   methods: {
@@ -50,9 +81,12 @@ export default {
      * @description
      * saved pressed answer text in answers array
      */
-    _answerQuestion(chosenName) {
-      this.answers.push(chosenName);
+    _answerQuestion(chosenItem) {
+      this.answers.push(chosenItem);
       this.switchQuestion();
+    },
+    startQuiz(){
+      this.component= "question"
     },
     /**
      * @description switches the questions when the user performs an action in the quiz
@@ -66,54 +100,42 @@ export default {
       this.questionIndex++;
       switch (this.questionIndex) {
         case 0:
-          this.component = quizStart;
-          break;
+        break;
         //For question 1, see Question.Vue data field
         case 1:
-          this.component = "question";
-          this.$refs.question.setQuestion("Question 1");
-          this.$refs.question.setText(
-            "strawberry",
-            "strawberry",
-            "strawberry",
-            "strawberry"
+          this.$refs.question.setQuestion("Question 2");
+          this.$refs.question.setItems(
+            { name: "peper", variety: ["spicy"] },
+            { name: "aardbei", variety: ["sweet"] },
+            { name: "appel", variety: ["everyonesFriend"] },
+            { name: "wildebessen", variety: ["wild"] }
           );
           this.$refs.question.setImage(
+            this.pepper,
             this.strawberry,
-            this.strawberry,
-            this.strawberry,
-            this.strawberry
+            this.apple,
+            this.berry
           );
           this.progress = 0;
           break;
         case 2:
-          this.$refs.question.setQuestion("Question 2");
-          this.$refs.question.setText("banana", "banana", "banana", "banana");
+          console.log(this.questionIndex)
+          this.$refs.question.setQuestion("Question 3");
+          this.$refs.question.setItems(
+            { name: "speciaal bier", variety: ["wild", "everyonesFriend", "spicy"] },
+            { name: "sangria met fruit", variety: ["sweet"] },
+            { name: "wijn", variety: ["everyonesFriend"] },
+            { name: "bessen", variety: ["sweet"] }
+          );
           this.$refs.question.setImage(
-            this.banana,
-            this.banana,
-            this.banana,
-            this.banana
+            this.beer,
+            this.sangriaFruits,
+            this.wine,
+            this.jus
           );
           this.progress = 33;
           break;
         case 3:
-          this.$refs.question.setQuestion("Question 3");
-          this.$refs.question.setText(
-            "strawberry",
-            "strawberry",
-            "strawberry",
-            "banana"
-          );
-          this.$refs.question.setImage(
-            this.strawberry,
-            this.strawberry,
-            this.strawberry,
-            this.banana
-          );
-          this.progress = 66;
-          break;
-        case 4:
           this.component = quizFinished;
           this.progress = 99;
       }
