@@ -8,7 +8,7 @@
       </b> 
       <br> <br>
       <button class="btn btn-primary" v-on:click="$emit('start') " type="button">
-        Start de moodfiner!
+        Start de mood finder!
       </button>
     </b-col>
   </b-row>
