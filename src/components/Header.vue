@@ -6,7 +6,11 @@
           <div class="main-title">
             <h1>Tea is like a hug in a mug</h1>
             <p class="pb-3">
+<<<<<<< HEAD
               Wil jij weten welke thee bij jou past?<br />Doe dan snel de Mood
+=======
+              Wil jij weten welke thee bij jou past?<br />Doe dan snel de mood
+>>>>>>> frontend-index
               finder!
             </p>
           </div>
