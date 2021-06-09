@@ -23,9 +23,17 @@
 <script>
 import quizStart from "./QuizStart.vue";
 import question from "./Question";
-import strawberry from "../assets/strawberry.webp";
-import banana from "../assets/banana.webp";
+// import strawberry from "../assets/strawberry.webp";
+// import banana from "../assets/banana.webp";
 import quizFinished from "./QuizFinished.vue";
+
+// Question 1:
+import mountains from "../assets/quiz-images/question-one-quiz/mountains.png"
+import forest from "../assets/quiz-images/question-one-quiz/forest.png";
+import party from "../assets/quiz-images/question-one-quiz/party.png"
+import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png"
+// Question 2:
+
 export default {
   name: "app",
   components: {
@@ -38,8 +46,10 @@ export default {
       questionIndex: 0,
       answers: [],
       component: "quizStart",
-      strawberry: strawberry,
-      banana: banana,
+      mountains: mountains,
+      forest: forest,
+      party: party,
+      flowerField: flowerField,
       progress: 0,
       maxProgress: 99,
     };
@@ -72,16 +82,16 @@ export default {
           this.component = "question";
           this.$refs.question.setQuestion("Question 1");
           this.$refs.question.setText(
-            "strawberry",
-            "strawberry",
-            "strawberry",
-            "strawberry"
+            "bergen",
+            "bossen",
+            "weiland met bloemen",
+            "uitgaansgelegenheid"
           );
           this.$refs.question.setImage(
-            this.strawberry,
-            this.strawberry,
-            this.strawberry,
-            this.strawberry
+            this.mountains,
+            this.forest,
+            this.flowerField,
+            this.party
           );
           this.progress = 0;
           break;
