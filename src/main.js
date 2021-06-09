@@ -26,7 +26,7 @@ import index from './components/pages/Index';
 import pageNotFound from './components/pages/PageNotFound';
 import webshop from './components/pages/Webshop';
 
-const resultsRoute = { path: '/results', component: results };
+const resultsRoute = { path: '/results', component: results, props: route => (route.query.q) };
 const indexRoute = { path: '/', component: index };
 const pageNotFoundRoute = { path: '*', component: pageNotFound };
 const webshopRoute = { path: '/webshop', component: webshop };

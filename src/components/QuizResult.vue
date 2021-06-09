@@ -2,30 +2,30 @@
   <main class="container-fluid main-bg mt-5 pt-5 pb-3">
     <div class="offset-lg-2 offset-md-2 offset-sm-1">
       <div class="row">
-        <card class="col-lg-2 col-md-2 col-sm-3">
+        <div class="col-lg-2 col-md-2 col-sm-3">
           <img
             src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
             alt=""
             style="width: 100%"
           />
           <p>thee smaak 1</p>
-        </card>
-        <card class="col-lg-2 col-md-2 col-sm-3">
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3">
           <img
             src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
             alt=""
             style="width: 100%"
           />
           <p>thee smaak 2</p>
-        </card>
-        <card class="col-lg-2 col-md-2 col-sm-3">
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3">
           <img
             src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
             alt=""
             style="width: 100%"
           />
           <p>thee smaak 3</p>
-        </card>
+        </div>
         <div class="col-lg-4 col-md-4 col-sm-10">
           <h4><b>Theeplank optie 1</b></h4>
           <p>
@@ -41,30 +41,30 @@
       <hr class="col-lg-10 col-md-10 col-sm-10 mt-4 mb-4" />
 
       <div class="row pb-3">
-        <card class="col-lg-2 col-md-2 col-sm-3">
+        <div class="col-lg-2 col-md-2 col-sm-3">
           <img
             src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
             alt=""
             style="width: 100%"
           />
           <p>thee smaak 3</p>
-        </card>
-        <card class="col-lg-2 col-md-2 col-sm-3">
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3">
           <img
             src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
             alt=""
             style="width: 100%"
           />
           <p>thee smaak 4</p>
-        </card>
-        <card class="col-lg-2 col-md-2 col-sm-3">
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3">
           <img
             src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
             alt=""
             style="width: 100%"
           />
           <p>thee smaak 5</p>
-        </card>
+        </div>
         <div class="col-lg-4 col-md-4 col-sm-10">
           <h4><b>Theeplank optie 2</b></h4>
           <p>
@@ -83,11 +83,16 @@
 <script>
 export default {
   name: "QuizResult",
+  props:['route'], 
+  created: function (){
+    this.answers = this.route
+    console.log(this.answers)
+  }
 };
 </script>
 
 <style scoped>
-.card {
+.div {
   margin: 0;
   padding: 0;
   color: #ffffff;

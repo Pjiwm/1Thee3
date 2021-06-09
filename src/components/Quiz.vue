@@ -6,6 +6,7 @@
         v-on:click="_answerQuestion($event)"
         v-on:start="this.startQuiz"
         v-bind:is="component"
+        v-bind:answers="answers"
         ref="question"
       />
       <b-row class="d-flex justify-content-center">
@@ -56,6 +57,7 @@ export default {
     },
     startQuiz(){
       this.component= "question"
+      
     },
     /**
      * @description switches the questions when the user performs an action in the quiz
@@ -106,6 +108,7 @@ export default {
           break;
         case 3:
           this.component = quizFinished;
+          this.component.props = this.answers
           this.progress = 99;
       }
     },
