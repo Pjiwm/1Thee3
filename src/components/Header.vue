@@ -6,7 +6,7 @@
           <div class="main-title">
             <h1>Tea is like a hug in a mug</h1>
             <p class="pb-3">
-              Wil jij weten welke thee bij jou past?<br />Doe dan snel de mood
+              Wil jij weten welke thee bij jou past?<br />Doe dan snel de Mood
               finder!
             </p>
           </div>
@@ -17,7 +17,7 @@
               alt="Doe de mood finder"
               aria-label="Navigeer naar de mood finder"
             >
-              Doe de mood finder
+              Doe de Mood finder
             </button>
           </a>
         </div>

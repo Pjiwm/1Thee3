@@ -3,7 +3,7 @@
     <b-col class="col-10 col-lg-8">
       <b class="text-white">
         Niet zeker welke theesmaken bij jou passen of wil je simpelweg verrast
-        worden?<br />Doe hier de mood finder en wij kiezen een passende
+        worden?<br />Doe hier de Mood finder en wij kiezen een passende
         theepakket voor jou uit!
       </b>
       <br />
@@ -15,7 +15,7 @@
         alt="Start de mood finder!"
         aria-label="Start mood finder"
       >
-        Start de mood finder!
+        Start de Mood finder!
       </button>
     </b-col>
   </b-row>
