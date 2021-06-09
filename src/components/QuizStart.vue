@@ -7,7 +7,7 @@
         bij jou past
       </b> 
       <br> <br>
-      <button class="btn btn-primary" v-on:click="$emit('click')" type="button">
+      <button class="btn btn-primary" v-on:click="$emit('start') " type="button">
         Start de moodfiner!
       </button>
     </b-col>

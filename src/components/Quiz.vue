@@ -3,7 +3,8 @@
     <b-container class="text-center">
       <h1 class="">Mood finder</h1>
       <component
-        v-on:click="(chosenName) => this._answerQuestion(chosenName)"
+        v-on:click="_answerQuestion($event)"
+        v-on:start="this.startQuiz"
         v-bind:is="component"
         ref="question"
       />
@@ -79,9 +80,12 @@ export default {
      * @description
      * saved pressed answer text in answers array
      */
-    _answerQuestion(chosenName) {
-      this.answers.push(chosenName);
+    _answerQuestion(chosenItem) {
+      this.answers.push(chosenItem);
       this.switchQuestion();
+    },
+    startQuiz(){
+      this.component= "question"
     },
     /**
      * @description switches the questions when the user performs an action in the quiz
@@ -95,54 +99,42 @@ export default {
       this.questionIndex++;
       switch (this.questionIndex) {
         case 0:
-          this.component = quizStart;
-          break;
+        break;
         //For question 1, see Question.Vue data field
         case 1:
-          this.component = "question";
-          this.$refs.question.setQuestion("Question 1");
-          this.$refs.question.setText(
-            "bergen",
-            "bossen",
-            "weiland met bloemen",
-            "uitgaansgelegenheid"
+          this.$refs.question.setQuestion("Question 2");
+          this.$refs.question.setItems(
+            { name: "peper", variety: ["spicy"] },
+            { name: "aardbei", variety: ["sweet"] },
+            { name: "appel", variety: ["everyonesFriend"] },
+            { name: "wildebessen", variety: ["wild"] }
           );
           this.$refs.question.setImage(
-            this.mountains,
-            this.forest,
-            this.flowerField,
-            this.party
+            this.pepper,
+            this.strawberry,
+            this.apple,
+            this.berry
           );
           this.progress = 0;
           break;
         case 2:
-          this.$refs.question.setQuestion("Question 2");
-          this.$refs.question.setText("a", "b", "c", "d");
+          console.log(this.questionIndex)
+          this.$refs.question.setQuestion("Question 3");
+          this.$refs.question.setItems(
+            { name: "speciaal bier", variety: ["wild", "everyonesFriend", "spicy"] },
+            { name: "sangria met fruit", variety: ["sweet"] },
+            { name: "wijn", variety: ["everyonesFriend"] },
+            { name: "bessen", variety: ["sweet"] }
+          );
           this.$refs.question.setImage(
-            this.banana,
-            this.banana,
-            this.banana,
-            this.banana
+            this.beer,
+            this.sangriaFruits,
+            this.wine,
+            this.jus
           );
           this.progress = 33;
           break;
         case 3:
-          this.$refs.question.setQuestion("Question 3");
-          this.$refs.question.setText(
-            "strawberry",
-            "strawberry",
-            "strawberry",
-            "banana"
-          );
-          this.$refs.question.setImage(
-            this.strawberry,
-            this.strawberry,
-            this.strawberry,
-            this.banana
-          );
-          this.progress = 66;
-          break;
-        case 4:
           this.component = quizFinished;
           this.progress = 99;
       }
