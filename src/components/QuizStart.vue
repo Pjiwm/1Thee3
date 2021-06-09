@@ -10,7 +10,7 @@
       <br />
       <button
         class="btn btn-primary"
-        v-on:click="$emit('click')"
+        v-on:click="$emit('start')"
         type="button"
         alt="Start de mood finder!"
         aria-label="Start mood finder"
