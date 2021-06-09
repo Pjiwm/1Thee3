@@ -1,7 +1,7 @@
 <template>
   <b-row class="d-flex justify-content-center question-row">
     <p class="text-white">{{ question }}</p>
-    <b-col v-on:click="$emit('click', itemNames[0])" class="col-6 col-lg-2">
+    <b-col v-on:click="$emit('click', items[0])" class="col-6 col-lg-2">
       <div class="card my-2 question-border">
         <div class="image-box">
           <b-img
@@ -12,11 +12,11 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ itemNames[0] }}</p>
+          <p class="text-white">{{ items[0].name }}</p>
         </div>
       </div>
     </b-col>
-    <b-col v-on:click="$emit('click', itemNames[1])" class="col-6 col-lg-2">
+    <b-col v-on:click="$emit('click', items[1])" class="col-6 col-lg-2">
       <div class="card my-2 question-border">
         <div class="image-box">
           <b-img
@@ -27,11 +27,11 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ itemNames[1] }}</p>
+          <p class="text-white">{{ items[1].name }}</p>
         </div>
       </div>
     </b-col>
-    <b-col v-on:click="$emit('click', itemNames[2])" class="col-6 col-lg-2">
+    <b-col v-on:click="$emit('click', items[2])" class="col-6 col-lg-2">
       <div class="card my-2 question-border">
         <div class="image-box">
           <b-img
@@ -42,11 +42,11 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ itemNames[2] }}</p>
+          <p class="text-white">{{ items[3].name }}</p>
         </div>
       </div>
     </b-col>
-    <b-col v-on:click="$emit('click', itemNames[3])" class="col-6 col-lg-2">
+    <b-col v-on:click="$emit('click', items[3])" class="col-6 col-lg-2">
       <div class="card my-2 question-border">
         <div class="image-box">
           <b-img
@@ -57,7 +57,7 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ itemNames[3] }}</p>
+          <p class="text-white">{{ items[3].name }}</p>
         </div>
       </div>
     </b-col>
@@ -67,11 +67,16 @@
 import strawberry from "../assets/strawberry.webp";
 export default {
   name: "question",
-  data: function () {
+  data: function() {
     return {
       question: "Question 1",
       images: [strawberry, strawberry, strawberry, strawberry],
-      itemNames: ["strawberry", "strawberry", "strawberry", "strawberry"],
+      items: [
+        { name: "strawberry", variety: "sweet" },
+        { name: "strawberry", variety: "sweet" },
+        { name: "strawberry", variety: "sweet" },
+        { name: "strawberry", variety: "sweet" },
+      ],
     };
   },
   methods: {
@@ -82,8 +87,10 @@ export default {
      * @param {string} itemThree - sets bottom-left text
      * @param {string} itemFour - sets the bottom-right text
      */
-    setText(itemOne, itemTwo, itemThree, itemFour) {
-      this.itemNames = [itemOne, itemTwo, itemThree, itemFour];
+    setItems(...args) {
+      for (let i = 0; i < args.length; i++) {
+        this.items[i] = args[i];
+      }
     },
     /**
      * @description sets the image for each quiz answer
