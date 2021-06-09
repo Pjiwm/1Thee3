@@ -42,7 +42,7 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ items[3].name }}</p>
+          <p class="text-white">{{ items[2].name }}</p>
         </div>
       </div>
     </b-col>
@@ -90,9 +90,9 @@ export default {
      * @param {string} itemThree - sets bottom-left text
      * @param {string} itemFour - sets the bottom-right text
      */
-    setItems(...args) {
+       setItems(...args) {
       for (let i = 0; i < args.length; i++) {
-        this.items[i] = args[i];
+         this.items[i] = args[i];
       }
     },
     /**
