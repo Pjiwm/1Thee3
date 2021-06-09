@@ -2,7 +2,7 @@
   <b-row class="d-flex justify-content-center question-row">
     <p class="text-white">{{ question }}</p>
     <b-col v-on:click="$emit('click', items[0])" class="col-6 col-lg-2">
-      <div class="card my-2 question-border">
+      <div class="card my-2 question-border" aria-label="Selecteer optie 1">
         <div class="image-box">
           <b-img
             fluid
@@ -17,7 +17,7 @@
       </div>
     </b-col>
     <b-col v-on:click="$emit('click', items[1])" class="col-6 col-lg-2">
-      <div class="card my-2 question-border">
+      <div class="card my-2 question-border" aria-label="Selecteer optie 2">
         <div class="image-box">
           <b-img
             fluid
@@ -32,7 +32,7 @@
       </div>
     </b-col>
     <b-col v-on:click="$emit('click', items[2])" class="col-6 col-lg-2">
-      <div class="card my-2 question-border">
+      <div class="card my-2 question-border" aria-label="Selecteer optie 3">
         <div class="image-box">
           <b-img
             fluid
@@ -47,7 +47,7 @@
       </div>
     </b-col>
     <b-col v-on:click="$emit('click', items[3])" class="col-6 col-lg-2">
-      <div class="card my-2 question-border">
+      <div class="card my-2 question-border" aria-label="Selecteer optie 4">
         <div class="image-box">
           <b-img
             fluid
@@ -90,9 +90,9 @@ export default {
      * @param {string} itemThree - sets bottom-left text
      * @param {string} itemFour - sets the bottom-right text
      */
-       setItems(...args) {
+    setItems(...args) {
       for (let i = 0; i < args.length; i++) {
-         this.items[i] = args[i];
+        this.items[i] = args[i];
       }
     },
     /**
