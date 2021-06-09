@@ -15,16 +15,8 @@
             </p>
           </b-col>
         </b-row>
-<<<<<<< HEAD
-        <hr />
-        <div
-          id="collection-component-1622713024168"
-          alt="Theecollectie niet gevonden"
-        ></div>
-=======
         <hr class="" id="ons_doel" />
         <div id="collection-component-1623232139238"></div>
->>>>>>> webshop
       </b-container>
     </div>
   </div>
