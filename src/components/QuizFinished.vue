@@ -5,7 +5,12 @@
         De Mood finder is gemaakt. Je resultaten staan klaar!
       </p>
       <router-link :to="{ path: '/results' }"
-        ><button class="btn btn-primary" type="button">
+        ><button
+          class="btn btn-primary"
+          type="button"
+          alt="Verder naar resultaat"
+          aria-label="Navigeer naar resultaat"
+        >
           Verder naar resultaten
         </button></router-link
       >

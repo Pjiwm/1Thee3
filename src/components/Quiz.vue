@@ -11,6 +11,7 @@
         <b-col cols="12" md="8" class="pt-3">
           <b-progress
             variant="primary"
+            alt="Voortgangmeter"
             aria-label="Voortgang van de Moodfinder"
             :value="progress"
             :max="maxProgress"
@@ -128,12 +129,12 @@ export default {
   min-height: 450px;
 }
 
-.quiz-background {
+/* .quiz-background {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url("https://hetherdertje.nl/phpthumbsup/w/2545/h/900/zc/1/fltr[]/clr%7C35%7C000000/src/uploads/assets/uploads/tea.jpg");
   position: relative;
-}
+} */
 </style>

@@ -5,7 +5,13 @@
         <b-col cols="12">
           <h1>404</h1>
           <p>Page Not Found</p>
-          <a href="/" class="btn btn-primary">Terug naar home</a>
+          <a
+            href="/"
+            class="btn btn-primary"
+            aria-label="Navigeer terug naar home"
+            alt="Navigeerknop terug naar home"
+            >Terug naar home</a
+          >
         </b-col>
       </b-row>
     </b-container>
