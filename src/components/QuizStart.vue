@@ -4,7 +4,7 @@
       <b class="text-white">
         Niet zeker welke theesmaken bij jou passen of wil je simpelweg verrast
         worden?<br />Doe hier de mood finder en wij kiezen een passende
-        theepakket voor je uit!
+        theepakket voor jou uit!
       </b>
       <br />
       <br />
