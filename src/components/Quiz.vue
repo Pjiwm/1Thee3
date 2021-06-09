@@ -36,14 +36,14 @@ import party from "../assets/quiz-images/question-one-quiz/party.png";
 import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png";
 // Question 2:
 import pepper from "../assets/quiz-images/question-two-quiz/pepper.png";
-import strawberry from "../assets/quiz-images/question-two-quiz/strawberry.png"
-import apple from "../assets/quiz-images/question-two-quiz/apple.png"
-import berry from "../assets/quiz-images/question-two-quiz/berry.png"
+import strawberry from "../assets/quiz-images/question-two-quiz/strawberry.png";
+import apple from "../assets/quiz-images/question-two-quiz/apple.png";
+import berry from "../assets/quiz-images/question-two-quiz/berry.png";
 // Question 3:
-import jus from "../assets/quiz-images/question-three-quiz/jus.jpg"
-import sangriaFruits from "../assets/quiz-images/question-three-quiz/sangria-met-fruit.jpg"
-import beer from "../assets/quiz-images/question-three-quiz/speciaal-bier.jpg"
-import wine from "../assets/quiz-images/question-three-quiz/wijn.jpg"
+import jus from "../assets/quiz-images/question-three-quiz/jus.jpg";
+import sangriaFruits from "../assets/quiz-images/question-three-quiz/sangria-met-fruit.jpg";
+import beer from "../assets/quiz-images/question-three-quiz/speciaal-bier.jpg";
+import wine from "../assets/quiz-images/question-three-quiz/wijn.jpg";
 
 export default {
   name: "app",
@@ -57,7 +57,7 @@ export default {
       questionIndex: 0,
       answers: [],
       progress: 0,
-      maxProgress: 99,
+      maxProgress: 100,
       component: "quizStart",
       // question 1
       mountains: mountains,
@@ -85,8 +85,8 @@ export default {
       this.answers.push(chosenItem);
       this.switchQuestion();
     },
-    startQuiz(){
-      this.component= "question"
+    startQuiz() {
+      this.component = "question";
     },
     /**
      * @description switches the questions when the user performs an action in the quiz
@@ -100,7 +100,7 @@ export default {
       this.questionIndex++;
       switch (this.questionIndex) {
         case 0:
-        break;
+          break;
         //For question 1, see Question.Vue data field
         case 1:
           this.$refs.question.setQuestion("Question 2");
@@ -116,13 +116,16 @@ export default {
             this.apple,
             this.berry
           );
-          this.progress = 0;
+          this.progress = 33;
           break;
         case 2:
-          console.log(this.questionIndex)
+          console.log(this.questionIndex);
           this.$refs.question.setQuestion("Question 3");
           this.$refs.question.setItems(
-            { name: "speciaal bier", variety: ["wild", "everyonesFriend", "spicy"] },
+            {
+              name: "speciaal bier",
+              variety: ["wild", "everyonesFriend", "spicy"],
+            },
             { name: "sangria met fruit", variety: ["sweet"] },
             { name: "wijn", variety: ["everyonesFriend"] },
             { name: "bessen", variety: ["sweet"] }
@@ -133,11 +136,11 @@ export default {
             this.wine,
             this.jus
           );
-          this.progress = 33;
+          this.progress = 66;
           break;
         case 3:
           this.component = quizFinished;
-          this.progress = 99;
+          this.progress = 100;
       }
     },
   },
