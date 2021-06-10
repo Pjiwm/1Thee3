@@ -13,7 +13,7 @@
 
       <b-row class="d-flex justify-content-center">
         <b-col cols="12" md="8" class="pt-3">
-          <b-progress
+          <b-progress v-if="progressBar"
             variant="primary"
             alt="Voortgangmeter"
             aria-label="Voortgang van de Moodfinder"
@@ -77,6 +77,7 @@ export default {
       sangriaFruits: sangriaFruits,
       beer: beer,
       wine: wine,
+      progressBar: false,
     };
   },
   methods: {
@@ -90,6 +91,7 @@ export default {
     },
     startQuiz() {
       this.component = "question";
+      this.progressBar = true;
     },
     /**
      * @description switches the questions when the user performs an action in the quiz
@@ -143,7 +145,7 @@ export default {
           break;
         case 3:
           this.component = quizFinished;
-          this.progress = 100;
+          this.progressBar = false;
       }
     },
   },
