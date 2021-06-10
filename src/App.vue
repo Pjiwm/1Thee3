@@ -27,28 +27,11 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 
 body {
+  overflow-x:hidden;
   font-family: "Comfortaa", Helvetica, sans-serif !important;
+  text-shadow: 0px 0px 50px rgba(0,0,0, 0.7) !important;
 }
 
-.btn-primary {
-  background-color: #bfa253 !important;
-  border-color: #bfa253 !important;
-  font-weight: bold !important;
-}
-
-.btn {
-  border-radius: 3px !important;
-}
-
-.btn-primary:hover {
-  background-color: #998243 !important;
-  border-color: #998243 !important;
-  font-weight: bold !important;
-}
-
-.btn-primary:focus {
-  box-shadow: none !important;
-}
 
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */

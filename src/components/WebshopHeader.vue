@@ -4,50 +4,29 @@
       <div class="row">
         <div class="col-12 col-md-8 text-center header-title m-auto">
           <div class="main-title">
-            <h1>Tea is like a hug in a mug</h1>
+            <h1>Webshop</h1>
             <p class="pb-3">
-              Wil jij weten welke thee bij jou past?<br />Doe dan snel de mood
-              finder!
+              Vind hier alle onze verschillende thee smaken en pakketten!
             </p>
           </div>
-          <a href="/#mood-finder">
-            <button
-              type="button"
-              class="btn btn-primary"
-              alt="Doe de mood finder"
-              aria-label="Navigeer naar de mood finder"
-            >
-              Doe de mood finder
-            </button>
-          </a>
         </div>
       </div>
     </div>
-    <!-- Font size 0 is to make the text readable for text-readers, but not for other users -->
-    <a class="d-block" href="#impressie" style="font-size: 0px">
-      Link naar impressie
-      <div
-        class="arrow bounce"
-        alt="Navigeer naar impressie"
-        aria-label="Navigeer naar impressie"
-      ></div>
-    </a>
   </header>
 </template>
 
 <script>
 export default {
-  name: "Header",
+  name: "WebshopHeader",
 };
 </script>
 
 <style scoped>
 header {
-  min-height: 100vh;
+  min-height: 60vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-image: url("../assets/header-image.webp");
   position: relative;
   padding-top: 71px;
@@ -66,6 +45,7 @@ header:after {
 
 .header-title {
   z-index: 50;
+  color: #fff;
 }
 
 h1 {
@@ -79,36 +59,7 @@ header p {
   margin: auto;
 }
 
-header button {
-  font-size: 1.4rem;
-}
 
-header .arrow {
-  transform: translateY(-100%);
-  left: 50%;
-  bottom: 0;
-  margin-left: -20px;
-  width: 40px;
-  height: 40px;
-  background-image: url("../assets/chevron_down.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: arrow 3s infinite;
-  position: absolute;
-  z-index: 30;
-}
-
-@keyframes arrow {
-  0% {
-    transform: translateY(-100%);
-  }
-  50% {
-    transform: translateY(-40%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
 
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
@@ -119,10 +70,6 @@ No media query for `xs` since this is the default in Bootstrap */
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  nav.bg-dark {
-    background-color: transparent !important;
-  }
-
   h1 {
     font-weight: bold;
     font-size: 4rem;

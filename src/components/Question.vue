@@ -1,8 +1,8 @@
 <template>
   <b-row class="d-flex justify-content-center question-row">
     <p class="text-white">{{ question }}</p>
-    <b-col v-on:click="$emit('click', itemNames[0])" class="col-6 col-lg-2">
-      <div class="card my-2 question-border">
+    <b-col v-on:click="$emit('click', items[0])" class="col-6 col-lg-2">
+      <div class="card my-2 question-border" aria-label="Selecteer optie 1">
         <div class="image-box">
           <b-img
             fluid
@@ -12,12 +12,12 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ itemNames[0] }}</p>
+          <p class="text-white">{{ items[0].name }}</p>
         </div>
       </div>
     </b-col>
-    <b-col v-on:click="$emit('click', itemNames[1])" class="col-6 col-lg-2">
-      <div class="card my-2 question-border">
+    <b-col v-on:click="$emit('click', items[1])" class="col-6 col-lg-2">
+      <div class="card my-2 question-border" aria-label="Selecteer optie 2">
         <div class="image-box">
           <b-img
             fluid
@@ -27,12 +27,12 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ itemNames[1] }}</p>
+          <p class="text-white">{{ items[1].name }}</p>
         </div>
       </div>
     </b-col>
-    <b-col v-on:click="$emit('click', itemNames[2])" class="col-6 col-lg-2">
-      <div class="card my-2 question-border">
+    <b-col v-on:click="$emit('click', items[2])" class="col-6 col-lg-2">
+      <div class="card my-2 question-border" aria-label="Selecteer optie 3">
         <div class="image-box">
           <b-img
             fluid
@@ -42,12 +42,12 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ itemNames[2] }}</p>
+          <p class="text-white">{{ items[2].name }}</p>
         </div>
       </div>
     </b-col>
-    <b-col v-on:click="$emit('click', itemNames[3])" class="col-6 col-lg-2">
-      <div class="card my-2 question-border">
+    <b-col v-on:click="$emit('click', items[3])" class="col-6 col-lg-2">
+      <div class="card my-2 question-border" aria-label="Selecteer optie 4">
         <div class="image-box">
           <b-img
             fluid
@@ -57,21 +57,29 @@
           ></b-img>
         </div>
         <div class="text-background p-1">
-          <p class="text-white">{{ itemNames[3] }}</p>
+          <p class="text-white">{{ items[3].name }}</p>
         </div>
       </div>
     </b-col>
   </b-row>
 </template>
 <script>
-import strawberry from "../assets/strawberry.webp";
+import mountains from "../assets/quiz-images/question-one-quiz/mountains.png";
+import forest from "../assets/quiz-images/question-one-quiz/forest.png";
+import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png";
+import party from "../assets/quiz-images/question-one-quiz/party.png";
 export default {
   name: "question",
   data: function () {
     return {
       question: "Question 1",
-      images: [strawberry, strawberry, strawberry, strawberry],
-      itemNames: ["strawberry", "strawberry", "strawberry", "strawberry"],
+      images: [mountains, forest, flowerField, party],
+      items: [
+        { name: "bergen", variety: ["wild", "spicy"] },
+        { name: "bos", variety: ["wild", "everyonesFriend", "sweet"] },
+        { name: "weiland met bloemen", variety: ["everyonesFriend", "sweet"] },
+        { name: "uitgaansgelegenheid", variety: ["spicy", "wild"] },
+      ],
     };
   },
   methods: {
@@ -82,8 +90,10 @@ export default {
      * @param {string} itemThree - sets bottom-left text
      * @param {string} itemFour - sets the bottom-right text
      */
-    setText(itemOne, itemTwo, itemThree, itemFour) {
-      this.itemNames = [itemOne, itemTwo, itemThree, itemFour];
+    setItems(...args) {
+      for (let i = 0; i < args.length; i++) {
+        this.items[i] = args[i];
+      }
     },
     /**
      * @description sets the image for each quiz answer
