@@ -35,12 +35,14 @@ export default {
   metaInfo: {
     title: "1T3",
     titleTemplate: "%s - Bestel uw thee of theepakket in onze webshop",
-    link: [{ rel: "canonical", href="https://onet3.onrender.com/webshop" }],
+    link: [{ rel: "canonical", href: "https://onet3.onrender.com/webshop" }],
     meta: [
-      {name: "description", content: "Bestel uw thee of theepakket op 1Thee3.nl"}
-    ]
+      {
+        name: "description",
+        content: "Bestel uw thee of theepakket op 1Thee3.nl",
+      },
+    ],
   },
-  
 
   created: function () {
     var scriptURL =

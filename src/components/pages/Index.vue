@@ -21,10 +21,14 @@ export default {
   metaInfo: {
     title: "1T3",
     titleTemplate: "%s - De mannelijkste theeën van Nederland!",
-    link: [{ rel: "canonical", href="https://onet3.onrender.com/" }],
+    link: [{ rel: "canonical", href: "https://onet3.onrender.com/" }],
 
     meta: [
-      { name: "description", content: "1thee3.nl is een aanbieder van theeën met een mannelijke draai" }
+      {
+        name: "description",
+        content:
+          "1thee3.nl is een aanbieder van theeën met een mannelijke draai",
+      },
       //SOCIALE MEDIA TAGS
       // // OpenGraph data (Most widely used)
       // { property: "og:title", content: "My Page Title ← My Site" },
@@ -62,9 +66,8 @@ export default {
       //   itemprop: "image",
       //   content: "https://www.my-site.com/my-special-image.jpg",
       // },
-    ]
-  }
-  
+    ],
+  },
 };
 </script>
 
