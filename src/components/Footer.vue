@@ -5,7 +5,7 @@
         <b-col cols="6" md="8" lg="9">
           <div class="padding-left-3">
             <p>Kvk nummer | 17240186</p>
-            <p>Email | info@1t3</p>
+            <p>Email | <a href="mailto:info@1t3.nl">info@1t3.nl</a></p>
           </div>
         </b-col>
         <b-col
