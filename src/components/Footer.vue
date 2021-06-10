@@ -77,6 +77,7 @@ footer {
   color: #aaa199;
 }
 .icon:hover {
-  padding: 0px !important;
+  transition: color 0.2s ease-in;
+  color: #BFA253;
 }
 </style>
