@@ -3,7 +3,7 @@
     <b-container class="text-center">
       <b-row align-v="center" id="header">
         <b-col cols="12">
-            <h1>Webshop</h1>
+          <h1>Webshop</h1>
         </b-col>
       </b-row>
     </b-container>
@@ -22,7 +22,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/webshop_header.jpg");
+  background-image: url("../assets/webshop_header.webp");
   position: relative;
   border-radius: 3px;
 }
