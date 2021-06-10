@@ -13,7 +13,7 @@
       <b-col class="col-lg-3 offset-lg-0 col-10 offset-1">
         <img
           alt="Een open theefilter met losse thee erin op een tafel"
-          src="../assets/thee1-home.jpg"
+          src="../assets/thee1-home.webp"
           width="100%"
         />
       </b-col>
@@ -32,7 +32,7 @@
       >
         <img
           alt="Thee wordt ingeschoken met een goudkleurige theepot in een Chinees kopje"
-          src="../assets/thee2-home.jpg"
+          src="../assets/thee2-home.webp"
           width="100%"
         />
       </b-col>
