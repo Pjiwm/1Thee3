@@ -5,14 +5,16 @@
     <b-container class="py-5">
       <b-row>
         <b-col class="sidenav" cols="12" md="2">
-          <ul id="webshoplink-list" class="list-unstyled text-center text-md-left">
+          <ul
+            id="webshoplink-list"
+            class="list-unstyled text-center text-md-left"
+          >
             <li class="py-2"><a class="d-block" href="#">Thee smaken</a></li>
             <li class="py-2"><a class="d-block" href="#">Thee pakket</a></li>
             <li class="py-2"><a class="d-block" href="#">Toebehoren</a></li>
           </ul>
         </b-col>
         <b-col cols="12" md="10">
-        
           <div class="page-information text-center text-md-left">
             <h1>Thee smaken</h1>
             <p>
@@ -22,9 +24,10 @@
               (bijvoorbeeld kamillethee of rooibos), zijn dan ook geen echte
               thee maar kruidenthee.
             </p>
-            <div id="collection-component-1623232139238">
-              
-              </div>
+            <div
+              id="collection-component-1623232139238"
+              alt="Thee collectie"
+            ></div>
           </div>
         </b-col>
       </b-row>
@@ -344,64 +347,57 @@ export default {
 </script>
 
 <style scoped>
+#teabag {
+  transform-origin: top center;
+  transform: rotate(3deg);
+  animation: swing 2s infinite;
+}
 
+#steamL {
+  stroke-dasharray: 13;
+  stroke-dashoffset: 13;
+  animation: steamLarge 2s infinite;
+}
 
-
-  #teabag {
-    transform-origin: top center;
-    transform: rotate(3deg);
-    animation: swing 2s infinite;
-  }
-
-
-  #steamL {
-    stroke-dasharray: 13;
-    stroke-dashoffset: 13;
-    animation: steamLarge 2s infinite;
-  }
-
-  #steamR {
-    stroke-dasharray: 9;
-    stroke-dashoffset: 9;
-    animation: steamSmall 2s infinite;
-  }
-
+#steamR {
+  stroke-dasharray: 9;
+  stroke-dashoffset: 9;
+  animation: steamSmall 2s infinite;
+}
 
 @keyframes swing {
-50% { transform: rotate(-3deg); }
-}
-  
-@keyframes steamLarge {
-0% {
-   stroke-dashoffset: 13;
-    opacity: .6;
+  50% {
+    transform: rotate(-3deg);
   }
- 
+}
+
+@keyframes steamLarge {
+  0% {
+    stroke-dashoffset: 13;
+    opacity: 0.6;
+  }
+
   100% {
     stroke-dashoffset: 39;
     opacity: 0;
   }
-
 }
 @keyframes steamSmall {
   10% {
-  stroke-dashoffset: 9;
-    opacity: .6;
+    stroke-dashoffset: 9;
+    opacity: 0.6;
   }
-  
+
   80% {
-  stroke-dashoffset: 27;
-    opacity: 0;
-  }
-  
-  100% {
     stroke-dashoffset: 27;
     opacity: 0;
   }
 
+  100% {
+    stroke-dashoffset: 27;
+    opacity: 0;
+  }
 }
-  
-
 
 .sidenav {
   border-right: 2px solid #aaa199;
@@ -457,7 +453,6 @@ No media query for `xs` since this is the default in Bootstrap */
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 }
-
 </style>
 
 
