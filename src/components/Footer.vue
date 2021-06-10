@@ -23,6 +23,7 @@
                 class="img-fluid"
                 src="../../src/assets/1thee3logo.webp"
                 width="90rem"
+                height="90rem"
                 alt="1Thee3.nl logo"
               />
             </a>
