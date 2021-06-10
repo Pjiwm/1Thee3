@@ -34,7 +34,7 @@ export default {
   },
   metaInfo: {
     title: "1T3",
-    titleTemplate: "%s - Bestel uw thee of theepakket",
+    titleTemplate: "%s - Bestel uw thee of theepakket in onze webshop",
   },
 
   meta: [
@@ -81,7 +81,7 @@ export default {
     // },
   ],
   // Canonical url uitgecomment, wanneer domein beschikbaar is comment weghalen
-  // link: [{ rel: "canonical", href="https://1thee3.nl/webshop" }],
+  link: [{ rel: "canonical", href="https://onet3.onrender.com/webshop" }],
 
   created: function () {
     var scriptURL =

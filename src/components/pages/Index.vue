@@ -20,10 +20,10 @@ export default {
   },
   metaInfo: {
     title: "1T3",
-    titleTemplate: "%s - SLOGAN HIER",
+    titleTemplate: "%s - De mannelijkste theeën van Nederland!",
   },
   meta: [
-    { name: "description", content: "Welkom bij 1Thee3.nl!" },
+    { name: "description", content: "1thee3.nl is een aanbieder van theeën met een mannelijke draai" },
     //SOCIALE MEDIA TAGS
     // // OpenGraph data (Most widely used)
     // { property: "og:title", content: "My Page Title ← My Site" },
@@ -63,7 +63,7 @@ export default {
     // },
   ],
   // Canonical url uitgecomment, wanneer domein beschikbaar is comment weghalen
-  // link: [{ rel: "canonical", href="https://1thee3.nl/" }],
+  link: [{ rel: "canonical", href="https://onet3.onrender.com/" }],
 };
 </script>
 
