@@ -21,10 +21,14 @@ Vue.use(IconsPlugin);
 Vue.use(VueRouter);
 Vue.use(VueMeta);
 
-import results from "./components/pages/Results";
-import index from "./components/pages/Index";
-import pageNotFound from "./components/pages/PageNotFound";
-import webshop from "./components/pages/Webshop";
+const results = () =>
+    import('./components/pages/Results')
+const index = () =>
+    import('./components/pages/Index')
+const pageNotFound = () =>
+    import('./components/pages/PageNotFound')
+const webshop = () =>
+    import('./components/pages/Webshop')
 
 const resultsRoute = { path: "/results", component: results };
 const indexRoute = { path: "/", component: index };
@@ -34,15 +38,15 @@ const webshopRoute = { path: "/webshop", component: webshop };
 const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
 
 const router = new VueRouter({
-  routes,
-  mode: "history",
+    routes,
+    mode: "history",
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  render: function(h) {
-    return h(App);
-  },
+    router,
+    render: function (h) {
+        return h(App);
+    },
 }).$mount("#app");
