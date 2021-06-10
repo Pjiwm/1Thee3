@@ -6,15 +6,31 @@
           <div class="main-title">
             <h1>Tea is like a hug in a mug</h1>
             <p class="pb-3">
-              Wil jij weten welke thee bij jou past? Doe dan hieronder de quiz!
+              Wil jij weten welke thee bij jou past?<br />Doe dan snel de mood
+              finder!
             </p>
           </div>
-          <button type="button" class="btn btn-primary">Doe de quiz</button>
+          <a href="/#mood-finder">
+            <button
+              type="button"
+              class="btn btn-primary"
+              alt="Doe de mood finder"
+              aria-label="Navigeer naar de mood finder"
+            >
+              Doe de mood finder
+            </button>
+          </a>
         </div>
       </div>
     </div>
-    <a class="d-block" href="#impressie">
-      <div class="arrow bounce"></div>
+    <!-- Font size 0 is to make the text readable for text-readers, but not for other users -->
+    <a class="d-block" href="#impressie" style="font-size: 0px">
+      Link naar impressie
+      <div
+        class="arrow bounce"
+        alt="Navigeer naar impressie"
+        aria-label="Navigeer naar impressie"
+      ></div>
     </a>
   </header>
 </template>
@@ -31,7 +47,8 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/header-image.jpg");
+  background-attachment: fixed;
+  background-image: url("../assets/header-image.webp");
   position: relative;
   padding-top: 71px;
 }
@@ -49,7 +66,6 @@ header:after {
 
 .header-title {
   z-index: 50;
-  color: #fff;
 }
 
 h1 {
@@ -74,7 +90,7 @@ header .arrow {
   margin-left: -20px;
   width: 40px;
   height: 40px;
-  background-image: url("../assets/chevron_down.png");
+  background-image: url("../assets/chevron_down.webp");
   background-repeat: no-repeat;
   background-size: contain;
   animation: arrow 3s infinite;

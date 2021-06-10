@@ -1,31 +1,43 @@
-import Vue from "vue";
-import App from "./App.vue";
-import VueRouter from "vue-router";
-import "./registerServiceWorker";
-import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
-// Import Bootstrap an BootstrapVue CSS files (order is important)
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
+import Vue from 'vue';
+import App from './App.vue';
+import VueRouter from 'vue-router';
+import './registerServiceWorker';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+import '../src/scss/bootstrap.css';
+// Import for fontAwesome : svg-core, brand icons and vue
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import VueMeta from 'vue-meta';
 
+library.add(fab);
+// fontawesome component neccesary to call
+Vue.component('font-awesome-icon', FontAwesomeIcon, fab);
 // Make BootstrapVue available throughout your project
+Vue.component('font-awesome-icon', FontAwesomeIcon, fab);
 Vue.use(BootstrapVue);
-// Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
-// install router
 Vue.use(VueRouter);
+Vue.use(VueMeta);
 
-import Results from "./components/pages/Results";
-import Index from "./components/pages/Index";
-import PageNotFound from "./components/pages/PageNotFound"
+const Results = () =>
+    import ('./components/pages/Results')
+const Index = () =>
+    import ('./components/pages/Index')
+const PageNotFound = () =>
+    import ('./components/pages/PageNotFound')
 
-const ResultsRoute = { path: "/results", component: Results };
-const IndexRoute = { path: "/", component: Index };
-const PageNotFoundRoute = { path: "*", component: PageNotFound };
-const routes = [ResultsRoute, IndexRoute, PageNotFoundRoute];
+const resultsRoute = { path: '/results', component: results };
+const indexRoute = { path: '/', component: index };
+const pageNotFoundRoute = { path: '*', component: pageNotFound };
+const webshopRoute = { path: '/webshop', component: webshop };
+
+const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
 
 const router = new VueRouter({
-  routes,
-  mode: "history",
+    routes,
+    mode: 'history',
 });
 
 Vue.config.productionTip = false;

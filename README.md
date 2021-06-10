@@ -1,4 +1,4 @@
-# 1-thee-3
+# 1T3
 
 
 ## Project setup - without Docker
