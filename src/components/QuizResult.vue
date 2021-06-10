@@ -72,6 +72,8 @@
             explicabo unde sed ipsum reprehenderit vero quia perferendis
             blanditiis accusantium neque iure id corrupti aperiam rem tempora,
             quasi ipsa dolorum totam!
+
+            {{id}}
           </p>
           <button type="button" class="btn btn-primary block">kies deze</button>
         </div>
@@ -81,12 +83,21 @@
 </template>
 
 <script>
+// export default {
+// //   name: "QuizResult",
+// //   props: {
+// //     answers: String
+// //   }, 
+// //     mounted() {
+// //     console.log(this.answers);
+// //   }
+// // };
 export default {
-  name: "QuizResult",
-  props:['route'], 
-  created: function (){
-    this.answers = this.route
-    console.log(this.answers)
+  props: {
+    id: String
+  },
+  mounted() {
+    console.log(this.id);
   }
 };
 </script>

@@ -71,6 +71,7 @@ export default {
       this.questionIndex++;
       switch (this.questionIndex) {
         case 0:
+          this.progress = 0;
         break;
         // //For question 1, see Question.Vue data field
         case 1:
@@ -87,7 +88,7 @@ export default {
             this.strawberry,
             this.strawberry
           );
-          this.progress = 0;
+          this.progress = 33;
           break;
         case 2:
           console.log(this.questionIndex)
@@ -104,7 +105,7 @@ export default {
             this.banana,
             this.banana
           );
-          this.progress = 33;
+          this.progress = 66;
           break;
         case 3:
           this.component = quizFinished;

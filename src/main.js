@@ -26,10 +26,10 @@ import index from './components/pages/Index';
 import pageNotFound from './components/pages/PageNotFound';
 import webshop from './components/pages/Webshop';
 
-const resultsRoute = { path: '/results', component: results, props: route => (route.query.q) };
-const indexRoute = { path: '/', component: index };
-const pageNotFoundRoute = { path: '*', component: pageNotFound };
-const webshopRoute = { path: '/webshop', component: webshop };
+const resultsRoute = { path: '/results', name: 'results', component: results, props: true, };
+const indexRoute = { path: '/', name: 'index', component: index };
+const pageNotFoundRoute = { path: '*', name: 'pageNotFound', component: pageNotFound };
+const webshopRoute = { path: '/webshop', name: 'webshop', component: webshop };
 
 const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
 
