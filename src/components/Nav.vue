@@ -9,6 +9,8 @@
         class="img-fluid mobile-logo"
         src="../assets/1thee3logo.webp"
         alt="1Thee3.nl logo"
+        height="100%"
+        width="100%"
       />
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

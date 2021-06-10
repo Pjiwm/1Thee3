@@ -15,6 +15,7 @@
           alt="Een open theefilter met losse thee erin op een tafel"
           src="../assets/thee1-home.webp"
           width="100%"
+          height="100%"
         />
       </b-col>
     </b-row>
@@ -34,6 +35,7 @@
           alt="Thee wordt ingeschoken met een goudkleurige theepot in een Chinees kopje"
           src="../assets/thee2-home.webp"
           width="100%"
+          height="100%"
         />
       </b-col>
       <b-col

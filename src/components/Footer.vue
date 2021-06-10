@@ -4,7 +4,7 @@
       <b-row class="py-4">
         <b-col cols="6" md="8" lg="9">
           <div class="padding-left-3">
-            <p>Kvk nummer | 17240186</p>
+            <p>KVK-nummer | 17240186</p>
             <p>Email | <a href="mailto:info@1t3.nl">info@1t3.nl</a></p>
           </div>
         </b-col>
@@ -23,6 +23,7 @@
                 class="img-fluid"
                 src="../../src/assets/1thee3logo.webp"
                 width="90rem"
+                height="90rem"
                 alt="1Thee3.nl logo"
               />
             </a>
