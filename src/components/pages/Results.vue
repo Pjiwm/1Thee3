@@ -67,7 +67,7 @@ export default {
     // },
   ],
   // Canonical url uitgecomment, wanneer domein beschikbaar is comment weghalen
-  // link: [{ rel: "canonical", href="https://1thee3.nl/results" }],
+  link: [{ rel: "canonical", href="https://onet3.onrender.com/results" }],
 };
 </script>
 

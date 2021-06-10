@@ -66,8 +66,6 @@ export default {
     //   content: "https://www.my-site.com/my-special-image.jpg",
     // },
   ],
-  // Canonical url uitgecomment, wanneer domein beschikbaar is comment weghalen
-  // link: [{ rel: "canonical", href="https://1thee3.nl/404" }],
 };
 </script>
 
