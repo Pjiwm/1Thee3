@@ -77,8 +77,8 @@ export default {
       items: [
         { name: "bergen", variety: ["wild", "spicy"] },
         { name: "bos", variety: ["wild", "everyonesFriend", "sweet"] },
-        { name: "weiland met bloemen", variety: ["everyonesFriend", "sweet"] },
-        { name: "uitgaansgelegenheid", variety: ["spicy", "wild"] },
+        { name: "weiland", variety: ["everyonesFriend", "sweet"] },
+        { name: "uitgaan", variety: ["spicy", "wild"] },
       ],
     };
   },

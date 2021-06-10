@@ -122,9 +122,9 @@ export default {
           this.$refs.question.setQuestion("Question 3");
           this.$refs.question.setItems(
             { name: "speciaal bier", variety: ["wild", "everyonesFriend", "spicy"] },
-            { name: "sangria met fruit", variety: ["sweet"] },
+            { name: "sangria", variety: ["sweet"] },
             { name: "wijn", variety: ["everyonesFriend"] },
-            { name: "bessen", variety: ["sweet"] }
+            { name: "sinasappelsap", variety: ["sweet"] }
           );
           this.$refs.question.setImage(
             this.beer,
