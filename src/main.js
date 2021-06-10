@@ -14,9 +14,13 @@ Vue.use(IconsPlugin);
 // install router
 Vue.use(VueRouter);
 
-import Results from "./components/pages/Results";
-import Index from "./components/pages/Index";
-import PageNotFound from "./components/pages/PageNotFound"
+const Results = () =>
+    import ('./components/pages/Results')
+const Index = () =>
+    import ('./components/pages/Index')
+const PageNotFound = () =>
+    import ('./components/pages/PageNotFound')
+
 
 const ResultsRoute = { path: "/results", component: Results };
 const IndexRoute = { path: "/", component: Index };
@@ -24,14 +28,13 @@ const PageNotFoundRoute = { path: "*", component: PageNotFound };
 const routes = [ResultsRoute, IndexRoute, PageNotFoundRoute];
 
 const router = new VueRouter({
-  routes,
-  mode: "history",
+    routes,
+    mode: "history",
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  render: function (h) { return h(App) },
+    router,
+    render: function(h) { return h(App) },
 }).$mount('#app')
-
