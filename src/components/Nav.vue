@@ -31,6 +31,8 @@
             class="img-fluid"
             src="../assets/1thee3logo.webp"
             alt="1Thee3.nl logo"
+            height="100%"
+            width="100%"
           />
         </a>
         <b-nav-item href="/#mood-finder">Mood finder</b-nav-item>
