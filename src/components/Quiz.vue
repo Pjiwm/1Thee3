@@ -6,7 +6,7 @@
         v-on:click="_answerQuestion($event)"
         v-on:start="this.startQuiz"
         v-bind:is="component"
-        v-bind:answers="answers"
+        :answers="answers"
         ref="question"
       />
       <b-row class="d-flex justify-content-center">
@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       questionIndex: 0,
-      answers: [],
+      answers: {array: []},
       component: "quizStart",
       strawberry: strawberry,
       banana: banana,
@@ -52,12 +52,11 @@ export default {
      * saved pressed answer text in answers array
      */
     _answerQuestion(chosenItem) {
-      this.answers.push(chosenItem);
+      this.answers.array.push(chosenItem);
       this.switchQuestion();
     },
     startQuiz(){
       this.component= "question"
-      
     },
     /**
      * @description switches the questions when the user performs an action in the quiz
@@ -108,9 +107,8 @@ export default {
           this.progress = 66;
           break;
         case 3:
-          this.component = quizFinished;
-          this.component.props = this.answers
           this.progress = 99;
+          this.component = quizFinished;
       }
     },
   },

@@ -4,29 +4,23 @@
       <p class="text-white">
         De Mood finder is gemaakt. Je resultaten staan klaar!
       </p>
-      <router-link :to="{ path: '/results/', params: { answers: 'hello' } }"
+      <!-- <router-link :to="{ path: '/results/', params: { answers: answers } }"
         ><button class="btn btn-primary" type="button">
           Verder naar resultaten
         </button></router-link
-      >
+      > -->
       <br />
-      <router-link :to="{ name: 'results', params: { id: '123' } }"
-        >Go to results</router-link
-      >
+      <router-link :to="{ name: 'results', params: { params: answers} }"
+        >Go to results</router-link>
+      {{ answers }}
     </b-col>
   </b-row>
 </template>
 <script>
 export default {
   name: "quizFinished",
-  // props:['answers']
-  data() {
-    return {
-      answers: "test",
-      props: {
-        msg: String,
-      },
-    };
+  props: {
+    answers: { type: Object, required: false },
   },
 };
 </script>
