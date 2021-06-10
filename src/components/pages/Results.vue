@@ -27,8 +27,8 @@ export default {
     link: [{ rel: "canonical", href="https://onet3.onrender.com/results" }],
     meta: [
       { name: "description", content: "Mood finder resultaat, bestel uw pakket" },
-    ],
-  },
+    ]
+  }
   
 };
 </script>

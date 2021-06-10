@@ -62,8 +62,8 @@ export default {
       //   itemprop: "image",
       //   content: "https://www.my-site.com/my-special-image.jpg",
       // },
-    ],
-  },
+    ]
+  }
   
 };
 </script>

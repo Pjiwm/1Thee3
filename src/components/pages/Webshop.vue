@@ -38,7 +38,7 @@ export default {
     link: [{ rel: "canonical", href="https://onet3.onrender.com/webshop" }],
     meta: [
       {name: "description", content: "Bestel uw thee of theepakket op 1Thee3.nl"},
-    ],
+    ]
   },
   
 
