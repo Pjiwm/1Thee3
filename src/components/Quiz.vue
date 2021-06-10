@@ -154,12 +154,16 @@ export default {
   min-height: 450px;
 }
 
-/* .quiz-background {
+.quiz-background {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("https://hetherdertje.nl/phpthumbsup/w/2545/h/900/zc/1/fltr[]/clr%7C35%7C000000/src/uploads/assets/uploads/tea.jpg");
+  background-image: url("../assets/tea_dark.jpg"); 
   position: relative;
-} */
+}
+
+image{
+  filter: brightness(50%);
+}
 </style>
