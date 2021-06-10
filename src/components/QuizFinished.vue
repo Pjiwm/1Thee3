@@ -1,6 +1,6 @@
 <template>
-  <b-row class="d-flex justify-content-center py-3">
-    <b-col class="col-6 col-lg-3">
+  <b-row class="d-flex justify-content-center pt-5">
+    <b-col class="col-6 col-lg-3 text-background">
       <p class="text-white">
         De mood finder is afgerond.<br />Jouw theepakket staat klaar!
       </p>
@@ -26,6 +26,9 @@ export default {
 <style scoped>
 .text-background {
   background-color: rgb(44, 43, 43);
+  border: solid 3px #aaa199;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .text-vertical-align {

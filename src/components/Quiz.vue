@@ -1,13 +1,16 @@
 <template>
   <div class="quiz-background py-5" id="mood-finder">
-    <b-container class="text-center">
+    <b-container class="text-center position-relative">
       <h1 class="">Mood finder</h1>
-      <component
-        v-on:click="_answerQuestion($event)"
-        v-on:start="this.startQuiz"
-        v-bind:is="component"
-        ref="question"
-      />
+      <b-col class="min-height">
+        <component
+          v-on:click="_answerQuestion($event)"
+          v-on:start="this.startQuiz"
+          v-bind:is="component"
+          ref="question"
+        />
+      </b-col>
+
       <b-row class="d-flex justify-content-center">
         <b-col cols="12" md="8" class="pt-3">
           <b-progress
@@ -148,6 +151,10 @@ export default {
 </script>
 
 <style scoped>
+.min-height {
+  min-height: 15rem;
+}
+
 #mood-finder {
   background-color: #403d3b;
   border-top: 2px solid #aaa199;
@@ -159,11 +166,11 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("../assets/tea_dark.jpg"); 
+  background-image: url("../assets/tea_dark.jpg");
   position: relative;
 }
 
-image{
+image {
   filter: brightness(50%);
 }
 </style>
