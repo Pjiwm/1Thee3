@@ -24,7 +24,7 @@ export default {
     link: [{ rel: "canonical", href="https://onet3.onrender.com/" }],
 
     meta: [
-      { name: "description", content: "1thee3.nl is een aanbieder van theeën met een mannelijke draai" },
+      { name: "description", content: "1thee3.nl is een aanbieder van theeën met een mannelijke draai" }
       //SOCIALE MEDIA TAGS
       // // OpenGraph data (Most widely used)
       // { property: "og:title", content: "My Page Title ← My Site" },

@@ -26,7 +26,7 @@ export default {
     titleTemplate: "%s - Uw resultaat, bestel snel uw pakket!",
     link: [{ rel: "canonical", href="https://onet3.onrender.com/results" }],
     meta: [
-      { name: "description", content: "Mood finder resultaat, bestel uw pakket" },
+      { name: "description", content: "Mood finder resultaat, bestel uw pakket" }
     ]
   }
   
