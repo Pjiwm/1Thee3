@@ -1,6 +1,6 @@
 <template>
   <b-row class="d-flex justify-content-center pt-5">
-    <b-col class="col-6 col-lg-3 text-background">
+    <b-col class="col-8 col-lg-3 text-background">
       <p class="text-white">
         De mood finder is afgerond.<br />Jouw theepakket staat klaar!
       </p>

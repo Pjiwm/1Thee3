@@ -64,10 +64,10 @@
   </b-row>
 </template>
 <script>
-import mountains from "../assets/quiz-images/question-one-quiz/mountains.png";
-import forest from "../assets/quiz-images/question-one-quiz/forest.png";
-import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png";
-import party from "../assets/quiz-images/question-one-quiz/party.png";
+import mountains from "../assets/quiz-images/question-one-quiz/mountains.webp";
+import forest from "../assets/quiz-images/question-one-quiz/forest.webp";
+import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.webp";
+import party from "../assets/quiz-images/question-one-quiz/party.webp";
 export default {
   name: "question",
   data: function () {

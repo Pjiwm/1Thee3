@@ -21,7 +21,7 @@
             >
               <img
                 class="img-fluid"
-                src="../../src/assets/1thee3logo.png"
+                src="../../src/assets/1thee3logo.webp"
                 width="90rem"
                 alt="1Thee3.nl logo"
               />
@@ -78,6 +78,6 @@ footer {
 }
 .icon:hover {
   transition: color 0.2s ease-in;
-  color: #BFA253;
+  color: #bfa253;
 }
 </style>
