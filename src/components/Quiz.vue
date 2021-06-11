@@ -163,7 +163,4 @@ export default {
   position: relative;
 }
 
-image{
-  filter: brightness(50%);
-}
 </style>
