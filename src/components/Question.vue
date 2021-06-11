@@ -1,6 +1,10 @@
 <template>
   <b-row class="d-flex justify-content-center question-row">
-    <p class="text-white">{{ question }}</p>
+    <b-row class="d-flex justify-content-center"
+      ><b-col class="col-lg-8 col-10 question-background"
+        ><b class="text-white">{{ question }}</b></b-col
+      ></b-row
+    >
     <b-col v-on:click="$emit('click', items[0])" class="col-6 col-lg-2">
       <div class="card my-2 question-border" aria-label="Selecteer optie 1">
         <div class="image-box">
@@ -72,7 +76,7 @@ export default {
   name: "question",
   data: function () {
     return {
-      question: "Question 1",
+      question: "Welke van de vier afbeeldingen spreekt jou het meest aan?",
       images: [mountains, forest, flowerField, party],
       items: [
         { name: "bergen", variety: ["wild", "spicy"] },
@@ -109,9 +113,9 @@ export default {
      * @description sets a question above the quiz answers
      * @param {string} text - the text above the quiz
      */
-    setQuestion(text) {
-      this.question = text;
-    },
+    // setQuestion(text) {
+    //   this.question = text;
+    // },
   },
 };
 </script>
@@ -135,7 +139,12 @@ img {
   display: flex;
   align-items: center;
 }
-
+.question-background {
+  background-color: rgb(44, 43, 43);
+  border: solid 3px #aaa199;
+  border-radius: 10px;
+  padding: 7px;
+}
 .question-border:hover {
   border: 2px solid;
   border-color: #bfa253;
