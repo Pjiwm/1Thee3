@@ -109,12 +109,12 @@ export default {
           break;
         //For question 1, see Question.Vue data field
         case 1:
-          this.$refs.question.setQuestion("Question 2");
+          // this.$refs.question.setQuestion("Question 2");
           this.$refs.question.setItems(
             { name: "peper", variety: ["spicy"] },
             { name: "aardbei", variety: ["sweet"] },
             { name: "appel", variety: ["everyonesFriend"] },
-            { name: "wildebessen", variety: ["wild"] }
+            { name: "wilde bessen", variety: ["wild"] }
           );
           this.$refs.question.setImage(
             this.pepper,
@@ -125,8 +125,7 @@ export default {
           this.progress = 33.3;
           break;
         case 2:
-          console.log(this.questionIndex);
-          this.$refs.question.setQuestion("Question 3");
+          // this.$refs.question.setQuestion("Question 3");
           this.$refs.question.setItems(
             {
               name: "speciaal bier",
