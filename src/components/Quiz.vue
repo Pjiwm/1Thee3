@@ -165,12 +165,16 @@ export default {
 }
 
 .quiz-background {
+
+  position: relative;
+}
+
+.quiz-background:before {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url("../assets/tea_dark.webp");
-  position: relative;
 }
 
 image {
