@@ -1,13 +1,16 @@
 <template>
   <div class="quiz-background py-5" id="mood-finder">
-    <b-container class="text-center">
+    <b-container class="text-center position-relative">
       <h1 class="">Mood finder</h1>
-      <component
-        v-on:click="_answerQuestion($event)"
-        v-on:start="this.startQuiz"
-        v-bind:is="component"
-        ref="question"
-      />
+      <b-col class="min-height">
+        <component
+          v-on:click="_answerQuestion($event)"
+          v-on:start="this.startQuiz"
+          v-bind:is="component"
+          ref="question"
+        />
+      </b-col>
+
       <b-row class="d-flex justify-content-center">
         <b-col cols="12" md="8" class="pt-3">
           <b-progress
@@ -16,6 +19,7 @@
             aria-label="Voortgang van de Moodfinder"
             :value="progress"
             :max="maxProgress"
+            v-if="progressBar"
           ></b-progress>
         </b-col>
       </b-row>
@@ -30,20 +34,20 @@ import question from "./Question";
 import quizFinished from "./QuizFinished.vue";
 
 // Question 1:
-import mountains from "../assets/quiz-images/question-one-quiz/mountains.png";
-import forest from "../assets/quiz-images/question-one-quiz/forest.png";
-import party from "../assets/quiz-images/question-one-quiz/party.png";
-import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.png";
+import mountains from "../assets/quiz-images/question-one-quiz/mountains.webp";
+import forest from "../assets/quiz-images/question-one-quiz/forest.webp";
+import party from "../assets/quiz-images/question-one-quiz/party.webp";
+import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.webp";
 // Question 2:
-import pepper from "../assets/quiz-images/question-two-quiz/pepper.png";
-import strawberry from "../assets/quiz-images/question-two-quiz/strawberry.png";
-import apple from "../assets/quiz-images/question-two-quiz/apple.png";
-import berry from "../assets/quiz-images/question-two-quiz/berry.png";
+import pepper from "../assets/quiz-images/question-two-quiz/pepper.webp";
+import strawberry from "../assets/quiz-images/question-two-quiz/strawberry.webp";
+import apple from "../assets/quiz-images/question-two-quiz/apple.webp";
+import berry from "../assets/quiz-images/question-two-quiz/berry.webp";
 // Question 3:
-import jus from "../assets/quiz-images/question-three-quiz/jus.jpg";
-import sangriaFruits from "../assets/quiz-images/question-three-quiz/sangria-met-fruit.jpg";
-import beer from "../assets/quiz-images/question-three-quiz/speciaal-bier.jpg";
-import wine from "../assets/quiz-images/question-three-quiz/wijn.jpg";
+import jus from "../assets/quiz-images/question-three-quiz/jus.webp";
+import sangriaFruits from "../assets/quiz-images/question-three-quiz/sangria-met-fruit.webp";
+import beer from "../assets/quiz-images/question-three-quiz/speciaal-bier.webp";
+import wine from "../assets/quiz-images/question-three-quiz/wijn.webp";
 
 export default {
   name: "app",
@@ -59,6 +63,7 @@ export default {
       progress: 0,
       maxProgress: 100,
       component: "quizStart",
+      progressBar: false,
       // question 1
       mountains: mountains,
       forest: forest,
@@ -87,6 +92,7 @@ export default {
     },
     startQuiz() {
       this.component = "question";
+      this.progressBar = true;
     },
     /**
      * @description switches the questions when the user performs an action in the quiz
@@ -148,6 +154,10 @@ export default {
 </script>
 
 <style scoped>
+.min-height {
+  min-height: 15rem;
+}
+
 #mood-finder {
   background-color: #403d3b;
   border-top: 2px solid #aaa199;
@@ -159,8 +169,11 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("../assets/tea_dark.jpg"); 
+  background-image: url("../assets/tea_dark.webp");
   position: relative;
 }
 
+image {
+  filter: brightness(50%);
+}
 </style>

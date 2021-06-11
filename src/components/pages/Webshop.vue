@@ -1,27 +1,37 @@
 <template>
   <div>
     <WebshopHeader />
-    <div class="d-flex align-items-center">
-      <b-container class="webshop-main py-5 text-center">
-        <b-row class="d-flex justify-content-center py-4">
-          <b-col cols="12" lg="8">
-            <h1>Alle thee smaken</h1>
-            <p class="under-title">
-              Alle thee, behalve kruidenthee, wordt gemaakt van theeblaadjes die
-              van de theestruik afkomstig zijn. De theestruik groeit in een
-              tropisch of subtropisch klimaat. ... Ondanks dat er veel
-              verschillende soorten thee bestaan zijn ze allemaal afkomstig van
-              de bladeren van dezelfde theestruik: de Camellia Sinensis.
+
+    <b-container class="py-5">
+      <b-row>
+        <b-col class="sidenav" cols="12" md="2">
+          <ul
+            id="webshoplink-list"
+            class="list-unstyled text-center text-md-left"
+          >
+            <li class="py-2"><a class="d-block" href="#">Thee smaken</a></li>
+            <li class="py-2"><a class="d-block" href="#">Thee pakket</a></li>
+            <li class="py-2"><a class="d-block" href="#">Toebehoren</a></li>
+          </ul>
+        </b-col>
+        <b-col cols="12" md="10">
+          <div class="page-information text-center text-md-left">
+            <h1>Thee smaken</h1>
+            <p>
+              Thee is een warme drank die wordt gemaakt door infusie van de
+              gedroogde bladeren van de theeplant Camellia sinensis. Alle als
+              thee verkochte producten die niet van deze plant afkomstig zijn
+              (bijvoorbeeld kamillethee of rooibos), zijn dan ook geen echte
+              thee maar kruidenthee.
             </p>
-          </b-col>
-        </b-row>
-        <hr />
-        <div
-          id="collection-component-1623232139238"
-          alt="Theecollectie niet gevonden"
-        ></div>
-      </b-container>
-    </div>
+            <div
+              id="collection-component-1623232139238"
+              alt="Thee collectie"
+            ></div>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -34,54 +44,15 @@ export default {
   },
   metaInfo: {
     title: "1T3",
-    titleTemplate: "%s - Bestel uw thee of theepakket",
+    titleTemplate: "%s - Bestel uw thee of theepakket in onze webshop",
+    link: [{ rel: "canonical", href: "https://onet3.onrender.com/webshop" }],
+    meta: [
+      {
+        name: "description",
+        content: "Bestel uw thee of theepakket op 1Thee3.nl",
+      },
+    ],
   },
-
-  meta: [
-    {
-      name: "description",
-      content: "Bestel uw thee of theepakket op 1Thee3.nl",
-    },
-    //SOCIALE MEDIA TAGS
-    // // OpenGraph data (Most widely used)
-    // { property: "og:title", content: "My Page Title ← My Site" },
-    // { property: "og:site_name", content: "My Site" },
-    // // The list of types is available here: http://ogp.me/#types
-    // { property: "og:type", content: "website" },
-    // // Should the the same as your canonical link, see below.
-    // { property: "og:url", content: "https://www.my-site.com/my-special-page" },
-    // {
-    //   property: "og:image",
-    //   content: "https://www.my-site.com/my-special-image.jpg",
-    // },
-    // // Often the same as your meta description, but not always.
-    // { property: "og:description", content: "I have things here on my site." },
-
-    // // Twitter card
-    // { name: "twitter:card", content: "summary" },
-    // {
-    //   name: "twitter:site",
-    //   content: "https://www.my-site.com/my-special-page",
-    // },
-    // { name: "twitter:title", content: "My Page Title ← My Site" },
-    // { name: "twitter:description", content: "I have things here on my site." },
-    // // Your twitter handle, if you have one.
-    // { name: "twitter:creator", content: "@alligatorio" },
-    // {
-    //   name: "twitter:image:src",
-    //   content: "https://www.my-site.com/my-special-image.jpg",
-    // },
-
-    // // Google / Schema.org markup:
-    // { itemprop: "name", content: "My Page Title ← My Site" },
-    // { itemprop: "description", content: "I have things here on my site." },
-    // {
-    //   itemprop: "image",
-    //   content: "https://www.my-site.com/my-special-image.jpg",
-    // },
-  ],
-  // Canonical url uitgecomment, wanneer domein beschikbaar is comment weghalen
-  // link: [{ rel: "canonical", href="https://1thee3.nl/webshop" }],
 
   created: function () {
     var scriptURL =
@@ -376,6 +347,67 @@ export default {
 </script>
 
 <style scoped>
+#teabag {
+  transform-origin: top center;
+  transform: rotate(3deg);
+  animation: swing 2s infinite;
+}
+
+#steamL {
+  stroke-dasharray: 13;
+  stroke-dashoffset: 13;
+  animation: steamLarge 2s infinite;
+}
+
+#steamR {
+  stroke-dasharray: 9;
+  stroke-dashoffset: 9;
+  animation: steamSmall 2s infinite;
+}
+
+@keyframes swing {
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes steamLarge {
+  0% {
+    stroke-dashoffset: 13;
+    opacity: 0.6;
+  }
+
+  100% {
+    stroke-dashoffset: 39;
+    opacity: 0;
+  }
+}
+@keyframes steamSmall {
+  10% {
+    stroke-dashoffset: 9;
+    opacity: 0.6;
+  }
+
+  80% {
+    stroke-dashoffset: 27;
+    opacity: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 27;
+    opacity: 0;
+  }
+}
+
+.sidenav {
+  border-right: 2px solid #aaa199;
+}
+
+#webshoplink-list a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .webshop-main {
   min-height: 100vh;
 }
@@ -395,6 +427,31 @@ hr {
   opacity: 1;
   height: 2px !important;
   border-radius: 20px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .page-information {
+    margin-left: 3rem;
+  }
+  .text-md-left {
+    text-align: left !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
 </style>
 

@@ -1,6 +1,6 @@
 <template>
-  <b-row class="d-flex justify-content-center py-3 quiz-start">
-    <b-col class="col-10 col-lg-8">
+  <b-row class="d-flex justify-content-center pt-5">
+    <b-col class="col-10 col-lg-8 text-background">
       <b class="text-white">
         Niet zeker welke theesmaken bij jou passen of wil je simpelweg verrast
         worden?<br />Doe de mood finder en wij kiezen een passende theepakket
@@ -29,6 +29,9 @@ export default {
 <style scoped>
 .text-background {
   background-color: rgb(44, 43, 43);
+  border: solid 3px #aaa199;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .text-vertical-align {
@@ -36,8 +39,8 @@ export default {
   align-items: center;
 }
 
-.quiz-start {
+/* .quiz-start {
   margin-top: 60px;
   margin-bottom: 60px;
-}
+} */
 </style>

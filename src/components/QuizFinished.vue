@@ -1,9 +1,10 @@
 <template>
-  <b-row class="d-flex justify-content-center py-3">
-    <b-col class="col-6 col-lg-3">
-      <p class="text-white">
+  <b-row class="d-flex justify-content-center pt-5">
+    <b-col class="col-8 col-lg-3 text-background">
+      <b class="text-white">
         De mood finder is afgerond.<br />Jouw theepakket staat klaar!
-      </p>
+      </b>
+      <br /><br />
       <router-link :to="{ path: '/results' }"
         ><button
           class="btn btn-primary"
@@ -26,6 +27,9 @@ export default {
 <style scoped>
 .text-background {
   background-color: rgb(44, 43, 43);
+  border: solid 3px #aaa199;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .text-vertical-align {
