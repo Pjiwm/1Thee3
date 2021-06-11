@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style scoped>
+#impressie{
+background-color: rgb(44, 43, 43);
+}
 h1 {
   margin-bottom: 15px;
 }

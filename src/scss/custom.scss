@@ -5,7 +5,7 @@ body {
 }
 
 //bootstrap
-// @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/bootstrap.scss";
+//  @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/bootstrap.scss";
 // Required
 @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/variables";
@@ -22,7 +22,7 @@ body {
 //@import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/tables";
 //@import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/buttons";
-// @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/transitions";
 // @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/dropdown";
 // @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/button-group";
 // @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/input-group";
@@ -44,10 +44,24 @@ body {
 // @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/tooltip";
 // @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/popover";
 // @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/carousel";
-// @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/spinners";
 // @import "../../node_modules/bootstrap-vue/node_modules/bootstrap/scss/print";
 //
-//bootstrap-vue:
-@import "../../node_modules/bootstrap-vue/src/index.scss";
+// --- BootstrapVue Custom SCSS ---
+
+// Requires at least the Bootstrap functions, variables and
+// mixins to be imported first
+
+// Include variables and utilities first
+@import "../../node_modules/bootstrap-vue/src/variables";
+@import "../../node_modules/bootstrap-vue/src/utilities";
+
+// General styling needed for special form controls
+@import "../../node_modules/bootstrap-vue/src/custom-controls";
+
+// Include custom SCSS for icons
+@import "../../node_modules/bootstrap-vue/src/icons/index";
+
 @import "../../node_modules/bootstrap-vue/src/components/navbar/index.scss";
+@import "../../node_modules/bootstrap-vue/src/components/skeleton/index.scss";
 @import "../../node_modules/bootstrap-vue/src/components/nav/index.scss";
