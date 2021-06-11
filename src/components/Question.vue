@@ -1,6 +1,6 @@
 <template>
   <b-row class="d-flex justify-content-center question-row">
-    <b-row class="d-flex justify-content-center question-row"
+    <b-row class="d-flex justify-content-center"
       ><b-col class="col-lg-8 col-10 question-background"
         ><b class="text-white">{{ question }}</b></b-col
       ></b-row

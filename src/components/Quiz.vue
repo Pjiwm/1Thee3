@@ -154,7 +154,7 @@ export default {
 
 <style scoped>
 .min-height {
-  min-height: 15rem;
+  min-height: 15.5rem;
 }
 
 #mood-finder {
