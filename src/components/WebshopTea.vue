@@ -8,6 +8,9 @@
         producten die niet van deze plant afkomstig zijn (bijvoorbeeld
         kamillethee of rooibos), zijn dan ook geen echte thee maar kruidenthee.
       </p>
+      <div class="text-center d-none">
+        <b-spinner variant="primary" label="Text Centered"></b-spinner>
+      </div>
       <div
         class="pt-4"
         id="collection-component-1623232139238"
@@ -20,7 +23,6 @@
 <script>
 export default {
   name: "WebshopTea",
-
   created: function () {
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
@@ -34,8 +36,8 @@ export default {
       loadScript();
     }
     function loadScript() {
-      var script = document.createElement("script");
-      script.async = true;
+      var script = document.createElement("script").then;
+      script.async = false;
       script.src = scriptURL;
       (
         document.getElementsByTagName("head")[0] ||
@@ -48,6 +50,7 @@ export default {
         domain: "1t3-nl.myshopify.com",
         storefrontAccessToken: "9bc45730908a4fbfe63a973eef74d5cc",
       });
+
       window.ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent("collection", {
           id: "266373529807",
