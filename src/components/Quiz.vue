@@ -162,15 +162,16 @@ export default {
   border-top: 2px solid #aaa199;
   min-height: 450px;
 }
-
+/* it's repeating itself now, but that's fine because its a temporary image anyways.
+ this image was causing major lag issues to the webpage.*/
 .quiz-background {
-    background-image: url("../assets/tea_dark.webp");
+  background-image: url("../assets/tea_dark.webp");
 }
 
 .quiz-background:after {
-    background-position: center;
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+
   background-attachment: fixed;
   position: relative;
 }
