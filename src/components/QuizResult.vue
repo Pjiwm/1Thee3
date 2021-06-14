@@ -83,9 +83,15 @@
 <script>
 export default {
   name: "QuizResult",
-  components: {},
+    data() {
+    return {
+      data: require("../scripts/data.parser.js"),
+    };
+  },
   /*<![CDATA[*/
   created: function () {
+    alert(this.data.getProperty())
+    console.log(this.data.getProperty())
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
     if (window.ShopifyBuy) {

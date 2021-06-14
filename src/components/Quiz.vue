@@ -58,6 +58,7 @@ export default {
   },
   data() {
     return {
+      data: require("../scripts/data.parser.js"),
       questionIndex: 0,
       answers: [],
       progress: 0,
@@ -146,6 +147,8 @@ export default {
         case 3:
           this.component = quizFinished;
           this.progress = 100;
+          this.data.setProperty(this.answers);
+          console.log("finished quiz")
       }
     },
   },
