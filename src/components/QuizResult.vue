@@ -72,7 +72,13 @@
             explicabo unde sed ipsum reprehenderit vero quia perferendis
             blanditiis accusantium neque iure id corrupti aperiam rem tempora,
             quasi ipsa dolorum totam!
+            <br />
+            test:
+            <br />
+            {{ this.$route.params.items }}
+            <!-- {{ this.$route.attrs.items }} -->
           </p>
+
           <div id="product-2"></div>
         </div>
       </div>
@@ -82,9 +88,21 @@
 
 <script>
 export default {
+  // this.$route.params.items
   name: "QuizResult",
+  props: ["items"],
+  data() {
+    return {
+      // thee_collection_1: {
+      //   title: "title",
+      //   description: "description",
+      //   shopify_link: ""
+      // },
+    };
+  },
   /*<![CDATA[*/
   created: function () {
+    // console.log($attrs);
     let productIds = [6710995452111, 6711744037071];
     let i = 0;
     var scriptURL =
@@ -115,7 +133,7 @@ export default {
       });
       window.ShopifyBuy.UI.onReady(client).then(function (ui) {
         productIds.forEach((id) => {
-          i++
+          i++;
           ui.createComponent("product", {
             id: id,
             node: document.getElementById("product-" + i),

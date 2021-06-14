@@ -146,6 +146,12 @@ export default {
         case 3:
           this.component = quizFinished;
           this.progress = 100;
+          this.$router.push({
+            name: "resultsRoute",
+            params: {
+              items: this.answers,
+            },
+          });
       }
     },
   },

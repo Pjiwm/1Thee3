@@ -26,8 +26,8 @@ import index from "./components/pages/Index";
 import pageNotFound from "./components/pages/PageNotFound";
 import webshop from "./components/pages/Webshop";
 
-const resultsRoute = { path: "/results", component: results };
-const indexRoute = { path: "/", component: index };
+const resultsRoute = { path: "/results", name: "resultsRoute", component: results, props: true };
+const indexRoute = { path: "/", component: index, props: true };
 const pageNotFoundRoute = { path: "*", component: pageNotFound };
 const webshopRoute = { path: "/webshop", component: webshop };
 
