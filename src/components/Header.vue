@@ -53,8 +53,7 @@ header {
   padding-top: 71px;
 }
 
-
-header:before {
+header:after {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;

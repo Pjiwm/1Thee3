@@ -168,7 +168,7 @@ export default {
   position: relative;
 }
 
-.quiz-background:before {
+.quiz-background:after {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
