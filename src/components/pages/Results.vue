@@ -8,7 +8,7 @@
         <b-col><br /></b-col>
       </b-row>
       <b-row>
-        <b-col><QuizResults /></b-col>
+        <b-col alt="Quiz results niet gevonden"><QuizResults /></b-col>
       </b-row>
     </b-container>
   </div>
@@ -23,7 +23,14 @@ export default {
   },
   metaInfo: {
     title: "1T3",
-    titleTemplate: "%s - Results",
+    titleTemplate: "%s - Uw resultaat, bestel snel uw pakket!",
+    link: [{ rel: "canonical", href: "https://onet3.onrender.com/results" }],
+    meta: [
+      {
+        name: "description",
+        content: "Mood finder resultaat, bestel uw pakket",
+      },
+    ],
   },
 };
 </script>

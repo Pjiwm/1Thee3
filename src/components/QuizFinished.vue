@@ -1,12 +1,18 @@
 <template>
-  <b-row class="d-flex justify-content-center py-3">
-    <b-col class="col-6 col-lg-2">
-      <p class="text-white">
-        De Mood finder is gemaakt. Je resultaten staan klaar!
-      </p>
+  <b-row class="d-flex justify-content-center pt-5">
+    <b-col class="col-8 col-lg-3 text-background">
+      <b class="text-white">
+        De mood finder is afgerond.<br />Jouw theepakket staat klaar!
+      </b>
+      <br /><br />
       <router-link :to="{ path: '/results' }"
-        ><button class="btn btn-primary" type="button">
-          Verder naar resultaten
+        ><button
+          class="btn btn-primary"
+          type="button"
+          alt="Verder naar resultaat"
+          aria-label="Navigeer naar resultaat"
+        >
+          Verder naar theepakket
         </button></router-link
       >
     </b-col>
@@ -21,6 +27,9 @@ export default {
 <style scoped>
 .text-background {
   background-color: rgb(44, 43, 43);
+  border: solid 3px #aaa199;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .text-vertical-align {
