@@ -1,4 +1,4 @@
-class StaticMethodCall {
+class DataParser {
     constructor() {
         this.property;
     }
@@ -9,7 +9,7 @@ class StaticMethodCall {
         return this.property;
     } 
 }
-module.exports = new StaticMethodCall;
+module.exports = new DataParser;
 // StaticMethodCall.staticMethod();
 // // 'Static method and static property has been called'
 
