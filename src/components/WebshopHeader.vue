@@ -1,7 +1,8 @@
 <template>
   <header style="padding-top: 120px">
     <b-container class="text-center">
-      <b-row align-v="center" id="header">
+      <b-row align-v="center" >
+        <!-- id="header" -->
         <b-col cols="12">
           <h1>Webshop</h1>
         </b-col>
