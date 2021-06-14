@@ -1,17 +1,12 @@
 <template>
-  <header class="d-flex align-items-center py-md-5" id="header">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-8 text-center header-title m-auto">
-          <div class="main-title">
-            <h1>Webshop</h1>
-            <p class="pb-3">
-              Vind hier alle onze verschillende thee smaken en pakketten!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <header style="padding-top: 120px">
+    <b-container class="text-center">
+      <b-row align-v="center" id="header">
+        <b-col cols="12">
+          <h1>Webshop</h1>
+        </b-col>
+      </b-row>
+    </b-container>
   </header>
 </template>
 
@@ -22,17 +17,17 @@ export default {
 </script>
 
 <style scoped>
-header {
-  min-height: 60vh;
+#header {
+  min-height: 40vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/header-image.webp");
+  background-image: url("../assets/webshop_header.webp");
   position: relative;
-  padding-top: 71px;
+  border-radius: 3px;
 }
 
-header:after {
+#header:after {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
@@ -41,25 +36,18 @@ header:after {
   right: 0;
   content: "";
   z-index: 2;
+  border-radius: 3px;
 }
 
-.header-title {
+h1 {
   z-index: 50;
-  color: #fff;
+  position: relative;
 }
 
 h1 {
   font-weight: bold;
   font-size: 2.4rem;
 }
-
-header p {
-  font-size: 1.2rem;
-  width: 80%;
-  margin: auto;
-}
-
-
 
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
@@ -73,12 +61,6 @@ No media query for `xs` since this is the default in Bootstrap */
   h1 {
     font-weight: bold;
     font-size: 4rem;
-  }
-
-  header p {
-    font-size: 1.8rem;
-    width: 80%;
-    margin: auto;
   }
 }
 

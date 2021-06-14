@@ -29,6 +29,7 @@ export default {
 body {
   overflow-x:hidden;
   font-family: "Comfortaa", Helvetica, sans-serif !important;
+  text-shadow: 0px 0px 50px rgba(0,0,0, 0.7) !important;
 }
 
 

@@ -6,12 +6,17 @@
           <div class="main-title">
             <h1>Tea is like a hug in a mug</h1>
             <p class="pb-3">
-              Wil jij weten welke thee bij jou past? Doe dan hieronder de mood
+              Wil jij weten welke thee bij jou past?<br />Doe dan snel de mood
               finder!
             </p>
           </div>
           <a href="/#mood-finder">
-            <button type="button" class="btn btn-primary">
+            <button
+              type="button"
+              class="btn btn-primary"
+              alt="Doe de mood finder"
+              aria-label="Navigeer naar de mood finder"
+            >
               Doe de mood finder
             </button>
           </a>
@@ -21,7 +26,11 @@
     <!-- Font size 0 is to make the text readable for text-readers, but not for other users -->
     <a class="d-block" href="#impressie" style="font-size: 0px">
       Link naar impressie
-      <div class="arrow bounce"></div>
+      <div
+        class="arrow bounce"
+        alt="Navigeer naar impressie"
+        aria-label="Navigeer naar impressie"
+      ></div>
     </a>
   </header>
 </template>

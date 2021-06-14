@@ -1,13 +1,21 @@
 <template>
-  <b-row class="d-flex justify-content-center py-3">
-    <b-col class="col-10 col-lg-8">
-      <p class="text-white">
-        Niet zeker welke thee smaken bij jou passen of wil je simpelweg verrast
-        worden? Doe hier de mood finder en wij kiezen een assortiment dat goed
-        bij jou past
-      </p>
-      <button class="btn btn-primary" v-on:click="$emit('click')" type="button">
-        Start de moodfiner!
+  <b-row class="d-flex justify-content-center pt-5">
+    <b-col class="col-10 col-lg-8 text-background">
+      <b class="text-white">
+        Niet zeker welke theesmaken bij jou passen of wil je simpelweg verrast
+        worden?<br />Doe de mood finder en wij kiezen een passende theepakket
+        voor je uit!
+      </b>
+      <br />
+      <br />
+      <button
+        class="btn btn-primary"
+        v-on:click="$emit('start')"
+        type="button"
+        alt="Start de mood finder!"
+        aria-label="Start mood finder"
+      >
+        Start de mood finder!
       </button>
     </b-col>
   </b-row>
@@ -21,10 +29,18 @@ export default {
 <style scoped>
 .text-background {
   background-color: rgb(44, 43, 43);
+  border: solid 3px #aaa199;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .text-vertical-align {
   display: flex;
   align-items: center;
 }
+
+/* .quiz-start {
+  margin-top: 60px;
+  margin-bottom: 60px;
+} */
 </style>

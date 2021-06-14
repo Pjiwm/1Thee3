@@ -1,24 +1,37 @@
 <template>
   <div>
     <WebshopHeader />
-    <div class="d-flex align-items-center">
-      <b-container class="webshop-main py-5 text-center">
-        <b-row class="d-flex justify-content-center py-4">
-          <b-col cols="12" lg="8">
-            <h1>Alle thee smaken</h1>
-            <p class="under-title">
-              Alle thee, behalve kruidenthee, wordt gemaakt van theeblaadjes die
-              van de theestruik afkomstig zijn. De theestruik groeit in een
-              tropisch of subtropisch klimaat. ... Ondanks dat er veel
-              verschillende soorten thee bestaan zijn ze allemaal afkomstig van
-              de bladeren van dezelfde theestruik: de Camellia Sinensis.
+
+    <b-container class="py-5">
+      <b-row>
+        <b-col class="sidenav" cols="12" md="2">
+          <ul
+            id="webshoplink-list"
+            class="list-unstyled text-center text-md-left"
+          >
+            <li class="py-2"><a class="d-block" href="#">Thee smaken</a></li>
+            <li class="py-2"><a class="d-block" href="#">Thee pakket</a></li>
+            <li class="py-2"><a class="d-block" href="#">Toebehoren</a></li>
+          </ul>
+        </b-col>
+        <b-col cols="12" md="10">
+          <div class="page-information text-center text-md-left">
+            <h1>Thee smaken</h1>
+            <p>
+              Thee is een warme drank die wordt gemaakt door infusie van de
+              gedroogde bladeren van de theeplant Camellia sinensis. Alle als
+              thee verkochte producten die niet van deze plant afkomstig zijn
+              (bijvoorbeeld kamillethee of rooibos), zijn dan ook geen echte
+              thee maar kruidenthee.
             </p>
-          </b-col>
-        </b-row>
-        <hr class="" id="ons_doel" />
-        <div id="collection-component-1622713024168"></div>
-      </b-container>
-    </div>
+            <div
+              id="collection-component-1623232139238"
+              alt="Thee collectie"
+            ></div>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -31,8 +44,16 @@ export default {
   },
   metaInfo: {
     title: "1T3",
-    titleTemplate: "%s - Webshop",
+    titleTemplate: "%s - Bestel uw thee of theepakket in onze webshop",
+    link: [{ rel: "canonical", href: "https://onet3.onrender.com/webshop" }],
+    meta: [
+      {
+        name: "description",
+        content: "Bestel uw thee of theepakket op 1Thee3.nl",
+      },
+    ],
   },
+
   created: function () {
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
@@ -63,7 +84,7 @@ export default {
       window.ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent("collection", {
           id: "266373529807",
-          node: document.getElementById("collection-component-1622713024168"),
+          node: document.getElementById("collection-component-1623232139238"),
           moneyFormat: "%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D",
           options: {
             product: {
@@ -115,8 +136,12 @@ export default {
                   color: "#ffffff",
                 },
               },
+              buttonDestination: "modal",
+              contents: {
+                options: false,
+              },
               text: {
-                button: "In winkelwagen",
+                button: "Bekijk product",
               },
             },
             productSet: {
@@ -132,8 +157,6 @@ export default {
               contents: {
                 img: false,
                 imgWithCarousel: true,
-                button: false,
-                buttonWithQuantity: true,
               },
               styles: {
                 product: {
@@ -158,29 +181,39 @@ export default {
                   "font-family": "Helvetica Neue, sans-serif",
                   "font-weight": "bold",
                   "font-size": "26px",
-                  color: "#4c4c4c",
+                  color: "#ffffff",
                 },
                 price: {
                   "font-family": "Helvetica Neue, sans-serif",
                   "font-weight": "normal",
                   "font-size": "18px",
-                  color: "#4c4c4c",
+                  color: "#ffffff",
                 },
                 compareAt: {
                   "font-family": "Helvetica Neue, sans-serif",
                   "font-weight": "normal",
                   "font-size": "15.299999999999999px",
-                  color: "#4c4c4c",
+                  color: "#ffffff",
                 },
                 unitPrice: {
                   "font-family": "Helvetica Neue, sans-serif",
                   "font-weight": "normal",
                   "font-size": "15.299999999999999px",
-                  color: "#4c4c4c",
+                  color: "#ffffff",
+                },
+                description: {
+                  color: "#ffffff",
                 },
               },
               text: {
-                button: "Add to cart",
+                button: "In winkelwagen",
+              },
+            },
+            modal: {
+              styles: {
+                modal: {
+                  "background-color": "#262524",
+                },
               },
             },
             option: {},
@@ -252,6 +285,7 @@ export default {
                   "Verzend- en kortingscodes worden toegevoegd bij het afrekenen.",
                 button: "Bestellen",
               },
+              popup: false,
             },
             toggle: {
               styles: {
@@ -313,6 +347,67 @@ export default {
 </script>
 
 <style scoped>
+#teabag {
+  transform-origin: top center;
+  transform: rotate(3deg);
+  animation: swing 2s infinite;
+}
+
+#steamL {
+  stroke-dasharray: 13;
+  stroke-dashoffset: 13;
+  animation: steamLarge 2s infinite;
+}
+
+#steamR {
+  stroke-dasharray: 9;
+  stroke-dashoffset: 9;
+  animation: steamSmall 2s infinite;
+}
+
+@keyframes swing {
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes steamLarge {
+  0% {
+    stroke-dashoffset: 13;
+    opacity: 0.6;
+  }
+
+  100% {
+    stroke-dashoffset: 39;
+    opacity: 0;
+  }
+}
+@keyframes steamSmall {
+  10% {
+    stroke-dashoffset: 9;
+    opacity: 0.6;
+  }
+
+  80% {
+    stroke-dashoffset: 27;
+    opacity: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 27;
+    opacity: 0;
+  }
+}
+
+.sidenav {
+  border-right: 2px solid #aaa199;
+}
+
+#webshoplink-list a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .webshop-main {
   min-height: 100vh;
 }
@@ -332,6 +427,31 @@ hr {
   opacity: 1;
   height: 2px !important;
   border-radius: 20px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .page-information {
+    margin-left: 3rem;
+  }
+  .text-md-left {
+    text-align: left !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
 </style>
 
