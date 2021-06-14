@@ -172,8 +172,8 @@ export default {
   background-position: center;
   background-size: cover;
 
-  background-attachment: fixed;
-  position: relative;
+  /* background-attachment: fixed;
+  position: relative; */
 }
 
 image {

@@ -22,7 +22,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/webshop_header.webp");
+  /* background-image: url("../assets/webshop_header.webp"); */
   position: relative;
   border-radius: 3px;
 }
