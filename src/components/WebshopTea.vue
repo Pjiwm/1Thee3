@@ -36,8 +36,8 @@ export default {
       loadScript();
     }
     function loadScript() {
-      var script = document.createElement("script").then;
-      script.async = false;
+      var script = document.createElement("script");
+      script.async = true;
       script.src = scriptURL;
       (
         document.getElementsByTagName("head")[0] ||
