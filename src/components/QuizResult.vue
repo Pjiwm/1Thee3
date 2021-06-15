@@ -1,87 +1,49 @@
 <template>
-  <main class="container-fluid main-bg mt-5 pt-5 pb-3">
-    <div class="offset-lg-2 offset-md-2 offset-sm-1">
-      <div class="row">
-        <card class="col-lg-2 col-md-2 col-sm-3">
-          <img
-            src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
-            alt=""
-            style="width: 100%"
-          />
-          <p>thee smaak 1</p>
-        </card>
-        <card class="col-lg-2 col-md-2 col-sm-3">
-          <img
-            src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
-            alt=""
-            style="width: 100%"
-          />
-          <p>thee smaak 2</p>
-        </card>
-        <card class="col-lg-2 col-md-2 col-sm-3">
-          <img
-            src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
-            alt=""
-            style="width: 100%"
-          />
-          <p>thee smaak 3</p>
-        </card>
-        <div class="col-lg-4 col-md-4 col-sm-10">
-          <h4><b>Theeplank optie 1</b></h4>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-            explicabo unde sed ipsum reprehenderit vero quia perferendis
-            blanditiis accusantium neque iure id corrupti aperiam rem tempora,
-            quasi ipsa dolorum totam!
+  <main>
+    <b-container>
+      <b-row>
+        <b-col cols="12" class="pb-5 text-center">
+          <h1>Dit thee pakket past het best bij jou!</h1>
+          <p class="m-auto">
+            Onze experts hebben gecalculeerd dat deze thee helemaal bij jou
+            past.
           </p>
-          <div id="product-1"></div>
-        </div>
-      </div>
-
-      <hr class="col-lg-10 col-md-10 col-sm-10 mt-4 mb-4" />
-
-      <div class="row pb-3">
-        <card class="col-lg-2 col-md-2 col-sm-3">
-          <img
-            src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
-            alt=""
-            style="width: 100%"
-          />
-          <p>thee smaak 3</p>
-        </card>
-        <card class="col-lg-2 col-md-2 col-sm-3">
-          <img
-            src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
-            alt=""
-            style="width: 100%"
-          />
-          <p>thee smaak 4</p>
-        </card>
-        <card class="col-lg-2 col-md-2 col-sm-3">
-          <img
-            src="https://static-images.jumbo.com/product_images/090820180902_51014DS-242_360x360.png"
-            alt=""
-            style="width: 100%"
-          />
-          <p>thee smaak 5</p>
-        </card>
-        <div class="col-lg-4 col-md-4 col-sm-10">
-          <h4><b>Theeplank optie 2</b></h4>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-            explicabo unde sed ipsum reprehenderit vero quia perferendis
-            blanditiis accusantium neque iure id corrupti aperiam rem tempora,
-            quasi ipsa dolorum totam!
-            <br />
-            test:
-            <br />
-            {{ this.some_data }}
-          </p>
-
-          <div id="product-2"></div>
-        </div>
-      </div>
-    </div>
+        </b-col>
+        <hr class="col-12" />
+        <b-col
+          cols="12"
+          order="1"
+          class="product-result my-5 pb-5"
+          data-rank="#1"
+        >
+          <div id="product-component-1"></div>
+        </b-col>
+        <b-col
+          cols="12"
+          order="2"
+          class="product-result my-5 pb-5"
+          data-rank="#2"
+        >
+          <div id="product-component-2"></div>
+        </b-col>
+        <b-col
+          cols="12"
+          order="3"
+          class="product-result my-5 pb-5"
+          data-rank="#3"
+        >
+          <div id="product-component-3"></div>
+        </b-col>
+        <b-col
+          cols="12"
+          order="4"
+          class="product-result my-5 pb-5"
+          data-rank="#4"
+        >
+          <div id="product-component-4"></div>
+        </b-col>
+      </b-row>
+    </b-container>
   </main>
 </template>
 
@@ -101,7 +63,11 @@ export default {
   },
   /*<![CDATA[*/
   created: function () {
-    let productIds = [6710995452111, 6711744037071];
+    // Shopfiy product id's
+    // If you want to add more results you can add the id here
+    let productIds = [
+      6718558568655, 6710995452111, 6718558404815, 6711744037071,
+    ];
     let i = 0;
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
@@ -134,19 +100,21 @@ export default {
           i++;
           ui.createComponent("product", {
             id: id,
-            node: document.getElementById("product-" + i),
+            node: document.getElementById("product-component-" + i),
             moneyFormat: "%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D",
             options: {
               product: {
                 styles: {
                   product: {
                     "@media (min-width: 601px)": {
-                      "max-width": "calc(25% - 20px)",
-                      "margin-left": "20px",
+                      "max-width": "100%",
+                      "margin-left": "0",
                       "margin-bottom": "50px",
                     },
+                    "text-align": "center",
                   },
                   title: {
+                    "font-size": "26px",
                     color: "#ffffff",
                   },
                   button: {
@@ -157,22 +125,32 @@ export default {
                     ":focus": {
                       "background-color": "#ac924b",
                     },
+                    "padding-left": "42px",
+                    "padding-right": "42px",
                   },
                   price: {
+                    "font-size": "18px",
                     color: "#ffffff",
                   },
                   compareAt: {
+                    "font-size": "15.299999999999999px",
                     color: "#ffffff",
                   },
                   unitPrice: {
+                    "font-size": "15.299999999999999px",
+                    color: "#ffffff",
+                  },
+                  description: {
                     color: "#ffffff",
                   },
                 },
+                layout: "horizontal",
                 contents: {
                   img: false,
-                  title: false,
-                  price: false,
+                  imgWithCarousel: true,
+                  description: true,
                 },
+                width: "100%",
                 text: {
                   button: "In winkelwagen",
                 },
@@ -190,8 +168,6 @@ export default {
                 contents: {
                   img: false,
                   imgWithCarousel: true,
-                  button: false,
-                  buttonWithQuantity: true,
                 },
                 styles: {
                   product: {
@@ -209,36 +185,49 @@ export default {
                     ":focus": {
                       "background-color": "#ac924b",
                     },
-                    "padding-left": "100px",
-                    "padding-right": "100px",
+                    "padding-left": "42px",
+                    "padding-right": "42px",
                   },
                   title: {
                     "font-family": "Helvetica Neue, sans-serif",
                     "font-weight": "bold",
                     "font-size": "26px",
-                    color: "#4c4c4c",
+                    color: "#ffffff",
                   },
                   price: {
                     "font-family": "Helvetica Neue, sans-serif",
                     "font-weight": "normal",
                     "font-size": "18px",
-                    color: "#4c4c4c",
+                    color: "#ffffff",
                   },
                   compareAt: {
                     "font-family": "Helvetica Neue, sans-serif",
                     "font-weight": "normal",
                     "font-size": "15.299999999999999px",
-                    color: "#4c4c4c",
+                    color: "#ffffff",
                   },
                   unitPrice: {
                     "font-family": "Helvetica Neue, sans-serif",
                     "font-weight": "normal",
                     "font-size": "15.299999999999999px",
-                    color: "#4c4c4c",
+                    color: "#ffffff",
+                  },
+                  description: {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "14px",
+                    color: "#ffffff",
                   },
                 },
                 text: {
-                  button: "Add to cart",
+                  button: "In winkelwagen",
+                },
+              },
+              modal: {
+                styles: {
+                  modal: {
+                    "background-color": "#262524",
+                  },
                 },
               },
               option: {},
@@ -372,6 +361,40 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-weight: bold;
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.product-result {
+  position: relative;
+  border-bottom: 2px solid #aaa199;
+}
+
+.product-result:last-child {
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.product-result:after {
+  content: attr(data-rank);
+  width: 50px;
+  height: 70px;
+  border-radius: 3px;
+  background-color: #bfa253;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 72px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .card {
   margin: 0;
   padding: 0;
@@ -395,10 +418,43 @@ h1 {
 
 p {
   font-size: 20px;
+  width: 80%;
 }
 
 img {
   border: solid 3px #aaa199;
   border-radius: 4px;
+}
+
+hr {
+  background-color: #aaa199;
+  opacity: 1;
+  height: 2px !important;
+  border-radius: 20px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .product-result:after {
+    left: 13rem;
+    width: 60px;
+    height: 80px;
+    line-height: 82px;
+  }
 }
 </style>
