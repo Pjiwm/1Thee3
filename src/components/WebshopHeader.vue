@@ -28,7 +28,7 @@ export default {
     }
 
     onKonamiCode(function () {
-      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
     });
   },
 };
