@@ -61,7 +61,7 @@ export default {
 
 .nav-item {
   font-weight: bold;
-  width: 120px;
+  width: 125px;
   text-align: center;
 }
 

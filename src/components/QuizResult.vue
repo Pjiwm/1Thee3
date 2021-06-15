@@ -474,6 +474,7 @@ main {
 .product-result {
   position: relative;
   border-bottom: 2px solid #aaa199;
+  min-height: 40rem;
 }
 
 .product-result:last-child {
