@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "nl.1t3",
+    "package_name": "nl.EenTheeDrie",
     "sha256_cert_fingerprints":
     ["5C:7A:53:21:07:EA:13:DA:64:38:CB:10:3B:B0:C6:37:B6:76:33:09:1E:2A:62:E8:89:E7:D5:7B:26:60:35:31"]
   }
