@@ -133,7 +133,7 @@ export default {
             },
             { name: "sangria met fruit", variety: ["sweet"] },
             { name: "wijn", variety: ["everyonesFriend"] },
-            { name: "bessen", variety: ["sweet"] }
+            { name: "jus d'orange", variety: ["sweet"] }
           );
           this.$refs.question.setImage(
             this.beer,

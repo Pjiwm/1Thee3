@@ -12,35 +12,36 @@
         <hr class="col-12" />
         <b-col
           cols="12"
-          order="1"
+          :order="everyonesFriend"
           class="product-result my-5 pb-5"
-          data-rank="#1"
+          :data-rank="everyonesFriendNr"
         >
           <div id="product-component-1"></div>
         </b-col>
         <b-col
           cols="12"
-          order="2"
+          :order="spicy"
           class="product-result my-5 pb-5"
-          data-rank="#2"
+          :data-rank="spicyNr"
         >
           <div id="product-component-2"></div>
         </b-col>
         <b-col
           cols="12"
-          order="3"
+          :order="wild"
           class="product-result my-5 pb-5"
-          data-rank="#3"
+          :data-rank="wildNr"
         >
           <div id="product-component-3"></div>
         </b-col>
         <b-col
           cols="12"
-          order="4"
+          :order="sweet"
           class="product-result my-5 pb-5"
-          data-rank="#4"
+          :data-rank="sweetNr"
         >
           <div id="product-component-4"></div>
+          {{ this.$route.params.items }}
         </b-col>
       </b-row>
     </b-container>
@@ -53,16 +54,116 @@ export default {
   name: "QuizResult",
   data() {
     return {
-      some_data: this.$route.params.items,
-      // thee_collection_1: {
-      //   title: "title",
-      //   description: "description",
-      //   shopify_link: ""
-      // },
+      route_answers: this.$route.params.items,
+      everyonesFriend: 1,
+      spicy: 2,
+      wild: 3,
+      sweet: 4,
+      everyonesFriendNr: "1",
+      spicyNr: "2",
+      wildNr: "3",
+      sweetNr: "4",
     };
   },
   /*<![CDATA[*/
   created: function () {
+    const vm = this;
+    const answers = vm.$route.params.items;
+    console.log(answers);
+    // Sets order of product with params
+    setProductOrder();
+
+    function setProductOrder() {
+      let everyonesFriendCount = 0;
+      let spicyCount = 0;
+      let wildCount = 0;
+      let sweetCount = 0;
+
+      //Points per variety
+      for (let index1 = 0; index1 < 3; index1++) {
+        for (
+          let index2 = 0;
+          index2 < answers[index1].variety.length;
+          index2++
+        ) {
+          console.log("POINT ADDED TO: " + answers[index1].variety[index2]);
+          if (answers[index1].variety[index2] == "everyonesFriend") {
+            everyonesFriendCount++;
+          } else if (answers[index1].variety[index2] == "spicy") {
+            spicyCount++;
+          } else if (answers[index1].variety[index2] == "wild") {
+            wildCount++;
+          } else if (answers[index1].variety[index2] == "sweet") {
+            sweetCount++;
+          }
+        }
+      }
+
+      let counts = [];
+      counts[0] = ["everyonesFriend", everyonesFriendCount];
+      counts[1] = ["spicy", spicyCount];
+      counts[2] = ["wild", wildCount];
+      counts[3] = ["sweet", sweetCount];
+      let temp;
+
+      // Sorts counts from biggest to smallest
+      for (let x = 0; x < counts.length; x++) {
+        for (let y = x + 1; y < counts.length; y++) {
+          if (counts[x][1] < counts[y][1]) {
+            temp = counts[x];
+            counts[x] = counts[y];
+            counts[y] = temp;
+          }
+        }
+      }
+      console.log(
+        "POINTS TOTAL (DESC):\n" +
+          counts[0] +
+          "\n" +
+          counts[1] +
+          "\n" +
+          counts[2] +
+          "\n" +
+          counts[3]
+      );
+
+      // Assigns new positions
+      for (let z = 0; z < 4; z++) {
+        if (counts[z][0] == "everyonesFriend") {
+          vm.everyonesFriend = z + 1;
+          vm.everyonesFriendNr = "#" + (z + 1);
+        } else if (counts[z][0] == "spicy") {
+          vm.spicy = z + 1;
+          vm.spicyNr = "#" + (z + 1);
+        } else if (counts[z][0] == "wild") {
+          vm.wild = z + 1;
+          vm.wildNr = "#" + (z + 1);
+        } else if (counts[z][0] == "sweet") {
+          vm.sweet = z + 1;
+          vm.sweetNr = "#" + (z + 1);
+        }
+      }
+
+      console.log(
+        "NEW POSITIONS:\neveryonesFriend: " +
+          vm.everyonesFriend +
+          " " +
+          vm.everyonesFriendNr +
+          "\nspicy: " +
+          vm.spicy +
+          " " +
+          vm.spicyNr +
+          "\nwild: " +
+          vm.wild +
+          " " +
+          vm.wildNr +
+          "\nsweet: " +
+          vm.sweet +
+          " " +
+          vm.sweetNr
+      );
+    }
+
     // Shopfiy product id's
     // If you want to add more results you can add the id here
     let productIds = [
