@@ -6,7 +6,12 @@
           <h1>Dit thee pakket past het best bij jou!</h1>
           <p class="m-auto">
             Onze experts hebben gecalculeerd dat deze thee helemaal bij jou
-            past.
+            past.<br />
+            RESULTAAT:
+            <br />
+            Vraag 1: {{ this.$route.params.items[0].variety }}<br />
+            Vraag 2: {{ this.$route.params.items[1].variety }}<br />
+            Vraag 3: {{ this.$route.params.items[2].variety }}
           </p>
         </b-col>
         <hr class="col-12" />
@@ -41,7 +46,6 @@
           :data-rank="sweetNr"
         >
           <div id="product-component-4"></div>
-          {{ this.$route.params.items }}
         </b-col>
       </b-row>
     </b-container>
@@ -50,11 +54,9 @@
 
 <script>
 export default {
-  // this.$route.params.items
   name: "QuizResult",
   data() {
     return {
-      route_answers: this.$route.params.items,
       everyonesFriend: 1,
       spicy: 2,
       wild: 3,
@@ -68,12 +70,19 @@ export default {
   /*<![CDATA[*/
   created: function () {
     const vm = this;
-    const answers = vm.$route.params.items;
-    console.log(answers);
-    // Sets order of product with params
-    setProductOrder();
+    const params = vm.$route.params.items;
 
-    function setProductOrder() {
+    // Sets order of product with params
+    if (typeof params !== "undefined") {
+      console.log("Params:\n" + params);
+      setProductOrder(params);
+    } else {
+      //IMPLEMENTEER HIER DE COOKIE voor refresh, ALS ER GEEN PARAMS ZIJN (bij refresh) VOERT IE HET ONDERSTAANDE UIT
+      //https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+      //https://www.w3schools.com/js/js_cookies.asp
+    }
+
+    function setProductOrder(answers) {
       let everyonesFriendCount = 0;
       let spicyCount = 0;
       let wildCount = 0;
