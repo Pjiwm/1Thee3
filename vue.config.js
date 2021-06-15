@@ -7,12 +7,12 @@ module.exports = {
         appleMobileWebAppCapable: 'yes',
         appleMobileWebAppStatusBarStyle: 'black',
     },
-    configureWebpack: {
-        plugins: [
-            new webpack.IgnorePlugin({
-                resourceRegExp: /^\.\/locale$/,
-                contextRegExp: /moment$/
-            })
-        ]
-    }
+    // configureWebpack: {
+    //     plugins: [
+    //         new webpack.IgnorePlugin({
+    //             resourceRegExp: /^\.\/locale$/,
+    //             contextRegExp: /moment$/
+    //         })
+    //     ]
+    // }
 }
