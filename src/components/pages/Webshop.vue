@@ -77,6 +77,7 @@ export default {
 
 #webshoplink-list a:hover {
   cursor: pointer;
+  color: #bfa253;
 }
 
 .webshop-main {
@@ -92,6 +93,7 @@ div {
   background-color: #262524;
   color: #fff;
 }
+
 
 hr {
   background-color: #aaa199;
