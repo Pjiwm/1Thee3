@@ -21,19 +21,19 @@ Vue.use(IconsPlugin);
 Vue.use(VueRouter);
 Vue.use(VueMeta);
 
-const results = () =>
+const results =
     import('./components/pages/Results')
-const index = () =>
+const index =
     import('./components/pages/Index')
-const pageNotFound = () =>
+const pageNotFound =
     import('./components/pages/PageNotFound')
-const webshop = () =>
+const webshop =
     import('./components/pages/Webshop')
 
 const resultsRoute = { path: "/results", name: "resultsRoute", component: results, props: true };
-const indexRoute = { path: "/", component: resolve => require(index, resolve), props: true };
-const pageNotFoundRoute = { path: "*", component: resolve => require(pageNotFound, resolve) };
-const webshopRoute = { path: "/webshop", component: resolve => require(webshop, resolve) };
+const indexRoute = { path: "/", component: index, props: true };
+const pageNotFoundRoute = { path: "*", component: pageNotFound };
+const webshopRoute = { path: "/webshop", component: webshop };
 
 const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
 
