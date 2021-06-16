@@ -31,22 +31,22 @@ const webshop = () =>
     import('./components/pages/Webshop')
 
 const resultsRoute = { path: "/results", name: "resultsRoute", component: results, props: true };
-const indexRoute = { path: "/", component: index, props: true };
-const pageNotFoundRoute = { path: "*", component: pageNotFound };
-const webshopRoute = { path: "/webshop", component: webshop };
+const indexRoute = { path: "/", component: resolve => require(index, resolve), props: true };
+const pageNotFoundRoute = { path: "*", component: resolve => require(pageNotFound, resolve) };
+const webshopRoute = { path: "/webshop", component: resolve => require(webshop, resolve) };
 
 const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
 
 const router = new VueRouter({
     routes,
-    scrollBehavior (to, from, savedPosition) {
+    scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
-          return savedPosition
+            return savedPosition
         } else {
-          return { x: 0, y: 0 }
+            return { x: 0, y: 0 }
         }
-      },
-      
+    },
+
     mode: "history",
 });
 
