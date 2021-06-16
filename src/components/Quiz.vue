@@ -58,7 +58,6 @@ export default {
   },
   data() {
     return {
-      questionIndex: 0,
       answers: [],
       progress: 0,
       maxProgress: 100,
@@ -103,8 +102,7 @@ export default {
        * questionIndex stands for the question the user would like to go to.
        * So e.g questionIndex = 1 is going to the second question (counting from 0)
        */
-      this.questionIndex++;
-      switch (this.questionIndex) {
+      switch (this.answers.length) {
         case 0:
           break;
         //For question 1, see Question.Vue data field
@@ -127,13 +125,14 @@ export default {
         case 2:
           // this.$refs.question.setQuestion("Question 3");
           this.$refs.question.setItems(
-            {
-              name: "speciaal bier",
-              variety: ["wild", "everyonesFriend", "spicy"],
-            },
-            { name: "sangria met fruit", variety: ["sweet"] },
+            { name: "speciaal bier", variety: ["wild", "everyonesFriend", "spicy"] },
+            { name: "sangria", variety: ["sweet"] },
             { name: "wijn", variety: ["everyonesFriend"] },
+<<<<<<< HEAD
             { name: "jus d'orange", variety: ["sweet"] }
+=======
+            { name: "sinasappelsap", variety: ["sweet"] }
+>>>>>>> quiz-content
           );
           this.$refs.question.setImage(
             this.beer,
