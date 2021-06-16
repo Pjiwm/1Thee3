@@ -3,10 +3,10 @@
     <b-container>
       <b-row v-show="quiz_cookies_exist">
         <b-col cols="12" class="pb-5 text-center">
-          <h1>Dit thee pakket past het best bij jou!</h1>
+          <h1>Deze theepakketten passen het beste bij jou!</h1>
           <p class="m-auto">
-            Onze experts hebben gecalculeerd dat deze thee helemaal bij jou
-            past.<br />
+            De theepakketten staan op volgorde, van de beste match naar de
+            mindere match...<br />
           </p>
         </b-col>
         <!-- <hr class="col-12" /> -->
@@ -46,7 +46,7 @@
       <b-row v-show="!quiz_cookies_exist">
         <b-col cols="12" class="my-5 p-5 text-center">
           <h1>De Mood finder is nog niet gemaakt.</h1>
-          <p class="m-auto">Je wordt doorverwezen naar de Mood finder...</p>
+          <p class="m-auto">Je wordt zo doorverwezen naar de Mood finder...</p>
         </b-col>
       </b-row>
     </b-container>
