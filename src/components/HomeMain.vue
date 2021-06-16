@@ -1,5 +1,5 @@
 <template>
-  <main id="impressie" class="container-fluid main-bg py-4">
+  <main id="over_ons" class="container-fluid main-bg py-4">
     <b-row class="row py-5">
       <b-col class="col-lg-5 offset-lg-2 mb-lg-0 col-10 offset-1 mb-3">
         <h1>Over 1T3</h1>
@@ -20,7 +20,7 @@
         />
       </b-col>
     </b-row>
-    <hr class="col-lg-8 offset-lg-2 col-10 offset-1" id="ons_doel" />
+    <hr class="col-lg-8 offset-lg-2 col-10 offset-1" id="onze_thee" />
     <b-row class="row py-5">
       <b-col
         class="
