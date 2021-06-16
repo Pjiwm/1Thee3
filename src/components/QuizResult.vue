@@ -13,7 +13,7 @@
         <b-col
           cols="12"
           :order="everyonesFriend"
-          class="product-result mt-5 pt-5"
+          class="product-result mt-3 mb-5 pt-5"
           :data-rank="everyonesFriendNr"
         >
           <div id="product-component-1"></div>
@@ -21,7 +21,7 @@
         <b-col
           cols="12"
           :order="spicy"
-          class="product-result mt-5 pt-5"
+          class="product-result mt-3 mb-5 pt-5"
           :data-rank="spicyNr"
         >
           <div id="product-component-2"></div>
@@ -29,7 +29,7 @@
         <b-col
           cols="12"
           :order="wild"
-          class="product-result mt-5 pt-5"
+          class="product-result mt-3 mb-5 pt-5"
           :data-rank="wildNr"
         >
           <div id="product-component-3"></div>
@@ -37,7 +37,7 @@
         <b-col
           cols="12"
           :order="sweet"
-          class="product-result mt-5 pt-5"
+          class="product-result mt-3 mb-5 pt-5"
           :data-rank="sweetNr"
         >
           <div id="product-component-4"></div>
