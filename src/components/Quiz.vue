@@ -125,14 +125,13 @@ export default {
         case 2:
           // this.$refs.question.setQuestion("Question 3");
           this.$refs.question.setItems(
-            { name: "speciaal bier", variety: ["wild", "everyonesFriend", "spicy"] },
+            {
+              name: "speciaal bier",
+              variety: ["wild", "everyonesFriend", "spicy"],
+            },
             { name: "sangria", variety: ["sweet"] },
             { name: "wijn", variety: ["everyonesFriend"] },
-<<<<<<< HEAD
             { name: "jus d'orange", variety: ["sweet"] }
-=======
-            { name: "sinasappelsap", variety: ["sweet"] }
->>>>>>> quiz-content
           );
           this.$refs.question.setImage(
             this.beer,
