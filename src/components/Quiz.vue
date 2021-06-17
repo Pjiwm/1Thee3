@@ -58,26 +58,27 @@ export default {
   },
   data() {
     return {
+      questionIndex: 0,
       answers: [],
       progress: 0,
       maxProgress: 100,
       component: "quizStart",
       progressBar: false,
       // question 1
-      mountains: mountains,
-      forest: forest,
-      party: party,
-      flowerField: flowerField,
+      mountains,
+      forest,
+      party,
+      flowerField,
       // question 2
-      pepper: pepper,
-      strawberry: strawberry,
-      apple: apple,
-      berry: berry,
+      pepper,
+      strawberry,
+      apple,
+      berry,
       // question 3:
-      jus: jus,
-      sangriaFruits: sangriaFruits,
-      beer: beer,
-      wine: wine,
+      jus,
+      sangriaFruits,
+      beer,
+      wine,
     };
   },
   methods: {
@@ -129,7 +130,7 @@ export default {
               name: "speciaal bier",
               variety: ["wild", "everyonesFriend", "spicy"],
             },
-            { name: "sangria", variety: ["sweet"] },
+            { name: "sangria met fruit", variety: ["sweet"] },
             { name: "wijn", variety: ["everyonesFriend"] },
             { name: "jus d'orange", variety: ["sweet"] }
           );
