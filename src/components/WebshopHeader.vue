@@ -1,7 +1,8 @@
 <template>
   <header style="padding-top: 120px">
     <b-container class="text-center">
-      <b-row align-v="center" id="header">
+      <b-row align-v="center" >
+        <!-- id="header" -->
         <b-col cols="12">
           <h1>Webshop</h1>
         </b-col>
@@ -13,6 +14,24 @@
 <script>
 export default {
   name: "WebshopHeader",
+   mounted: function () {
+    function onKonamiCode(cb) {
+      var input = "";
+      var key = "38384040373937396665";
+      document.addEventListener("keydown", function (e) {
+        input += "" + e.keyCode;
+        if (input === key) {
+          return cb();
+        }
+        if (!key.indexOf(input)) return;
+        input = "" + e.keyCode;
+      });
+    }
+
+    onKonamiCode(function () {
+      window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+    });
+  },
 };
 </script>
 
@@ -22,7 +41,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/webshop_header.webp");
+  /* background-image: url("../assets/webshop_header.webp"); */
   position: relative;
   border-radius: 3px;
 }

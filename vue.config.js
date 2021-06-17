@@ -6,13 +6,5 @@ module.exports = {
         msTileColor: '#AAA199 ',
         appleMobileWebAppCapable: 'yes',
         appleMobileWebAppStatusBarStyle: 'black',
-    },
-    configureWebpack: {
-        plugins: [
-            new webpack.IgnorePlugin({
-                resourceRegExp: /^\.\/locale$/,
-                contextRegExp: /moment$/
-            })
-        ]
     }
 }

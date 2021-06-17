@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="p-0" toggleable="lg" type="dark" variant="dark" fixed="top">
+  <b-navbar class="p-0 shadow" toggleable="lg" type="dark" variant="dark" fixed="top">
     <b-navbar-brand
       href="/"
       class="d-block d-lg-none"
@@ -20,8 +20,8 @@
       class="d-lg-flex justify-content-center"
     >
       <b-navbar-nav class="d-flex align-items-center">
-        <b-nav-item href="/#impressie">Impressie</b-nav-item>
-        <b-nav-item href="/#ons_doel">Ons doel</b-nav-item>
+        <b-nav-item href="/#over_ons">Over 1T3</b-nav-item>
+        <b-nav-item href="/#onze_thee">Onze thee</b-nav-item>
         <a
           class="navbar-brand d-none d-lg-block"
           href="/#"
@@ -61,7 +61,7 @@ export default {
 
 .nav-item {
   font-weight: bold;
-  width: 120px;
+  width: 125px;
   text-align: center;
 }
 

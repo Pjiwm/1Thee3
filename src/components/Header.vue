@@ -45,9 +45,9 @@ export default {
 header {
   min-height: 100vh;
   background-position: center;
-  background-size: cover;
+  /* background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   background-image: url("../assets/header-image.webp");
   position: relative;
   padding-top: 71px;

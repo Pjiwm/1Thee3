@@ -6,8 +6,8 @@
         worden?<br />Doe de mood finder en wij kiezen een passende theepakket
         voor je uit!
       </b>
-      <br />
-      <br />
+      <br/>
+      <br/>
       <button
         class="btn btn-primary"
         v-on:click="$emit('start')"
