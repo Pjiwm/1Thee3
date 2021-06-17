@@ -175,10 +175,11 @@ export default {
 
 .quiz-background:after {
   background-position: center;
-  background-size: cover;
-
-  /* background-attachment: fixed;
-  position: relative; */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  background-image: url("../assets/tea_dark.webp");
+  position: relative;
 }
 
 image {
