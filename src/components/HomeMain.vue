@@ -31,12 +31,19 @@
           order-last order-md-1
         "
       >
-        <img
+        <!-- <img
           alt="Thee wordt ingeschoken met een goudkleurige theepot in een Chinees kopje"
           src="../assets/thee2-home.webp"
           width="100%"
           height="100%"
-        />
+        /> -->
+        <b-carousel :interval="4000" fade img-width="250" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+          <b-carousel-slide img-src="instaCarousel/0.jpg"></b-carousel-slide>
+          <b-carousel-slide img-src="instaCarousel/1.jpg"></b-carousel-slide>
+          <b-carousel-slide img-src="instaCarousel/2.jpg"></b-carousel-slide>
+          <b-carousel-slide img-src="instaCarousel/3.jpg"></b-carousel-slide>
+          <b-carousel-slide img-src="instaCarousel/4.jpg"></b-carousel-slide>
+        </b-carousel>
       </b-col>
       <b-col
         class="col-lg-5 offset-lg-0 col-10 offset-1 order-first mb-3 order-md-2"
@@ -56,6 +63,20 @@
 <script>
 export default {
   name: "HomeMain",
+    data() {
+      return {
+        slide: 0,
+        sliding: null
+      }
+    },
+    methods: {
+      onSlideStart() {
+        this.sliding = true
+      },
+      onSlideEnd() {
+        this.sliding = false
+      }
+    }
 };
 </script>
 
