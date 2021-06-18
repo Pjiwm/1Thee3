@@ -21,28 +21,40 @@ Vue.use(IconsPlugin);
 Vue.use(VueRouter);
 Vue.use(VueMeta);
 
-const results = () => import("./components/pages/Results");
-const index = () => import("./components/pages/Index");
-const pageNotFound = () => import("./components/pages/PageNotFound");
-const webshop = () => import("./components/pages/Webshop");
+const results = () =>
+    import('./components/pages/Results')
+const index = () =>
+    import('./components/pages/Index')
+const pageNotFound = () =>
+    import('./components/pages/PageNotFound')
+const webshop = () =>
+    import('./components/pages/Webshop')
 
-const resultsRoute = { path: "/results", component: results };
-const indexRoute = { path: "/", component: index };
+const resultsRoute = { path: "/results", name: "resultsRoute", component: results, props: true };
+const indexRoute = { path: "/", component: index, props: true };
 const pageNotFoundRoute = { path: "*", component: pageNotFound };
 const webshopRoute = { path: "/webshop", component: webshop };
 
 const routes = [resultsRoute, indexRoute, pageNotFoundRoute, webshopRoute];
 
 const router = new VueRouter({
-  routes,
-  mode: "history",
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+          return savedPosition
+        } else {
+          return { x: 0, y: 0 }
+        }
+      },
+      
+    mode: "history",
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  render: function(h) {
-    return h(App);
-  },
+    router,
+    render: function (h) {
+        return h(App);
+    },
 }).$mount("#app");

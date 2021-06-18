@@ -65,20 +65,20 @@ export default {
       component: "quizStart",
       progressBar: false,
       // question 1
-      mountains: mountains,
-      forest: forest,
-      party: party,
-      flowerField: flowerField,
+      mountains,
+      forest,
+      party,
+      flowerField,
       // question 2
-      pepper: pepper,
-      strawberry: strawberry,
-      apple: apple,
-      berry: berry,
+      pepper,
+      strawberry,
+      apple,
+      berry,
       // question 3:
-      jus: jus,
-      sangriaFruits: sangriaFruits,
-      beer: beer,
-      wine: wine,
+      jus,
+      sangriaFruits,
+      beer,
+      wine,
     };
   },
   methods: {
@@ -103,18 +103,17 @@ export default {
        * questionIndex stands for the question the user would like to go to.
        * So e.g questionIndex = 1 is going to the second question (counting from 0)
        */
-      this.questionIndex++;
-      switch (this.questionIndex) {
+      switch (this.answers.length) {
         case 0:
           break;
         //For question 1, see Question.Vue data field
         case 1:
-          this.$refs.question.setQuestion("Question 2");
+          // this.$refs.question.setQuestion("Question 2");
           this.$refs.question.setItems(
             { name: "peper", variety: ["spicy"] },
             { name: "aardbei", variety: ["sweet"] },
             { name: "appel", variety: ["everyonesFriend"] },
-            { name: "wildebessen", variety: ["wild"] }
+            { name: "wilde bessen", variety: ["wild"] }
           );
           this.$refs.question.setImage(
             this.pepper,
@@ -125,8 +124,7 @@ export default {
           this.progress = 33.3;
           break;
         case 2:
-          console.log(this.questionIndex);
-          this.$refs.question.setQuestion("Question 3");
+          // this.$refs.question.setQuestion("Question 3");
           this.$refs.question.setItems(
             {
               name: "speciaal bier",
@@ -134,7 +132,7 @@ export default {
             },
             { name: "sangria met fruit", variety: ["sweet"] },
             { name: "wijn", variety: ["everyonesFriend"] },
-            { name: "bessen", variety: ["sweet"] }
+            { name: "jus d'orange", variety: ["sweet"] }
           );
           this.$refs.question.setImage(
             this.beer,
@@ -147,6 +145,12 @@ export default {
         case 3:
           this.component = quizFinished;
           this.progress = 100;
+          this.$router.push({
+            name: "resultsRoute",
+            params: {
+              items: this.answers,
+            },
+          });
       }
     },
   },
@@ -155,7 +159,7 @@ export default {
 
 <style scoped>
 .min-height {
-  min-height: 15rem;
+  min-height: 15.5rem;
 }
 
 #mood-finder {
@@ -163,14 +167,18 @@ export default {
   border-top: 2px solid #aaa199;
   min-height: 450px;
 }
-
+/* it's repeating itself now, but that's fine because its a temporary image anyways.
+ this image was causing major lag issues to the webpage.*/
 .quiz-background {
+  background-image: url("../assets/tea_dark.webp");
+}
+
+.quiz-background:after {
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-image: url("../assets/tea_dark.webp");
-  position: relative;
+
+  /* background-attachment: fixed;
+  position: relative; */
 }
 
 image {

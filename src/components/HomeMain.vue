@@ -1,13 +1,14 @@
 <template>
-  <main id="impressie" class="container-fluid main-bg py-4">
+  <main id="over_ons" class="container-fluid main-bg py-4">
     <b-row class="row py-5">
       <b-col class="col-lg-5 offset-lg-2 mb-lg-0 col-10 offset-1 mb-3">
-        <h1>Impressie</h1>
+        <h1>Over 1T3</h1>
         <p>
-          Dit is een deployment test 3 Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ipsum atque corrupti repellendus, eveniet non earum
-          illum nisi aliquid, nam eum explicabo. Iusto porro, minus doloremque
-          doloribus earum laboriosam repudiandae labore?
+        Bij 1T3 hebben wij de missie om het leven van mensen te verrijken met onze liefde voor thee. 
+        We willen af van het suffe imago en maken theedrinken stoer en gepersonaliseerd. 
+        Dit doen we door er met onze moodfinder achter te komen welke theeën het beste bij je passen. 
+        Op basis van de uitkomsten stellen we een gepersonaliseerd theepakket voor je samen. 
+        Iedere maand ontvang je ons theepakket met 4 verrassende en nieuwe smaken, afgestemd op jouw persoonlijke voorkeuren. 
         </p>
       </b-col>
       <b-col class="col-lg-3 offset-lg-0 col-10 offset-1">
@@ -19,7 +20,7 @@
         />
       </b-col>
     </b-row>
-    <hr class="col-lg-8 offset-lg-2 col-10 offset-1" id="ons_doel" />
+    <hr class="col-lg-8 offset-lg-2 col-10 offset-1" id="onze_thee" />
     <b-row class="row py-5">
       <b-col
         class="
@@ -41,12 +42,11 @@
       <b-col
         class="col-lg-5 offset-lg-0 col-10 offset-1 order-first mb-3 order-md-2"
       >
-        <h1>Ons doel</h1>
+        <h1>Onze thee </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          amet voluptas doloremque iste facere consectetur dolor a laborum
-          necessitatibus quia et, alias maiores quibusdam ea sint nostrum quidem
-          vel minima.
+        Een heerlijk kopje thee is altijd weer genieten, maar een beetje variatie is wel zo fijn. 
+        Daarom bieden we een ruim assortiment aan verse losse theeën welke we zelf zorgvuldig proeven en selecteren. 
+        Onze theeën zijn duurzaam en 100% natuurlijk!
         </p>
       </b-col>
     </b-row>
