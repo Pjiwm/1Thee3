@@ -7,6 +7,7 @@
           v-on:click="_answerQuestion($event)"
           v-on:start="this.startQuiz"
           v-bind:is="component"
+          v-bind:answers="answers"
           ref="question"
         />
       </b-col>
@@ -145,12 +146,6 @@ export default {
         case 3:
           this.component = quizFinished;
           this.progress = 100;
-          this.$router.push({
-            name: "resultsRoute",
-            params: {
-              items: this.answers,
-            },
-          });
       }
     },
   },

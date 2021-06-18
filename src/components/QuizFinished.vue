@@ -5,22 +5,32 @@
         De mood finder is afgerond.<br />Jouw theepakket staat klaar!
       </b>
       <br /><br />
-      <router-link :to="{ path: '/results' }"
-        ><button
-          class="btn btn-primary"
-          type="button"
-          alt="Verder naar resultaat"
-          aria-label="Navigeer naar resultaat"
-        >
-          Verder naar theepakket
-        </button></router-link
+      <button
+        class="btn btn-primary"
+        type="button"
+        alt="Verder naar resultaat"
+        aria-label="Navigeer naar resultaat"
+        v-on:click="toResults()"
       >
+        Verder naar theepakket
+      </button>
     </b-col>
   </b-row>
 </template>
 <script>
 export default {
   name: "quizFinished",
+  props: ["answers"],
+  methods: {
+    toResults() {
+      this.$router.push({
+        name: "resultsRoute",
+        params: {
+          items: this.answers,
+        },
+      });
+    },
+  },
 };
 </script>
 
