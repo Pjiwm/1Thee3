@@ -24,12 +24,12 @@
       </div>
     </div>
     <!-- Font size 0 is to make the text readable for text-readers, but not for other users -->
-    <a class="d-block" href="#impressie" style="font-size: 0px">
-      Link naar impressie
+    <a class="d-block" href="#onze_thee" style="font-size: 0px">
+      Link naar onze thee
       <div
         class="arrow bounce"
-        alt="Navigeer naar impressie"
-        aria-label="Navigeer naar impressie"
+        alt="Navigeer naar ionze thee"
+        aria-label="Navigeer naar onze thee"
       ></div>
     </a>
   </header>
@@ -45,9 +45,9 @@ export default {
 header {
   min-height: 100vh;
   background-position: center;
-  /* background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; */
+  background-attachment: fixed;
   background-image: url("../assets/header-image.webp");
   position: relative;
   padding-top: 71px;
