@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 module.exports = {
     pwa: {
         name: '1T3',
@@ -6,5 +5,10 @@ module.exports = {
         msTileColor: '#AAA199 ',
         appleMobileWebAppCapable: 'yes',
         appleMobileWebAppStatusBarStyle: 'black',
+    },
+    configureWebpack: {
+        output: {
+            crossOriginLoading: 'anonymous'
+        },
     }
 }
