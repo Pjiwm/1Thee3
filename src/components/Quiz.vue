@@ -29,8 +29,6 @@
 <script>
 import quizStart from "./QuizStart.vue";
 import question from "./Question";
-// import strawberry from "../assets/strawberry.webp";
-// import banana from "../assets/banana.webp";
 import quizFinished from "./QuizFinished.vue";
 
 // Question 1:
@@ -99,16 +97,11 @@ export default {
      * it swaps out the quiz images, text and quiz question for each question.
      */
     switchQuestion() {
-      /**
-       * questionIndex stands for the question the user would like to go to.
-       * So e.g questionIndex = 1 is going to the second question (counting from 0)
-       */
       switch (this.answers.length) {
         case 0:
           break;
         //For question 1, see Question.Vue data field
         case 1:
-          // this.$refs.question.setQuestion("Question 2");
           this.$refs.question.setItems(
             { name: "peper", variety: ["spicy"] },
             { name: "aardbei", variety: ["sweet"] },
@@ -124,7 +117,6 @@ export default {
           this.progress = 33.3;
           break;
         case 2:
-          // this.$refs.question.setQuestion("Question 3");
           this.$refs.question.setItems(
             {
               name: "speciaal bier",
@@ -170,16 +162,15 @@ export default {
 /* it's repeating itself now, but that's fine because its a temporary image anyways.
  this image was causing major lag issues to the webpage.*/
 .quiz-background {
-  background-image: url("../assets/tea_dark.webp");
+  background-image: url("../assets/tea_dark.jpg");
 }
 
 .quiz-background:after {
   background-position: center;
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
-  background-image: url("../assets/tea_dark.webp");
-  position: relative;
+  background-size: cover;
+
+  /* background-attachment: fixed;
+  position: relative; */
 }
 
 image {

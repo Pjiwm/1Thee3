@@ -48,7 +48,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("../assets/header-image.webp");
+  background-image: url("../assets/header.jpg");
   position: relative;
   padding-top: 71px;
 }
