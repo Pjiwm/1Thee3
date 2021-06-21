@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="p-0" toggleable="lg" type="dark" variant="dark" fixed="top">
+  <b-navbar class="p-0 shadow" toggleable="lg" type="dark" variant="dark" fixed="top">
     <b-navbar-brand
       href="/"
       class="d-block d-lg-none"
@@ -61,7 +61,7 @@ export default {
 
 .nav-item {
   font-weight: bold;
-  width: 120px;
+  width: 125px;
   text-align: center;
 }
 
