@@ -11,7 +11,6 @@
 import Header from "@/components/Header.vue";
 import Quiz from "../Quiz";
 import Main from "@/components/HomeMain.vue";
-import SocialMedia from "@/components/SocialMedia.vue";
 
 export default {
   name: "Index",
@@ -19,7 +18,6 @@ export default {
     Header,
     Main,
     Quiz,
-    SocialMedia,
   },
   metaInfo: {
     title: "1T3",
