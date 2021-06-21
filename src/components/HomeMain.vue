@@ -34,7 +34,7 @@
       >
         <img
           alt="Thee wordt ingeschoken met een goudkleurige theepot in een Chinees kopje"
-          src="../assets/thee2-home.webp"
+          src="../assets/thee2-home.jpg"
           width="100%"
           height="100%"
         />

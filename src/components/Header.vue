@@ -1,5 +1,5 @@
 <template>
-  <header class="d-flex align-items-center py-md-5" id="header">
+  <header class="d-flex align-items-center py-md-5">
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-8 text-center header-title m-auto">
@@ -48,7 +48,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("../assets/header-image.webp");
+  background-image: url("../assets/header.jpg");
   position: relative;
   padding-top: 71px;
 }
