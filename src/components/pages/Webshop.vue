@@ -3,20 +3,32 @@
     <WebshopHeader />
 
     <b-container class="py-5">
-      <b-row>
-        <b-col class="sidenav" cols="12" md="2">
-          <ul
-            id="webshoplink-list"
-            class="list-unstyled text-center text-md-left"
-          >
-            <li class="py-2"><a class="d-block" v-on:click="switchItem('WebshopTea')">Thee smaken</a></li>
-            <li class="py-2"><a class="d-block" v-on:click="switchItem('WebshopTeaPackage')">Thee pakket</a></li>
-            <li class="py-2"><a class="d-block" v-on:click="switchItem('WebshopTeaAccessories')">Toebehoren</a></li>
+      <b-row class="d-flex justify-content-center">
+        <b-col class="sidenav" cols="12" md="6" lg="2">
+          <ul id="webshoplink-list" class="list-unstyled">
+            <li class="py-2">
+              <a class="d-block" v-on:click="switchItem('WebshopTea')"
+                >Thee smaken
+                <font-awesome-icon :icon="['fas', 'chevron-right']"
+              /></a>
+            </li>
+            <li class="py-2">
+              <a class="d-block" v-on:click="switchItem('WebshopTeaPackage')"
+                >Thee pakket
+                <font-awesome-icon :icon="['fas', 'chevron-right']"
+              /></a>
+            </li>
+            <li class="py-2">
+              <a
+                class="d-block"
+                v-on:click="switchItem('WebshopTeaAccessories')"
+                >Toebehoren <font-awesome-icon :icon="['fas', 'chevron-right']"
+              /></a>
+            </li>
           </ul>
         </b-col>
-        <component
-          v-bind:is="component"
-        />
+        <hr class="col-10 d-block d-lg-none" />
+        <component v-bind:is="component" />
       </b-row>
     </b-container>
   </div>
@@ -33,14 +45,14 @@ export default {
     WebshopHeader,
     WebshopTea,
     WebshopTeaPackage,
-    WebshopTeaAccessories
+    WebshopTeaAccessories,
   },
   data() {
     return {
       component: "WebshopTea",
-    }
+    };
   },
-   methods: {
+  methods: {
     /**
      * @description
      * saved pressed answer text in answers array
@@ -48,7 +60,7 @@ export default {
     switchItem(component) {
       this.component = component;
     },
-   },
+  },
   metaInfo: {
     title: "1T3",
     titleTemplate: "%s - Bestel uw thee of theepakket in onze webshop",
@@ -65,14 +77,10 @@ export default {
 </script>
 
 <style scoped>
-
-.sidenav {
-  border-right: 2px solid #aaa199;
-}
-
 #webshoplink-list a {
   text-decoration: none;
   color: #fff;
+  text-align: center;
 }
 
 #webshoplink-list a:hover {
@@ -94,7 +102,6 @@ div {
   color: #fff;
 }
 
-
 hr {
   background-color: #aaa199;
   opacity: 1;
@@ -102,7 +109,40 @@ hr {
   border-radius: 20px;
 }
 
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #webshoplink-list a {
+    text-align: center;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .fa-chevron-right {
+    float: right;
+    margin-right: 0;
+  }
+  .sidenav {
+    border-right: 2px solid #aaa199;
+  }
+  #webshoplink-list a {
+    text-align: left;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .fa-chevron-right {
+    margin-right: 30px;
+  }
+}
 </style>
 
 
