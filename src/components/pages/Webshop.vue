@@ -16,7 +16,7 @@
             </li>
             <li class="py-2">
               <a class="d-block" v-on:click="switchItem('WebshopTeaPackage')"
-                >Theepakketten</a
+                >Theeplanken</a
               >
             </li>
             <li class="py-2">

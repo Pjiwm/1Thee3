@@ -3,9 +3,9 @@
     <b-container>
       <b-row v-show="quiz_cookies_exist">
         <b-col cols="12" class="pb-5 text-center">
-          <h1>Deze theepakketten passen het beste bij jou!</h1>
+          <h1>Deze theeplanken passen het beste bij jou!</h1>
           <p class="m-auto">
-            De theepakketten staan op volgorde, van de beste match naar de
+            De theeplanken staan op volgorde, van de beste match naar de
             mindere match...<br />
           </p>
         </b-col>

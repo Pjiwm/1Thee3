@@ -2,7 +2,7 @@
   <b-row class="d-flex justify-content-center pt-5">
     <b-col class="col-8 col-lg-3 text-background">
       <b class="text-white">
-        De mood finder is afgerond.<br />Jouw theepakket staat klaar!
+        De mood finder is afgerond.<br />Jouw theeplank staat klaar!
       </b>
       <br /><br />
       <button
@@ -12,7 +12,7 @@
         aria-label="Navigeer naar resultaat"
         v-on:click="toResults()"
       >
-        Verder naar theepakket
+        Verder naar theeplank
       </button>
     </b-col>
   </b-row>
