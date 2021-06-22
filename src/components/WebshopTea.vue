@@ -1,7 +1,7 @@
 <template>
   <b-col cols="12" md="10">
     <div class="page-information text-center text-md-left">
-      <h1>Thee smaken</h1>
+      <h1>Theesmaken</h1>
       <p>
         Thee is een warme drank die wordt gemaakt door infusie van de gedroogde
         bladeren van de theeplant Camellia sinensis. Alle als thee verkochte

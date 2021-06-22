@@ -9,14 +9,26 @@
             id="webshoplink-list"
             class="list-unstyled text-center text-md-left"
           >
-            <li class="py-2"><a class="d-block" v-on:click="switchItem('WebshopTea')">Thee smaken</a></li>
-            <li class="py-2"><a class="d-block" v-on:click="switchItem('WebshopTeaPackage')">Thee pakket</a></li>
-            <li class="py-2"><a class="d-block" v-on:click="switchItem('WebshopTeaAccessories')">Toebehoren</a></li>
+            <li class="py-2">
+              <a class="d-block" v-on:click="switchItem('WebshopTea')"
+                >Theesmaken</a
+              >
+            </li>
+            <li class="py-2">
+              <a class="d-block" v-on:click="switchItem('WebshopTeaPackage')"
+                >Theepakketten</a
+              >
+            </li>
+            <li class="py-2">
+              <a
+                class="d-block"
+                v-on:click="switchItem('WebshopTeaAccessories')"
+                >Toebehoren</a
+              >
+            </li>
           </ul>
         </b-col>
-        <component
-          v-bind:is="component"
-        />
+        <component v-bind:is="component" />
       </b-row>
     </b-container>
   </div>
@@ -33,14 +45,14 @@ export default {
     WebshopHeader,
     WebshopTea,
     WebshopTeaPackage,
-    WebshopTeaAccessories
+    WebshopTeaAccessories,
   },
   data() {
     return {
       component: "WebshopTea",
-    }
+    };
   },
-   methods: {
+  methods: {
     /**
      * @description
      * saved pressed answer text in answers array
@@ -48,7 +60,7 @@ export default {
     switchItem(component) {
       this.component = component;
     },
-   },
+  },
   metaInfo: {
     title: "1T3",
     titleTemplate: "%s - Bestel uw thee of theepakket in onze webshop",
@@ -65,7 +77,6 @@ export default {
 </script>
 
 <style scoped>
-
 .sidenav {
   border-right: 2px solid #aaa199;
 }
@@ -94,15 +105,12 @@ div {
   color: #fff;
 }
 
-
 hr {
   background-color: #aaa199;
   opacity: 1;
   height: 2px !important;
   border-radius: 20px;
 }
-
-
 </style>
 
 
