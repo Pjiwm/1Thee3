@@ -109,13 +109,6 @@ export default {
     setImage(imageOne, imageTwo, imageThree, imageFour) {
       this.images = [imageOne, imageTwo, imageThree, imageFour];
     },
-    /**
-     * @description sets a question above the quiz answers
-     * @param {string} text - the text above the quiz
-     */
-    // setQuestion(text) {
-    //   this.question = text;
-    // },
   },
 };
 </script>
