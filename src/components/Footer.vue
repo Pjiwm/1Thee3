@@ -9,10 +9,10 @@
           </div>
         </b-col>
         <b-col cols="4" class="d-flex align-items-center flex-column">
-          <div class="iconBox">
+          <div id="downloadBox">
             <a id="installApp">
               <font-awesome-icon
-                class="icon p-1 downloadBox"
+                class="icon p-1"
                 :icon="['fas', 'download']"
                 alt="Download app"
               />
@@ -34,13 +34,6 @@
               />
             </a>
             <div class="iconBox">
-              <a href="facebook.com" aria-label="Ga naar onze facebook">
-                <font-awesome-icon
-                  class="icon p-1"
-                  :icon="['fab', 'facebook-square']"
-                  alt="Facebook"
-                />
-              </a>
               <a href="instagram.com" aria-label="Ga naar onze instagram">
                 <font-awesome-icon
                   class="icon p-1"
@@ -69,10 +62,10 @@ export default {
     window.addEventListener("beforeinstallprompt", (e) => {
       deferredPrompt = e;
       console.log("added before install listener");
+      window.getElementById("downloadBox").style.display= "inline";
     });
 
     const installApp = document.getElementById("installApp");
-    try {
       installApp.addEventListener("click", async () => {
         console.log("added event listener");
         if (deferredPrompt !== null) {
@@ -83,9 +76,6 @@ export default {
           }
         }
       });
-    } catch (e) {
-      console.log("There's no SSL certificate.");
-    }
   },
 };
 </script>
@@ -101,10 +91,11 @@ footer {
 }
 
 .iconBox {
-  font-size: 3.1rem;
+  font-size: 4.1rem;
 }
 
-.downloadBox {
+#downloadBox {
+  display: none;
   font-size: 5.1rem;
 }
 
