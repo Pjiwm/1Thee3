@@ -19,10 +19,7 @@
             </a>
           </div>
         </b-col>
-        <b-col
-          class="d-flex align-items-center flex-column"
-          cols="4"
-        >
+        <b-col class="d-flex align-items-center flex-column" cols="4">
           <div class="px-3">
             <a
               href="/"
@@ -67,26 +64,29 @@
 <script>
 export default {
   name: "Footer",
-  // mounted: () => {
-  //   let deferredPrompt;
-  //   window.addEventListener("beforeinstallprompt", (e) => {
-  //     deferredPrompt = e;
-  //     console.log("added before install listener");
-  //   });
+  mounted: () => {
+    let deferredPrompt;
+    window.addEventListener("beforeinstallprompt", (e) => {
+      deferredPrompt = e;
+      console.log("added before install listener");
+    });
 
-  //   const installApp = document.getElementById("installApp");
-
-  //   installApp.addEventListener("click", async () => {
-  //     console.log("added event listener");
-  //     if (deferredPrompt !== null) {
-  //       deferredPrompt.prompt();
-  //       const { outcome } = await deferredPrompt.userChoice;
-  //       if (outcome === "accepted") {
-  //         deferredPrompt = null;
-  //       }
-  //     }
-  //   });
-  // },
+    const installApp = document.getElementById("installApp");
+    try {
+      installApp.addEventListener("click", async () => {
+        console.log("added event listener");
+        if (deferredPrompt !== null) {
+          deferredPrompt.prompt();
+          const { outcome } = await deferredPrompt.userChoice;
+          if (outcome === "accepted") {
+            deferredPrompt = null;
+          }
+        }
+      });
+    } catch (e) {
+      console.log("There's no SSL certificate.");
+    }
+  },
 };
 </script>
 
