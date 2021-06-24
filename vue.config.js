@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 module.exports = {
     pwa: {
         publicPath:'https://onet3.onrender.com/',
@@ -7,5 +6,10 @@ module.exports = {
         msTileColor: '#AAA199 ',
         appleMobileWebAppCapable: 'yes',
         appleMobileWebAppStatusBarStyle: 'black',
+    },
+    configureWebpack: {
+        output: {
+            crossOriginLoading: 'anonymous'
+        },
     }
 }

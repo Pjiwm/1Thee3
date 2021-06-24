@@ -1,5 +1,5 @@
 <template>
-  <header class="d-flex align-items-center py-md-5" id="header">
+  <header class="d-flex align-items-center py-md-5">
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-8 text-center header-title m-auto">
@@ -24,12 +24,12 @@
       </div>
     </div>
     <!-- Font size 0 is to make the text readable for text-readers, but not for other users -->
-    <a class="d-block" href="#impressie" style="font-size: 0px">
-      Link naar impressie
+    <a class="d-block" href="#onze_thee" style="font-size: 0px">
+      Link naar onze thee
       <div
         class="arrow bounce"
-        alt="Navigeer naar impressie"
-        aria-label="Navigeer naar impressie"
+        alt="Navigeer naar ionze thee"
+        aria-label="Navigeer naar onze thee"
       ></div>
     </a>
   </header>
@@ -48,7 +48,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("../assets/header-image.webp");
+  background-image: url("../assets/header.jpg");
   position: relative;
   padding-top: 71px;
 }

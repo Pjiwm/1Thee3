@@ -1,24 +1,19 @@
 <template>
   <main>
     <b-container>
-      <b-row>
+      <b-row v-show="quiz_cookies_exist">
         <b-col cols="12" class="pb-5 text-center">
-          <h1>Dit thee pakket past het best bij jou!</h1>
+          <h1>Deze theeplanken passen het beste bij jou!</h1>
           <p class="m-auto">
-            Onze experts hebben gecalculeerd dat deze thee helemaal bij jou
-            past.<br />
-            RESULTAAT:
-            <br />
-            Vraag 1: {{ this.$route.params.items[0].variety }}<br />
-            Vraag 2: {{ this.$route.params.items[1].variety }}<br />
-            Vraag 3: {{ this.$route.params.items[2].variety }}
+            De theeplanken staan op volgorde, van de beste match naar de
+            mindere match...<br />
           </p>
         </b-col>
-        <hr class="col-12" />
+        <!-- <hr class="col-12" /> -->
         <b-col
           cols="12"
           :order="everyonesFriend"
-          class="product-result my-5 pb-5"
+          class="product-result mt-3 mb-5 pt-5"
           :data-rank="everyonesFriendNr"
         >
           <div id="product-component-1"></div>
@@ -26,7 +21,7 @@
         <b-col
           cols="12"
           :order="spicy"
-          class="product-result my-5 pb-5"
+          class="product-result mt-3 mb-5 pt-5"
           :data-rank="spicyNr"
         >
           <div id="product-component-2"></div>
@@ -34,7 +29,7 @@
         <b-col
           cols="12"
           :order="wild"
-          class="product-result my-5 pb-5"
+          class="product-result mt-3 mb-5 pt-5"
           :data-rank="wildNr"
         >
           <div id="product-component-3"></div>
@@ -42,10 +37,16 @@
         <b-col
           cols="12"
           :order="sweet"
-          class="product-result my-5 pb-5"
+          class="product-result mt-3 mb-5 pt-5"
           :data-rank="sweetNr"
         >
           <div id="product-component-4"></div>
+        </b-col>
+      </b-row>
+      <b-row v-show="!quiz_cookies_exist">
+        <b-col cols="12" class="my-5 p-5 text-center">
+          <h1>De Mood finder is nog niet gemaakt.</h1>
+          <p class="m-auto">Je wordt zo doorverwezen naar de Mood finder...</p>
         </b-col>
       </b-row>
     </b-container>
@@ -61,10 +62,11 @@ export default {
       spicy: 2,
       wild: 3,
       sweet: 4,
-      everyonesFriendNr: "1",
-      spicyNr: "2",
-      wildNr: "3",
-      sweetNr: "4",
+      everyonesFriendNr: "#1",
+      spicyNr: "#2",
+      wildNr: "#3",
+      sweetNr: "#4",
+      quiz_cookies_exist: true,
     };
   },
   /*<![CDATA[*/
@@ -77,18 +79,84 @@ export default {
       console.log("Params:\n" + params);
       setProductOrder(params);
     } else {
-      //IMPLEMENTEER HIER DE COOKIE voor refresh, ALS ER GEEN PARAMS ZIJN (bij refresh) VOERT IE HET ONDERSTAANDE UIT
-      //https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
-      //https://www.w3schools.com/js/js_cookies.asp
+      console.log("Page was refreshed or was visited directly");
+      checkCookie();
     }
 
+    // Gets the information out of the cookie and returns it
+    function getCookie() {
+      const name = "quiz_result=";
+      const cookie_values = document.cookie.split("; ");
+      console.log("cookie_values: " + cookie_values);
+      for (let i = 0; i < cookie_values.length; i++) {
+        let c = cookie_values[i];
+        while (c.charAt(0) == " ") {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          console.log(
+            "SUBSTRING IN GETCOOKIE: " + c.substring(name.length, c.length)
+          );
+          return c.substring(name.length, c.length);
+        }
+      }
+      console.log("NO QUIZRESULT IN COOKIE");
+      return "";
+    }
+
+    // Uses cookie data for result or will show message redirection to Mood finder
+    function checkCookie() {
+      console.log("CHECKCOOKIE CALLED");
+      let quizResults = getCookie("quiz_result");
+      if (quizResults != "") {
+        console.log("QUIZRESULT EXISTS IN CHECKCOOKIE");
+        quizResults = quizResults.split(",");
+        console.log("QUIZRESULT: " + quizResults);
+
+        vm.everyonesFriend = quizResults[0];
+        vm.everyonesFriendNr = quizResults[1];
+        vm.spicy = quizResults[2];
+        vm.spicyNr = quizResults[3];
+        vm.wild = quizResults[4];
+        vm.wildNr = quizResults[5];
+        vm.sweet = quizResults[6];
+        vm.sweetNr = quizResults[7];
+
+        console.log(
+          "POSITIONS IN COOKIE:\neveryonesFriend: " +
+            vm.everyonesFriend +
+            " " +
+            vm.everyonesFriendNr +
+            "\nspicy: " +
+            vm.spicy +
+            " " +
+            vm.spicyNr +
+            "\nwild: " +
+            vm.wild +
+            " " +
+            vm.wildNr +
+            "\nsweet: " +
+            vm.sweet +
+            " " +
+            vm.sweetNr
+        );
+      } else {
+        console.log("ELSE TRIGGERED IN CHECKCOOKIE");
+        vm.quiz_cookies_exist = false;
+        setTimeout(function () {
+          vm.$router.push("/#mood-finder");
+        }, 5000);
+      }
+    }
+
+    // Sets the product order for result, with the data passed from Mood finder
     function setProductOrder(answers) {
       let everyonesFriendCount = 0;
       let spicyCount = 0;
       let wildCount = 0;
       let sweetCount = 0;
 
-      //Points per variety
+      //Calculate points per variety
       for (let index1 = 0; index1 < 3; index1++) {
         for (
           let index2 = 0;
@@ -125,6 +193,7 @@ export default {
           }
         }
       }
+
       console.log(
         "POINTS TOTAL (DESC):\n" +
           counts[0] +
@@ -136,7 +205,7 @@ export default {
           counts[3]
       );
 
-      // Assigns new positions
+      // Assign new positions to products
       for (let z = 0; z < 4; z++) {
         if (counts[z][0] == "everyonesFriend") {
           vm.everyonesFriend = z + 1;
@@ -171,6 +240,38 @@ export default {
           " " +
           vm.sweetNr
       );
+
+      //Sets cookie with the data from quiz
+      let cookieData =
+        vm.everyonesFriend +
+        "," +
+        vm.everyonesFriendNr +
+        "," +
+        vm.spicy +
+        "," +
+        vm.spicyNr +
+        "," +
+        vm.wild +
+        "," +
+        vm.wildNr +
+        "," +
+        vm.sweet +
+        "," +
+        vm.sweetNr;
+
+      setCookie(cookieData, 24);
+      // console.log("COOKIEDATA: " + cookieData);
+      function setCookie(cvalues, exhours) {
+        let expiresInHours = "max-age=" + 60 * 60 * exhours;
+        document.cookie =
+          "quiz_result=" +
+          cvalues +
+          "; " +
+          expiresInHours +
+          "; " +
+          "SameSite=Lax;";
+        console.log("COOKIE: " + document.cookie);
+      }
     }
 
     // Shopfiy product id's
@@ -482,19 +583,14 @@ main {
 
 .product-result {
   position: relative;
-  border-bottom: 2px solid #aaa199;
-  min-height: 40rem;
-}
-
-.product-result:last-child {
-  position: relative;
-  border-bottom: 2px solid transparent;
+  border-top: 2px solid #aaa199;
 }
 
 .product-result:after {
   content: attr(data-rank);
   width: 50px;
   height: 70px;
+  margin-top: 3rem;
   border-radius: 3px;
   background-color: #bfa253;
   position: absolute;
@@ -523,6 +619,7 @@ hr {
   height: 2px !important;
   border-radius: 20px;
 }
+
 h1 {
   margin-bottom: 15px;
 }
@@ -535,13 +632,6 @@ p {
 img {
   border: solid 3px #aaa199;
   border-radius: 4px;
-}
-
-hr {
-  background-color: #aaa199;
-  opacity: 1;
-  height: 2px !important;
-  border-radius: 20px;
 }
 
 /* Extra small devices (portrait phones, less than 576px)

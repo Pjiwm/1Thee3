@@ -3,6 +3,7 @@
     <Header />
     <Main />
     <Quiz />
+    <SocialMedia />
   </div>
 </template>
 

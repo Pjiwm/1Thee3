@@ -3,11 +3,11 @@
     <b-col class="col-10 col-lg-8 text-background">
       <b class="text-white">
         Niet zeker welke theesmaken bij jou passen of wil je simpelweg verrast
-        worden?<br />Doe de mood finder en wij kiezen een passende theepakket
+        worden?<br />Doe de mood finder en wij kiezen een passende theeplank
         voor je uit!
       </b>
-      <br />
-      <br />
+      <br/>
+      <br/>
       <button
         class="btn btn-primary"
         v-on:click="$emit('start')"
