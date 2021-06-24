@@ -1,7 +1,7 @@
 <template>
-  <b-col cols="12" md="10">
-    <div class="page-information text-center text-md-left">
-      <h1>Theeplanken</h1>
+  <b-col cols="12" lg="10">
+    <div class="page-information text-center text-lg-left">
+      <h1>Theepakketten</h1>
       <p>
         Thee is een warme drank die wordt gemaakt door infusie van de gedroogde
         bladeren van de theeplant Camellia sinensis. Alle als thee verkochte
@@ -325,13 +325,13 @@ No media query for `xs` since this is the default in Bootstrap */
   .page-information {
     margin-left: 3rem;
   }
-  .text-md-left {
-    text-align: left !important;
-  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .text-lg-left {
+    text-align: left !important;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

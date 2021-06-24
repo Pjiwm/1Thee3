@@ -3,31 +3,30 @@
     <WebshopHeader />
 
     <b-container class="py-5">
-      <b-row>
-        <b-col class="sidenav" cols="12" md="2">
-          <ul
-            id="webshoplink-list"
-            class="list-unstyled text-center text-md-left"
-          >
+      <b-row class="d-flex justify-content-center">
+        <b-col class="sidenav" cols="12" md="6" lg="2">
+          <ul id="webshoplink-list" class="list-unstyled">
             <li class="py-2">
               <a class="d-block" v-on:click="switchItem('WebshopTea')"
-                >Theesmaken</a
-              >
+                >Theesmaken <font-awesome-icon :icon="['fas', 'chevron-right']"
+              /></a>
             </li>
             <li class="py-2">
               <a class="d-block" v-on:click="switchItem('WebshopTeaPackage')"
-                >Theeplanken</a
-              >
+                >Theepakketten
+                <font-awesome-icon :icon="['fas', 'chevron-right']"
+              /></a>
             </li>
             <li class="py-2">
               <a
                 class="d-block"
                 v-on:click="switchItem('WebshopTeaAccessories')"
-                >Toebehoren</a
-              >
+                >Toebehoren <font-awesome-icon :icon="['fas', 'chevron-right']"
+              /></a>
             </li>
           </ul>
         </b-col>
+        <hr class="col-10 d-block d-lg-none" />
         <component v-bind:is="component" />
       </b-row>
     </b-container>
@@ -77,13 +76,10 @@ export default {
 </script>
 
 <style scoped>
-.sidenav {
-  border-right: 2px solid #aaa199;
-}
-
 #webshoplink-list a {
   text-decoration: none;
   color: #fff;
+  text-align: center;
 }
 
 #webshoplink-list a:hover {
@@ -110,6 +106,41 @@ hr {
   opacity: 1;
   height: 2px !important;
   border-radius: 20px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #webshoplink-list a {
+    text-align: center;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .fa-chevron-right {
+    float: right;
+    margin-right: 0;
+  }
+  .sidenav {
+    border-right: 2px solid #aaa199;
+  }
+  #webshoplink-list a {
+    text-align: left;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .fa-chevron-right {
+    margin-right: 30px;
+  }
 }
 </style>
 
