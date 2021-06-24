@@ -3,7 +3,7 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 import "./registerServiceWorker";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
-import "bootstrap-vue/dist/bootstrap-vue.css";
+// import "bootstrap-vue/dist/bootstrap-vue.css";
 import "../src/scss/bootstrap.css";
 // Import for fontAwesome : svg-core, brand icons and vue
 import { library } from "@fortawesome/fontawesome-svg-core";
