@@ -8,14 +8,12 @@
           <ul id="webshoplink-list" class="list-unstyled">
             <li class="py-2">
               <a class="d-block" v-on:click="switchItem('WebshopTea')"
-                >Thee smaken
-                <font-awesome-icon :icon="['fas', 'chevron-right']"
+                >Theesmaken <font-awesome-icon :icon="['fas', 'chevron-right']"
               /></a>
             </li>
             <li class="py-2">
               <a class="d-block" v-on:click="switchItem('WebshopTeaPackage')"
-                >Thee pakket
-                <font-awesome-icon :icon="['fas', 'chevron-right']"
+                >Theepakket <font-awesome-icon :icon="['fas', 'chevron-right']"
               /></a>
             </li>
             <li class="py-2">
