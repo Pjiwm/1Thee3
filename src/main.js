@@ -9,9 +9,11 @@ import "../src/scss/bootstrap.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import VueMeta from "vue-meta";
 
 library.add(fab);
+library.add(faChevronRight);
 // fontawesome component neccesary to call
 Vue.component("font-awesome-icon", FontAwesomeIcon, fab);
 // Make BootstrapVue available throughout your project
