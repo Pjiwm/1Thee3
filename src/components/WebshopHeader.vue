@@ -73,7 +73,7 @@ No media query for `xs` since this is the default in Bootstrap */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   #header {
-    background-image: url("../assets/webshop_header_mobile.jpg");
+    background-image: url("../assets/webshop_header.jpg");
   }
 }
 
