@@ -32,6 +32,11 @@ https://www.docker.com/get-started
 docker-compose build
 ```
 
+### Installs npm packages
+```
+docker-compose run node npm i
+```
+
 ### Starts container and starts application
 ```
 docker-compose up
