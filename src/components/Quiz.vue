@@ -159,6 +159,11 @@ export default {
 .quiz-background {
   background-image: url("../assets/tea_dark_mobile.jpg");
   background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {

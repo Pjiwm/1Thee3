@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 #header {
-  background-image: url("../assets/webshop_header.jpg");
+  background-image: url("../assets/webshop_header_mobile.jpg");
   min-height: 40vh;
   background-position: center;
   background-size: cover;
@@ -73,6 +73,9 @@ No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    #header {
+    background-image: url("../assets/webshop_header.jpg");
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
