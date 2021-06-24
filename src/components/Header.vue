@@ -45,10 +45,13 @@ export default {
 header {
   min-height: 100vh;
   background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("../assets/header.jpg");
+  background-image: url("../assets/header_mobile.jpg");
   position: relative;
   padding-top: 71px;
 }
@@ -132,6 +135,9 @@ No media query for `xs` since this is the default in Bootstrap */
     font-size: 1.8rem;
     width: 80%;
     margin: auto;
+  }
+    header {
+  background-image: url("../assets/header.jpg");
   }
 }
 

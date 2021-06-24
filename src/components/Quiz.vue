@@ -158,6 +158,7 @@ export default {
  this image was causing major lag issues to the webpage.*/
 .quiz-background {
   background-image: url("../assets/tea_dark.jpg");
+  background-position: center;
 }
 
 .quiz-background:after {
