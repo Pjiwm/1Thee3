@@ -112,5 +112,6 @@ footer {
 .icon:hover {
   transition: color 0.2s ease-in;
   color: #bfa253;
+  cursor:pointer;
 }
 </style>
