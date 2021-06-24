@@ -34,7 +34,7 @@
               />
             </a>
             <div class="iconBox">
-              <a href="facebook.com" aria-label="Ga naar ons facebook">
+              <a href="https://facebook.com" aria-label="Ga naar ons facebook">
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'facebook-square']"
