@@ -35,7 +35,7 @@
                   alt="Facebook"
                 />
               </a>
-              <a href="instagram.com" aria-label="Ga naar ons instagram">
+              <a href="https://www.instagram.com/job_cools/" target="_blank" aria-label="Ga naar ons instagram">
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'instagram']"

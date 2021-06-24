@@ -1,7 +1,7 @@
 <template>
-  <main id="over_ons" class="container-fluid main-bg py-4">
-    <b-row class="row py-5">
-      <b-col class="col-lg-5 offset-lg-2 mb-lg-0 col-10 offset-1 mb-3">
+  <main id="over_ons" class="container py-4">
+    <b-row class="py-5 d-flex justify-content-center">
+      <b-col cols="12" md="10" lg="7" class="mb-3 text-center text-lg-left">
         <h1>Over 1T3</h1>
         <p>
         Bij 1T3 hebben wij de missie om het leven van mensen te verrijken met onze liefde voor thee. 
@@ -11,44 +11,30 @@
         Iedere maand ontvang je ons theepakket met 4 verrassende en nieuwe smaken, afgestemd op jouw persoonlijke voorkeuren. 
         </p>
       </b-col>
-      <b-col class="col-lg-3 offset-lg-0 col-10 offset-1">
-        <img
-          alt="Een open theefilter met losse thee erin op een tafel"
-          src="../assets/thee1-home.webp"
-          width="100%"
-          height="100%"
-        />
-      </b-col>
-    </b-row>
-    <hr class="col-lg-8 offset-lg-2 col-10 offset-1" id="onze_thee" />
-    <b-row class="row py-5">
-      <b-col
-        class="
-          col-lg-3
-          offset-lg-2
-          mb-lg-0
-          col-10
-          offset-1
-          order-last order-md-1
-        "
-      >
-        <!-- <img
-          alt="Thee wordt ingeschoken met een goudkleurige theepot in een Chinees kopje"
-          src="../assets/thee2-home.jpg"
-          width="100%"
-          height="100%"
-        /> -->
-        <b-carousel :interval="4000" fade img-width="250" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+      <b-col cols="12" md="8" lg="4" xl="3">
+        <a class="d-block" href="https://www.instagram.com/job_cools/" target="_blank">
+          <b-carousel class="border-img" :interval="4000" fade img-width="250" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
           <b-carousel-slide img-src="instaCarousel/0.jpg"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/1.jpg"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/2.jpg"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/3.jpg"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/4.jpg"></b-carousel-slide>
         </b-carousel>
+        </a>
       </b-col>
-      <b-col
-        class="col-lg-5 offset-lg-0 col-10 offset-1 order-first mb-3 order-md-2"
-      >
+    </b-row>
+    <hr class="col-10 col-lg-10 offset-1" id="onze_thee" />
+    <b-row class="py-5 d-flex justify-content-center">
+      <b-col cols="12" md="8" lg="4" xl="3" order="2" order-lg="1">
+        <img
+          alt="Thee wordt ingeschoken met een goudkleurige theepot in een Chinees kopje"
+          src="../assets/thee2-home.jpg"
+          width="100%"
+          height="100%"
+          class="border-img"
+        />
+      </b-col>
+      <b-col cols="12" md="10" lg="7" class="mb-3 text-center text-lg-left" order="1" order-lg="2">
         <h1>Onze thee </h1>
         <p>
         Een heerlijk kopje thee is altijd weer genieten, maar een beetje variatie is wel zo fijn. 
@@ -96,8 +82,30 @@ p {
   font-size: 20px;
 }
 
-img {
+.border-img {
   border: solid 3px #aaa199;
-  border-radius: 4px;
+  border-radius: 3px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text-lg-left {
+    text-align: left !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
 </style>
