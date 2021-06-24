@@ -41,11 +41,7 @@
                   alt="Facebook"
                 />
               </a>
-<<<<<<< HEAD
-              <a href="https://www.instagram.com/job_cools/" target="_blank" aria-label="Ga naar ons instagram">
-=======
               <a href="instagram.com" aria-label="Ga naar onze instagram">
->>>>>>> feature/pwa-download
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'instagram']"
