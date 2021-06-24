@@ -9,9 +9,9 @@
           </div>
         </b-col>
         <b-col cols="4" class="d-flex align-items-center flex-column">
-          <div id="downloadBox">
+          <div>
             <a id="installApp">
-              <font-awesome-icon
+              <font-awesome-icon id="downloadBox"
                 class="icon p-1"
                 :icon="['fas', 'download']"
                 alt="Download app"
@@ -34,6 +34,13 @@
               />
             </a>
             <div class="iconBox">
+              <a href="facebook.com" aria-label="Ga naar ons facebook">
+                <font-awesome-icon
+                  class="icon p-1"
+                  :icon="['fab', 'facebook-square']"
+                  alt="Facebook"
+                />
+              </a>
               <a href="instagram.com" aria-label="Ga naar onze instagram">
                 <font-awesome-icon
                   class="icon p-1"
@@ -62,20 +69,20 @@ export default {
     window.addEventListener("beforeinstallprompt", (e) => {
       deferredPrompt = e;
       console.log("added before install listener");
-      window.getElementById("downloadBox").style.display= "inline";
+      document.getElementById("downloadBox").style.display = 'inline';
     });
 
     const installApp = document.getElementById("installApp");
-      installApp.addEventListener("click", async () => {
-        console.log("added event listener");
-        if (deferredPrompt !== null) {
-          deferredPrompt.prompt();
-          const { outcome } = await deferredPrompt.userChoice;
-          if (outcome === "accepted") {
-            deferredPrompt = null;
-          }
+    installApp.addEventListener("click", async () => {
+      console.log("added event listener");
+      if (deferredPrompt !== null) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === "accepted") {
+          deferredPrompt = null;
         }
-      });
+      }
+    });
   },
 };
 </script>
@@ -91,12 +98,12 @@ footer {
 }
 
 .iconBox {
-  font-size: 4.1rem;
+  font-size: 3.5rem;
 }
 
 #downloadBox {
-  display: none;
   font-size: 5.1rem;
+  display: none;
 }
 
 .icon {
