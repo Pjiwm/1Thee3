@@ -13,7 +13,8 @@
             </li>
             <li class="py-2">
               <a class="d-block" v-on:click="switchItem('WebshopTeaPackage')"
-                >Theepakket <font-awesome-icon :icon="['fas', 'chevron-right']"
+                >Theepakketten
+                <font-awesome-icon :icon="['fas', 'chevron-right']"
               /></a>
             </li>
             <li class="py-2">
