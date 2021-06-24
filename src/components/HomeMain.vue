@@ -12,7 +12,7 @@
         </p>
       </b-col>
       <b-col cols="12" md="8" lg="4" xl="3">
-        <a class="d-block" href="https://www.instagram.com/job_cools/" target="_blank">
+        <a class="d-block" href="https://www.instagram.com/job_cools/" rel="noopener" target="_blank">
           <b-carousel class="border-img" :interval="4000" fade img-width="250" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
           <b-carousel-slide img-src="instaCarousel/0.jpg"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/1.jpg"></b-carousel-slide>
