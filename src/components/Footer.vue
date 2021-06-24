@@ -28,14 +28,14 @@
               />
             </a>
             <div class="iconBox">
-              <a href="facebook.com" aria-label="Ga naar ons facebook">
+              <a href="facebook.com" aria-label="Ga naar onze facebook">
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'facebook-square']"
                   alt="Facebook"
                 />
               </a>
-              <a href="https://www.instagram.com/job_cools/" target="_blank" aria-label="Ga naar ons instagram">
+              <a href="https://www.instagram.com/job_cools/" target="_blank" aria-label="Ga naar onze instagram">
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'instagram']"
