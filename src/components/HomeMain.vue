@@ -13,13 +13,14 @@
       </b-col>
       <b-col cols="12" md="8" lg="4" xl="3">
         <a class="d-block" href="https://www.instagram.com/job_cools/" rel="noopener" target="_blank">
-          <b-carousel class="border-img" :interval="4000" fade img-width="250" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
-          <b-carousel-slide img-src="instaCarousel/0.jpg" alt="Eerste Instagram foto"></b-carousel-slide>
+         <!-- <b-carousel class="border-img" :interval="4000" fade img-width="250" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+          <b-carousel-slide src="../assets/0.jpg" alt="Eerste Instagram foto"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/1.jpg" alt="Tweede Instagram foto"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/2.jpg" alt="Derde Instagram foto"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/3.jpg" alt="Vierde Instagram foto"></b-carousel-slide>
           <b-carousel-slide img-src="instaCarousel/4.jpg" alt="Vijfde Instagram foto"></b-carousel-slide>
-        </b-carousel>
+        </b-carousel> -->
+        <img class="border-img" src="../assets/3.jpg"/>
         </a>
       </b-col>
     </b-row>
