@@ -24,7 +24,7 @@
       </div>
     </div>
     <!-- Font size 0 is to make the text readable for text-readers, but not for other users -->
-    <a class="d-block" href="#over_ons" style="font-size: 0px">
+    <a class="d-block" href="#Over_1T3" style="font-size: 0px">
       Link naar onze thee
       <div
         class="arrow bounce"
