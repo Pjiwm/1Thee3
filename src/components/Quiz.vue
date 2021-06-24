@@ -157,8 +157,14 @@ export default {
 /* it's repeating itself now, but that's fine because its a temporary image anyways.
  this image was causing major lag issues to the webpage.*/
 .quiz-background {
-  background-image: url("../assets/tea_dark.jpg");
+  background-image: url("../assets/tea_dark_mobile.jpg");
   background-position: center;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .quiz-background {
+    background-image: url("../assets/tea_dark.jpg");
+  }
 }
 
 .quiz-background:after {
