@@ -2,22 +2,28 @@
   <footer id="footer">
     <b-container>
       <b-row class="py-4">
-        <b-col cols="6" md="8" lg="9">
+        <b-col cols="4">
           <div class="padding-left-3">
             <p>KVK-nummer | 17240186</p>
             <p>Email | <a href="mailto:info@1t3.nl">info@1t3.nl</a></p>
           </div>
         </b-col>
-        <b-col
-          class="d-flex align-items-center flex-column"
-          cols="6"
-          md="4"
-          lg="3"
-        >
+        <b-col cols="4" class="d-flex align-items-center flex-column">
+          <div>
+            <a id="installApp">
+              <font-awesome-icon id="downloadBox"
+                class="icon p-1"
+                :icon="['fas', 'download']"
+                alt="Download app"
+              />
+            </a>
+          </div>
+        </b-col>
+        <b-col class="d-flex align-items-center flex-column" cols="4">
           <div class="px-3">
             <a
               href="/"
-              aria-label="1Thee3.nl logo, klik om terug te keren naar home"
+              aria-label="1T3.nl logo, klik om terug te keren naar home"
             >
               <img
                 class="img-fluid"
@@ -28,14 +34,14 @@
               />
             </a>
             <div class="iconBox">
-              <a href="facebook.com" aria-label="Ga naar onze facebook">
+              <a href="facebook.com" aria-label="Ga naar ons facebook">
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'facebook-square']"
                   alt="Facebook"
                 />
               </a>
-              <a href="https://www.instagram.com/job_cools/" target="_blank" aria-label="Ga naar onze instagram">
+              <a href="instagram.com" aria-label="Ga naar onze instagram">
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'instagram']"
@@ -58,6 +64,26 @@
 <script>
 export default {
   name: "Footer",
+  mounted: () => {
+    let deferredPrompt;
+    window.addEventListener("beforeinstallprompt", (e) => {
+      deferredPrompt = e;
+      console.log("added before install listener");
+      document.getElementById("downloadBox").style.display = 'inline';
+    });
+
+    const installApp = document.getElementById("installApp");
+    installApp.addEventListener("click", async () => {
+      console.log("added event listener");
+      if (deferredPrompt !== null) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === "accepted") {
+          deferredPrompt = null;
+        }
+      }
+    });
+  },
 };
 </script>
 
@@ -72,8 +98,14 @@ footer {
 }
 
 .iconBox {
-  font-size: 3.1rem;
+  font-size: 3.5rem;
 }
+
+#downloadBox {
+  font-size: 5.1rem;
+  display: none;
+}
+
 .icon {
   color: #aaa199;
 }
