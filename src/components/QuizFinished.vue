@@ -1,4 +1,5 @@
 <template>
+<!-- button and frame for going to quiz results -->
   <b-row class="d-flex justify-content-center pt-5">
     <b-col class="col-8 col-lg-3 text-background">
       <b class="text-white">
@@ -22,6 +23,10 @@ export default {
   name: "quizFinished",
   props: ["answers"],
   methods: {
+    /**
+     * @description goes to the result page.
+     * The function gets the quiz answers.
+     */
     toResults() {
       this.$router.push({
         name: "resultsRoute",

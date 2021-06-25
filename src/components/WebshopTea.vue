@@ -2,6 +2,7 @@
   <b-col cols="12" lg="10">
     <div class="page-information text-center text-lg-left">
       <h1>Theesmaken</h1>
+      <!-- text at top of webshop page, unlike most elements on this page, this can't be changed in Shopify CMS -->
       <p>
         Thee is een warme drank die wordt gemaakt door infusie van de gedroogde
         bladeren van de theeplant Camellia sinensis. Alle als thee verkochte
@@ -23,6 +24,8 @@
 <script>
 export default {
   name: "WebshopTea",
+  /* webshop script reference: 
+  https://1t3-nl.myshopify.com/admin/apps/buy_button/?host=MXQzLW5sLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en&new_design_language=true&session=a40ac285eb8db56abcb711cbcd342bff6e7e20d7b819278bbcc281765bfe527b&shop=1t3-nl.myshopify.com&timestamp=1624637849 */
   created: function () {
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
