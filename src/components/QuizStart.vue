@@ -21,6 +21,7 @@
     </b-col>
   </b-row>
 </template>
+
 <script>
 export default {
   name: "quizStart",
@@ -39,9 +40,4 @@ export default {
   display: flex;
   align-items: center;
 }
-
-/* .quiz-start {
-  margin-top: 60px;
-  margin-bottom: 60px;
-} */
 </style>

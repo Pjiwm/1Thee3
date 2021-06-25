@@ -77,9 +77,7 @@ export default {
   data: function () {
     return {
       question: "Welke van de vier afbeeldingen spreekt jou het meest aan?",
-      // first question values are set here others are in the switch case in Quiz.vue
       images: [mountains, forest, flowerField, party],
-      // text below iamges
       items: [
         { name: "bergen", variety: ["wild", "spicy"] },
         { name: "bos", variety: ["wild", "everyonesFriend", "sweet"] },

@@ -24,6 +24,8 @@
 <script>
 export default {
   name: "WebshopTea",
+  /* webshop script reference: 
+  https://1t3-nl.myshopify.com/admin/apps/buy_button/?host=MXQzLW5sLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en&new_design_language=true&session=a40ac285eb8db56abcb711cbcd342bff6e7e20d7b819278bbcc281765bfe527b&shop=1t3-nl.myshopify.com&timestamp=1624637849 */
   created: function () {
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";

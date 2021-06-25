@@ -13,12 +13,30 @@
 <script>
 export default {
   name: "WebshopHeader",
+  mounted: function() {
+    function onKonamiCode(cb) {
+      var input = "";
+      var key = "38384040373937396665";
+      document.addEventListener("keydown", function(e) {
+        input += "" + e.keyCode;
+        if (input === key) {
+          return cb();
+        }
+        if (!key.indexOf(input)) return;
+        input = "" + e.keyCode;
+      });
+    }
+
+    onKonamiCode(function() {
+      window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    });
+  },
 };
 </script>
 
 <style scoped>
 #header {
-  background-image: url("../assets/webshop_header.jpg");
+  background-image: url("../assets/webshop_header_mobile.jpg");
   min-height: 40vh;
   background-position: center;
   background-size: cover;
@@ -54,6 +72,9 @@ No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  #header {
+    background-image: url("../assets/webshop_header.jpg");
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */

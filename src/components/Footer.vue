@@ -1,6 +1,4 @@
-
 <template>
-  <!-- The footer of the website at the bottom of all pagees. -->
   <footer id="footer">
     <b-container>
       <b-row class="py-4">
@@ -11,11 +9,9 @@
           </div>
         </b-col>
         <b-col cols="4" class="d-flex align-items-center flex-column">
-          <!-- download button that installs php -->
           <div>
             <a id="installApp">
-              <font-awesome-icon
-                id="downloadBox"
+              <font-awesome-icon id="downloadBox"
                 class="icon p-1"
                 :icon="['fas', 'download']"
                 alt="Download app"
@@ -23,7 +19,6 @@
             </a>
           </div>
         </b-col>
-        <!-- logo and social media icons -->
         <b-col class="d-flex align-items-center flex-column" cols="4">
           <div class="px-3">
             <a
@@ -38,16 +33,15 @@
                 alt="1Thee3.nl logo"
               />
             </a>
-            <!-- social media -->
             <div class="iconBox">
-              <a href="facebook.com" aria-label="Ga naar ons facebook">
+              <a href="https://facebook.com" aria-label="Ga naar ons facebook">
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'facebook-square']"
                   alt="Facebook"
                 />
               </a>
-              <a href="instagram.com" aria-label="Ga naar onze instagram">
+              <a href="https://www.instagram.com/job_cools/" aria-label="Ga naar onze instagram">
                 <font-awesome-icon
                   class="icon p-1"
                   :icon="['fab', 'instagram']"
@@ -70,17 +64,14 @@
 <script>
 export default {
   name: "Footer",
-  // mounted runs when page is loaded.
   mounted: () => {
     let deferredPrompt;
-    /* listens if the browser is can have a pwa-download button
-    if not the button will not be displayed*/
     window.addEventListener("beforeinstallprompt", (e) => {
       deferredPrompt = e;
       console.log("added before install listener");
-      document.getElementById("downloadBox").style.display = "inline";
+      document.getElementById("downloadBox").style.display = 'inline';
     });
-    /* checks if the download button is pressed and opens an installation promt*/
+
     const installApp = document.getElementById("installApp");
     installApp.addEventListener("click", async () => {
       console.log("added event listener");
@@ -121,5 +112,6 @@ footer {
 .icon:hover {
   transition: color 0.2s ease-in;
   color: #bfa253;
+  cursor:pointer;
 }
 </style>
