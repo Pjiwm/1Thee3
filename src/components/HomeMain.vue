@@ -1,4 +1,5 @@
 <template>
+  <!-- center part of the homepage with the most tags -->
   <main id="over_ons" class="container py-4">
     <b-row class="py-5 d-flex justify-content-center" id="Over_1T3">
       <b-col cols="12" md="10" lg="7" class="mb-3 text-center text-lg-left">
@@ -78,9 +79,23 @@ export default {
     };
   },
   methods: {
+<<<<<<< HEAD
     onSlideStart() {
       this.sliding = true;
     },
+=======
+    /**
+     * @description sets slide state to true
+     * @param {string} sliding - the slide state for the isntagram carsousel
+     */
+    onSlideStart() {
+      this.sliding = true;
+    },
+    /**
+     * @description sets slide state to false
+     * @param {string} sliding - the slide state for the isntagram carsousel
+     */
+>>>>>>> ba412f5114a40b5007b09d0e263577b121434a2b
     onSlideEnd() {
       this.sliding = false;
     },

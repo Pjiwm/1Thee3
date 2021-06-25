@@ -3,7 +3,6 @@
     <div>
       <Nav />
     </div>
-
     <router-view></router-view>
     <Footer />
   </div>
@@ -24,6 +23,8 @@ export default {
 </script>
 
 <style>
+/* these styles are global, please add at least as possible in here,
+it effects the entirity of the site. */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 
 body {

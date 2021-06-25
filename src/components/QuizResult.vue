@@ -1,12 +1,13 @@
 <template>
+<!-- displays items user might buy based on quiz answers -->
   <main>
     <b-container>
       <b-row v-show="quiz_cookies_exist">
         <b-col cols="12" class="pb-5 text-center">
           <h1>Deze theeplanken passen het beste bij jou!</h1>
           <p class="m-auto">
-            De theeplanken staan op volgorde, van de beste match naar de
-            mindere match...<br />
+            De theeplanken staan op volgorde, van de beste match naar de mindere
+            match...<br />
           </p>
         </b-col>
         <!-- <hr class="col-12" /> -->
@@ -69,7 +70,6 @@ export default {
       quiz_cookies_exist: true,
     };
   },
-  /*<![CDATA[*/
   created: function () {
     const vm = this;
     const params = vm.$route.params.items;
@@ -83,7 +83,10 @@ export default {
       checkCookie();
     }
 
-    // Gets the information out of the cookie and returns it
+    /**
+     * @description Gets and formats the string of the cookie
+     * @return {string} the cookie data
+     */
     function getCookie() {
       const name = "quiz_result=";
       const cookie_values = document.cookie.split("; ");
@@ -104,7 +107,9 @@ export default {
       return "";
     }
 
-    // Uses cookie data for result or will show message redirection to Mood finder
+    /**
+     * @description Uses cookie data for result or will show message redirection to Mood finder
+     */
     function checkCookie() {
       console.log("CHECKCOOKIE CALLED");
       let quizResults = getCookie("quiz_result");
@@ -148,8 +153,10 @@ export default {
         }, 5000);
       }
     }
-
-    // Sets the product order for result, with the data passed from Mood finder
+    /**
+     * @description Sets the product order for result, with the data passed from Mood finder
+     * @param {object} answers - has the required types to order the products with
+     */
     function setProductOrder(answers) {
       let everyonesFriendCount = 0;
       let spicyCount = 0;
@@ -258,9 +265,12 @@ export default {
         vm.sweet +
         "," +
         vm.sweetNr;
-
       setCookie(cookieData, 24);
-      // console.log("COOKIEDATA: " + cookieData);
+      /**
+       * @description sets order of products in cookie.
+       * @param {string} cvalues - the cookie data to
+       * @param {number} exhours - the amount of hours before cookie expires
+       */
       function setCookie(cvalues, exhours) {
         let expiresInHours = "max-age=" + 60 * 60 * exhours;
         document.cookie =
@@ -274,8 +284,8 @@ export default {
       }
     }
 
-    // Shopfiy product id's
-    // If you want to add more results you can add the id here
+    /* Shopfiy product id's
+    If you want to add more results you can add the id here */
     let productIds = [
       6718558568655, 6710995452111, 6718558404815, 6711744037071,
     ];
