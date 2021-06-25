@@ -15,6 +15,8 @@ $img_urls = [];
 $album_ids = [];
 $ids = [];
 
+echo 'This Cron script checks if there are new fotos on Instagram and, if there are, downloads them in public_html/instaCarousel \n';
+
 //Read token file
 $tokenFile = fopen("token.txt", "r") or die("Unable to open file!");
 $access_token = fread($tokenFile, filesize("token.txt"));
@@ -30,7 +32,7 @@ foreach ($json_response['data'] as $mediaItem) {
 
 //Calculate checksum
 $checksum = crc32(implode(",", $ids));
-printf("checksum: %u ", $checksum);
+printf("checksum: %u \n", $checksum);
 
 //Read checksum file
 $checksum_file = fopen("checksum.txt", "r") or die("Unable to open file!");
@@ -79,7 +81,8 @@ if ($stored_checksum != $checksum) {
     $img_urls = array_reverse($img_urls);
     
     //The first 5 (0 to 5) img_urls is now uploaded to Tinify, to scale it to a width 350 and compress them.
-    for ($i = 0; $i < 5; $i++) {
+    echo 'The following image numbers have been downloaded:';
+    for ($i = 0; $i < 4; $i++) {
         $img_url = $img_urls[$i];
         $source = \Tinify\fromUrl($img_url);
         $resized = $source->resize(array(
@@ -87,9 +90,9 @@ if ($stored_checksum != $checksum) {
             "width" => 350
         ));
         //Puts them in public_html to be read by the website, numbers them 0 to 4
-        $resized->toFile("../public_html/instaCarousel/" . $i . ".jpg");
+        $resized->toFile("./" . $i . ".jpg");
         //Test display
-        echo '<img src=' . $i . '.jpg>';
+        echo $i;
     };
 } else {
     printf("Checksum is the same as the last request, not executing program");
