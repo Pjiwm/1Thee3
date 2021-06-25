@@ -1,4 +1,5 @@
 <template>
+<!-- button and frame at the bottom of the page that let's you start moodfinder/quiz -->
   <b-row class="d-flex justify-content-center pt-5">
     <b-col class="col-10 col-lg-8 text-background">
       <b class="text-white">
