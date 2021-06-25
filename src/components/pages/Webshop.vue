@@ -63,7 +63,7 @@ export default {
   metaInfo: {
     title: "1T3",
     titleTemplate: "%s - Bestel uw thee of theepakket in onze webshop",
-    link: [{ rel: "canonical", href: "https://onet3.onrender.com/webshop" }],
+    link: [{ rel: "canonical", href: "https://1t3.nl/webshop" }],
     meta: [
       {
         name: "description",

@@ -24,7 +24,7 @@ export default {
   metaInfo: {
     title: "1T3",
     titleTemplate: "%s - Uw resultaat, bestel snel uw pakket!",
-    link: [{ rel: "canonical", href: "https://onet3.onrender.com/results" }],
+    link: [{ rel: "canonical", href: "https://1t3.nl/results" }],
     meta: [
       {
         name: "description",

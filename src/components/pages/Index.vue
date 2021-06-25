@@ -21,7 +21,7 @@ export default {
   metaInfo: {
     title: "1T3",
     titleTemplate: "%s - De mannelijkste theeën van Nederland!",
-    link: [{ rel: "canonical", href: "https://onet3.onrender.com/" }],
+    link: [{ rel: "canonical", href: "https://1t3.nl/" }],
 
     meta: [
       {
