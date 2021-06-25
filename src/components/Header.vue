@@ -1,4 +1,6 @@
 <template>
+<!-- the large image at the top of the website -->
+<!-- navigation buttons jump to section of a screen via the ids on html tags-->
   <header class="d-flex align-items-center py-md-5">
     <div class="container">
       <div class="row">
