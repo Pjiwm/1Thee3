@@ -22,5 +22,6 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# exclude .token
-*.token
+# exclude token and checksum
+token.txt
+checksum.txt
