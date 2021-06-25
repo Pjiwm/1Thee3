@@ -2,6 +2,7 @@
   <b-col cols="12" lg="10">
     <div class="page-information text-center text-lg-left">
       <h1>Theesmaken</h1>
+      <!-- text at top of webshop page, unlike most elements on this page, this can't be changed in Shopify CMS -->
       <p>
         Thee is een warme drank die wordt gemaakt door infusie van de gedroogde
         bladeren van de theeplant Camellia sinensis. Alle als thee verkochte
