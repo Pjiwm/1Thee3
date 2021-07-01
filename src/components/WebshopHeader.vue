@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style scoped>
+/* CSS code to make header background parralex TODO: link to trick used. */
 #header {
   background-image: url("../assets/webshop_header.jpg");
   min-height: 40vh;
@@ -49,26 +50,11 @@ h1 {
   font-size: 2.4rem;
 }
 
-/* Extra small devices (portrait phones, less than 576px)
-No media query for `xs` since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   h1 {
     font-weight: bold;
     font-size: 4rem;
   }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 }
 </style>

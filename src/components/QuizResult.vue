@@ -1,5 +1,5 @@
 <template>
-<!-- displays items user might buy based on quiz answers -->
+<!-- Displays items user might buy. Order is based on quiz answers -->
   <main>
     <b-container>
       <b-row v-show="quiz_cookies_exist">
@@ -10,7 +10,6 @@
             match...<br />
           </p>
         </b-col>
-        <!-- <hr class="col-12" /> -->
         <b-col
           cols="12"
           :order="everyonesFriend"
@@ -44,6 +43,7 @@
           <div id="product-component-4"></div>
         </b-col>
       </b-row>
+      <!-- If the user has not yet completed the quiz, they are sent back to the Mood finder -->
       <b-row v-show="!quiz_cookies_exist">
         <b-col cols="12" class="my-5 p-5 text-center">
           <h1>De Mood finder is nog niet gemaakt.</h1>
@@ -58,6 +58,7 @@
 export default {
   name: "QuizResult",
   data() {
+    //Default settings
     return {
       everyonesFriend: 1,
       spicy: 2,
@@ -70,8 +71,26 @@ export default {
       quiz_cookies_exist: true,
     };
   },
+
+  /*
+  General flow:
+  Params? 
+  yes --> Set the order from params and store the data in cookie
+  no? --> Check the cookie
+
+  Check cookie:
+  Cookie stored?
+  yes? --> set the order from cookie
+  no? --> send user back to the moodfinder
+
+
+
+
+
+  */
   created: function () {
     const vm = this;
+    //Recieves the answers from QuizFinished.vue
     const params = vm.$route.params.items;
 
     // Sets order of product with params
@@ -79,13 +98,14 @@ export default {
       console.log("Params:\n" + params);
       setProductOrder(params);
     } else {
+      //The user was not sent here directly. Therefore, the cookie is checked to see if the user has made the quiz before.
       console.log("Page was refreshed or was visited directly");
       checkCookie();
     }
 
     /**
      * @description Gets and formats the string of the cookie
-     * @return {string} the cookie data
+     * @return {string} The cookie data.
      */
     function getCookie() {
       const name = "quiz_result=";
@@ -113,6 +133,7 @@ export default {
     function checkCookie() {
       console.log("CHECKCOOKIE CALLED");
       let quizResults = getCookie("quiz_result");
+      //Sets the order of the items on basis of the cookie.
       if (quizResults != "") {
         console.log("QUIZRESULT EXISTS IN CHECKCOOKIE");
         quizResults = quizResults.split(",");
@@ -145,9 +166,11 @@ export default {
             " " +
             vm.sweetNr
         );
+      // Sets the quiz_cookies_exists variable to false, triggering the b-row in line 47 to show.
       } else {
         console.log("ELSE TRIGGERED IN CHECKCOOKIE");
         vm.quiz_cookies_exist = false;
+        //Sends the user back to the mood-finder.
         setTimeout(function () {
           vm.$router.push("/#mood-finder");
         }, 5000);
@@ -164,6 +187,7 @@ export default {
       let sweetCount = 0;
 
       //Calculate points per variety
+      //TODO Mo explain this
       for (let index1 = 0; index1 < 3; index1++) {
         for (
           let index2 = 0;
@@ -191,6 +215,7 @@ export default {
       let temp;
 
       // Sorts counts from biggest to smallest
+      //TODO Mo explain this
       for (let x = 0; x < counts.length; x++) {
         for (let y = x + 1; y < counts.length; y++) {
           if (counts[x][1] < counts[y][1]) {
@@ -212,7 +237,7 @@ export default {
           counts[3]
       );
 
-      // Assign new positions to products
+      // Assign new positions to products.
       for (let z = 0; z < 4; z++) {
         if (counts[z][0] == "everyonesFriend") {
           vm.everyonesFriend = z + 1;
@@ -248,7 +273,7 @@ export default {
           vm.sweetNr
       );
 
-      //Sets cookie with the data from quiz
+      //Sets cookie with the data from quiz.
       let cookieData =
         vm.everyonesFriend +
         "," +
@@ -265,11 +290,12 @@ export default {
         vm.sweet +
         "," +
         vm.sweetNr;
+
       setCookie(cookieData, 24);
       /**
-       * @description sets order of products in cookie.
-       * @param {string} cvalues - the cookie data to
-       * @param {number} exhours - the amount of hours before cookie expires
+       * @description Sets order of the products in a cookie.
+       * @param {string} cvalues - The cookie data to store.
+       * @param {number} exhours - The amount of hours before cookie expires.
        */
       function setCookie(cvalues, exhours) {
         let expiresInHours = "max-age=" + 60 * 60 * exhours;
@@ -292,6 +318,8 @@ export default {
     let i = 0;
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
+
+      //Shopify imported code begins here
     if (window.ShopifyBuy) {
       if (window.ShopifyBuy.UI) {
         ShopifyBuyInit();
@@ -642,21 +670,6 @@ p {
 img {
   border: solid 3px #aaa199;
   border-radius: 4px;
-}
-
-/* Extra small devices (portrait phones, less than 576px)
-No media query for `xs` since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

@@ -1,10 +1,11 @@
 <template>
-<!-- button and frame at the bottom of the page that let's you start moodfinder/quiz -->
+<!-- Button and frame at the bottom of the page that let's you start moodfinder/quiz. -->
   <b-row class="d-flex justify-content-center pt-5">
     <b-col class="col-10 col-lg-8 text-background">
       <b class="text-white">
         Niet zeker welke theesmaken bij jou passen of wil je simpelweg verrast
-        worden?<br />Doe de mood finder en wij kiezen een passende theeplank
+        worden?<br />
+        Doe de mood finder en wij kiezen een passende theeplank
         voor je uit!
       </b>
       <br/>
@@ -39,9 +40,4 @@ export default {
   display: flex;
   align-items: center;
 }
-
-/* .quiz-start {
-  margin-top: 60px;
-  margin-bottom: 60px;
-} */
 </style>

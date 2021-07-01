@@ -1,5 +1,8 @@
 # 1T3
 
+# PHP
+Part of the project runs with PHP and CRON jobs. This code is available on the website.
+
 
 ## Project setup - without Docker
 ```

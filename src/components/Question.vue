@@ -1,3 +1,4 @@
+<!-- This component is loaded in Quiz.vue -->
 <template>
   <b-row class="d-flex justify-content-center question-row">
     <b-row class="d-flex justify-content-center"
@@ -5,6 +6,7 @@
         ><b class="text-white">{{ question }}</b></b-col
       ></b-row
     >
+    <!-- When a component is clicked, it emits a onClick event that is recieved in Quiz.vue. It sends the properties of item x -->
     <b-col v-on:click="$emit('click', items[0])" class="col-6 col-lg-2">
       <div class="card my-2 question-border" aria-label="Selecteer optie 1">
         <div class="image-box">
@@ -68,6 +70,7 @@
   </b-row>
 </template>
 <script>
+// Question 0 is loaded when this component is loaded
 import mountains from "../assets/quiz-images/question-one-quiz/mountains.webp";
 import forest from "../assets/quiz-images/question-one-quiz/forest.webp";
 import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.webp";
@@ -89,24 +92,20 @@ export default {
     };
   },
   methods: {
-    /**
-     * @description sets the text below each image
-     * @param {string} itemOne - sets top-left text
-     * @param {string} itemTwo - sets top-right Text
-     * @param {string} itemThree - sets bottom-left text
-     * @param {string} itemFour - sets the bottom-right text
-     */
+    /** @description Loads the items that are submitted. See Quiz.vue and the items variable above."
+    * @param {...args} ...args - All items
+    */
     setItems(...args) {
       for (let i = 0; i < args.length; i++) {
         this.items[i] = args[i];
       }
     },
     /**
-     * @description sets the image for each quiz answer
-     * @param {string} itemOne - sets top-left image
-     * @param {string} itemTwo - sets top-right image
-     * @param {string} itemThree - sets bottom-left image
-     * @param {string} itemFour - sets the bottom-right image
+     * @description Sets the image for each quiz answer. Keep in mind that imageOne is image[0].
+     * @param {string} itemOne - Sets top-left image.
+     * @param {string} itemTwo - Sets top-right image.
+     * @param {string} itemThree - Sets bottom-left image.
+     * @param {string} itemFour - Sets the bottom-right image.
      */
     setImage(imageOne, imageTwo, imageThree, imageFour) {
       this.images = [imageOne, imageTwo, imageThree, imageFour];

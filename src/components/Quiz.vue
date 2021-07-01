@@ -3,6 +3,8 @@
     <b-container class="text-center position-relative">
       <h1 class="">Mood finder</h1>
       <b-col class="min-height">
+      <!-- This component is dynamic. The v-on:start recieves a signal from QuizStart.vue, v-on:click from Question.vue. The v-bind:answers is so that QuizFinished can read out
+      the answers to send to QuizResult -->
         <component
           v-on:click="_answerQuestion($event)"
           v-on:start="this.startQuiz"
@@ -32,17 +34,17 @@ import quizStart from "./QuizStart.vue";
 import question from "./Question";
 import quizFinished from "./QuizFinished.vue";
 
-// Question 1:
+// Question 1 images:
 import mountains from "../assets/quiz-images/question-one-quiz/mountains.webp";
 import forest from "../assets/quiz-images/question-one-quiz/forest.webp";
 import party from "../assets/quiz-images/question-one-quiz/party.webp";
 import flowerField from "../assets/quiz-images/question-one-quiz/flower-field.webp";
-// Question 2:
+// Question 2 images:
 import pepper from "../assets/quiz-images/question-two-quiz/pepper.webp";
 import strawberry from "../assets/quiz-images/question-two-quiz/strawberry.webp";
 import apple from "../assets/quiz-images/question-two-quiz/apple.webp";
 import berry from "../assets/quiz-images/question-two-quiz/berry.webp";
-// Question 3:
+// Question 3 images:
 import jus from "../assets/quiz-images/question-three-quiz/jus.webp";
 import sangriaFruits from "../assets/quiz-images/question-three-quiz/sangria-met-fruit.webp";
 import beer from "../assets/quiz-images/question-three-quiz/speciaal-bier.webp";
@@ -63,17 +65,17 @@ export default {
       maxProgress: 100,
       component: "quizStart",
       progressBar: false,
-      // question 1
+      // Question 1 images:
       mountains,
       forest,
       party,
       flowerField,
-      // question 2
+      // Question 2 images:
       pepper,
       strawberry,
       apple,
       berry,
-      // question 3:
+      // Question 3 images:
       jus,
       sangriaFruits,
       beer,
@@ -82,20 +84,21 @@ export default {
   },
   methods: {
     /**
-     * @description
-     * saved pressed answer text in answers array
+     * @description Saves chosen answer text in answers array.
      */
     _answerQuestion(chosenItem) {
       this.answers.push(chosenItem);
       this.switchQuestion();
     },
+    /** 
+    * @description Starts the quiz. Is called from v-on:start in the component
+    */
     startQuiz() {
       this.component = "question";
       this.progressBar = true;
     },
     /**
-     * @description switches the questions when the user performs an action in the quiz
-     * it swaps out the quiz images, text and quiz question for each question.
+     * @description Switches the questions when the user ansers a question in the quiz. It swaps out the quiz images, text and quiz question for each question.
      */
     switchQuestion() {
       switch (this.answers.length) {
@@ -154,8 +157,7 @@ export default {
   border-top: 2px solid #aaa199;
   min-height: 450px;
 }
-/* it's repeating itself now, but that's fine because its a temporary image anyways.
- this image was causing major lag issues to the webpage.*/
+/* By default, the background is the mobile version, see CSS below for tablet and up version. */
 .quiz-background {
   background-image: url("../assets/tea_dark_mobile.jpg");
   background-position: center;
@@ -170,9 +172,6 @@ export default {
 .quiz-background:after {
   background-position: center;
   background-size: cover;
-
-  /* background-attachment: fixed;
-  position: relative; */
 }
 
 image {

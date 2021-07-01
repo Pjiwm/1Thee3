@@ -1,6 +1,6 @@
 
 <template>
-  <!-- The footer of the website at the bottom of all pagees. -->
+  <!-- The footer of the website at the bottom of all pages. -->
   <footer id="footer">
     <b-container>
       <b-row class="py-4">
@@ -11,7 +11,7 @@
           </div>
         </b-col>
         <b-col cols="4" class="d-flex align-items-center flex-column">
-          <!-- download button that installs php -->
+          <!-- Download button that installs PWA app. -->
           <div>
             <a id="installApp">
               <font-awesome-icon
@@ -23,7 +23,7 @@
             </a>
           </div>
         </b-col>
-        <!-- logo and social media icons -->
+        <!-- Logo and social media icons. -->
         <b-col class="d-flex align-items-center flex-column" cols="4">
           <div class="px-3">
             <a
@@ -38,7 +38,7 @@
                 alt="1Thee3.nl logo"
               />
             </a>
-            <!-- social media -->
+            <!-- Social media buttons from @fortawesome/vue-fontawesome.-->
             <div class="iconBox">
               <a href="facebook.com" aria-label="Ga naar ons facebook">
                 <font-awesome-icon
@@ -70,17 +70,18 @@
 <script>
 export default {
   name: "Footer",
-  // mounted runs when page is loaded.
+  //TODO https://stackoverflow.com/questions/50332119/is-it-possible-to-make-an-in-app-button-that-triggers-the-pwa-add-to-home-scree/64727286#64727286 is de goede link?
+  // Mounted runs when page is loaded (https://v3.vuejs.org/guide/instance.html#lifecycle-diagram).
   mounted: () => {
     let deferredPrompt;
-    /* listens if the browser is can have a pwa-download button
-    if not the button will not be displayed*/
+    /* Listens if the browser can install a PWA (Chrome on the desktop, Chrome and Firefox on Android, ?? on IOS)
+    if not the button will not be displayed.*/
     window.addEventListener("beforeinstallprompt", (e) => {
       deferredPrompt = e;
       console.log("added before install listener");
       document.getElementById("downloadBox").style.display = "inline";
     });
-    /* checks if the download button is pressed and opens an installation promt*/
+    /* Checks if the download button is pressed and opens an installation prompt.*/
     const installApp = document.getElementById("installApp");
     installApp.addEventListener("click", async () => {
       console.log("added event listener");

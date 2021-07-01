@@ -2,7 +2,7 @@
   <b-col cols="12" lg="10">
     <div class="page-information text-center text-lg-left">
       <h1>Toebehoren</h1>
-      <!-- text at top of webshop page, unlike most elements on this page, this can't be changed in Shopify CMS -->
+      <!-- Text at top of webshop page, unlike most elements on this page, this can't be changed in Shopify CMS. -->
       <p>
         Thee is een warme drank die wordt gemaakt door infusie van de gedroogde
         bladeren van de theeplant Camellia sinensis. Alle als thee verkochte
@@ -21,7 +21,7 @@
 <script>
 export default {
   name: "WebshopTeaAccessories",
-
+ //Shopify imported code is executed at the created lifecycle event (https://v3.vuejs.org/guide/instance.html#lifecycle-diagram).
   created: function () {
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";

@@ -1,5 +1,6 @@
 <template>
   <b-navbar class="p-0 shadow" toggleable="lg" type="dark" variant="dark" fixed="top">
+  <!-- 1T3 logo, links to home. -->
     <b-navbar-brand
       href="/"
       class="d-block d-lg-none"
@@ -13,6 +14,7 @@
         width="100%"
       />
     </b-navbar-brand>
+    <!-- This part is put in a hamburger menu on smaller devices -->
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse
       id="nav-collapse"
@@ -93,14 +95,6 @@ nav.navbar-dark .navbar-toggler:focus {
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
-
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   nav.bg-dark {
@@ -110,10 +104,6 @@ No media query for `xs` since this is the default in Bootstrap */
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgb(0, 0, 0));
     padding-top: 10px;
   }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 }
 </style>
 
