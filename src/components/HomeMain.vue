@@ -79,11 +79,6 @@ export default {
     };
   },
   methods: {
-<<<<<<< HEAD
-    onSlideStart() {
-      this.sliding = true;
-    },
-=======
     /**
      * @description sets slide state to true
      * @param {string} sliding - the slide state for the isntagram carsousel
@@ -95,7 +90,6 @@ export default {
      * @description sets slide state to false
      * @param {string} sliding - the slide state for the isntagram carsousel
      */
->>>>>>> ba412f5114a40b5007b09d0e263577b121434a2b
     onSlideEnd() {
       this.sliding = false;
     },
