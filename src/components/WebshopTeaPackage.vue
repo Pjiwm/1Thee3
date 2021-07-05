@@ -2,7 +2,7 @@
   <b-col cols="12" lg="10">
     <div class="page-information text-center text-lg-left">
       <h1>Theeplanken</h1>
-      <!-- text at top of webshop page, unlike most elements on this page, this can't be changed in Shopify CMS -->
+      <!-- Text at top of webshop page, unlike most elements on this page, this can't be changed in Shopify CMS. -->
       <p>
         Thee is een warme drank die wordt gemaakt door infusie van de gedroogde
         bladeren van de theeplant Camellia sinensis. Alle als thee verkochte
@@ -23,6 +23,7 @@ export default {
   name: "WebshopTeaPackage",
   /* webshop script reference: 
   https://1t3-nl.myshopify.com/admin/apps/buy_button/?host=MXQzLW5sLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en&new_design_language=true&session=a40ac285eb8db56abcb711cbcd342bff6e7e20d7b819278bbcc281765bfe527b&shop=1t3-nl.myshopify.com&timestamp=1624637849 */
+  //Shopify imported code is executed at the created lifecycle event (https://v3.vuejs.org/guide/instance.html#lifecycle-diagram).
   created: function () {
     var scriptURL =
       "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
@@ -315,12 +316,6 @@ export default {
 </script>
 
 <style scoped>
-/* Extra small devices (portrait phones, less than 576px)
-No media query for `xs` since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -334,9 +329,5 @@ No media query for `xs` since this is the default in Bootstrap */
   .text-lg-left {
     text-align: left !important;
   }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 }
 </style>

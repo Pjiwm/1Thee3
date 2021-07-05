@@ -1,6 +1,6 @@
 <template>
-<!-- the large image at the top of the website -->
-<!-- navigation buttons jump to section of a screen via the ids on html tags-->
+<!-- The large image at the top of the website. -->
+<!-- Navigation buttons jump to section of a screen via the ids on html tags or to seperate pages, like with the webshop link.-->
   <header class="d-flex align-items-center py-md-5">
     <div class="container">
       <div class="row">
@@ -88,6 +88,7 @@ header button {
   font-size: 1.4rem;
 }
 
+/* Bouncing chevron */
 header .arrow {
   transform: translateY(-100%);
   left: 50%;
@@ -141,13 +142,5 @@ No media query for `xs` since this is the default in Bootstrap */
     header {
   background-image: url("../assets/header.jpg");
   }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 }
 </style>

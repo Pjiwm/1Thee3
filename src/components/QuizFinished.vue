@@ -1,11 +1,12 @@
 <template>
-<!-- button and frame for going to quiz results -->
+<!-- Button and frame for going to quiz results -->
   <b-row class="d-flex justify-content-center pt-5">
     <b-col class="col-8 col-lg-3 text-background">
       <b class="text-white">
         De mood finder is afgerond.<br />Jouw theeplank staat klaar!
       </b>
       <br /><br />
+      <!-- Button calls the toResults method to go to the next page -->
       <button
         class="btn btn-primary"
         type="button"
@@ -24,8 +25,7 @@ export default {
   props: ["answers"],
   methods: {
     /**
-     * @description goes to the result page.
-     * The function gets the quiz answers.
+     * @description Goes to the result page and sends the quiz answers along with it.
      */
     toResults() {
       this.$router.push({

@@ -16,6 +16,7 @@
         </p>
       </b-col>
       <b-col cols="12" md="8" lg="4" xl="3">
+        <!-- Imagecarouse. Images are updated via the PHP script -->
         <a
           class="d-block"
           href="https://www.instagram.com/job_cools/"
@@ -79,23 +80,17 @@ export default {
     };
   },
   methods: {
-<<<<<<< HEAD
-    onSlideStart() {
-      this.sliding = true;
-    },
-=======
     /**
-     * @description sets slide state to true
-     * @param {string} sliding - the slide state for the isntagram carsousel
+     * @description Sets slide state to true.
+     * @param {string} sliding - The slide state for the Instagram carousel.
      */
     onSlideStart() {
       this.sliding = true;
     },
     /**
-     * @description sets slide state to false
-     * @param {string} sliding - the slide state for the isntagram carsousel
+     * @description Sets slide state to false
+     * @param {string} sliding - The slide state for the Instagram  carousel.
      */
->>>>>>> ba412f5114a40b5007b09d0e263577b121434a2b
     onSlideEnd() {
       this.sliding = false;
     },
@@ -127,22 +122,10 @@ p {
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
-
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .text-lg-left {
     text-align: left !important;
   }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 }
 </style>
