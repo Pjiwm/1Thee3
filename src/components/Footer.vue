@@ -1,4 +1,5 @@
 <template>
+  <!-- The footer of the website at the bottom of all pages. -->
   <footer id="footer">
     <b-container>
       <b-row class="py-4">
@@ -9,6 +10,7 @@
           </div>
         </b-col>
         <b-col cols="4" class="d-flex align-items-center flex-column">
+          <!-- Download button that installs PWA app. -->
           <div>
             <a id="installApp">
               <font-awesome-icon id="downloadBox"
@@ -19,6 +21,7 @@
             </a>
           </div>
         </b-col>
+        <!-- Logo and social media icons. -->
         <b-col class="d-flex align-items-center flex-column" cols="4">
           <div class="px-3">
             <a
@@ -33,6 +36,7 @@
                 alt="1Thee3.nl logo"
               />
             </a>
+            <!-- Social media buttons from @fortawesome/vue-fontawesome.-->
             <div class="iconBox">
               <a href="https://facebook.com" aria-label="Ga naar ons facebook">
                 <font-awesome-icon
@@ -64,14 +68,18 @@
 <script>
 export default {
   name: "Footer",
+  //TODO https://stackoverflow.com/questions/50332119/is-it-possible-to-make-an-in-app-button-that-triggers-the-pwa-add-to-home-scree/64727286#64727286 is de goede link?
+  // Mounted runs when page is loaded (https://v3.vuejs.org/guide/instance.html#lifecycle-diagram).
   mounted: () => {
     let deferredPrompt;
+    /* Listens if the browser can install a PWA (Chrome on the desktop, Chrome and Firefox on Android, ?? on IOS)
+    if not the button will not be displayed.*/
     window.addEventListener("beforeinstallprompt", (e) => {
       deferredPrompt = e;
       console.log("added before install listener");
       document.getElementById("downloadBox").style.display = 'inline';
     });
-
+    /* Checks if the download button is pressed and opens an installation prompt.*/
     const installApp = document.getElementById("installApp");
     installApp.addEventListener("click", async () => {
       console.log("added event listener");
