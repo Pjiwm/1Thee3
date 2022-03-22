@@ -1,4 +1,10 @@
 # 1T3
+This is a group school project which I was a part of in the last semester of 2020/2021 (First Year). The goal of the project was mainly to practice working using the SCRUM Method and to learn to put the things we learnt about communication with clients into practice. We also learnt to use VueJS as, up to that point, we had no experience with it. I mainly worked on the logic in the pages that had to do with an interactive quiz (see the components that have "quiz" in the name).
+
+A demonstration of the quiz component:
+
+https://user-images.githubusercontent.com/20358521/159578092-3edf81e2-e507-4216-ac28-0b429687435b.mp4
+
 
 ## PHP
 Part of the project runs with PHP and CRON jobs. This code is available on the website.
