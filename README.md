@@ -1,5 +1,5 @@
 # 1T3
-This is a group school project which I was a part of in the last semester of 2020/2021 (First Year). The project is hosted on [this website](https://1t3.nl/) The goal of the project was mainly to practice working using the SCRUM Method and to learn to put the things we learnt about communication with clients into practice. We also learnt to use VueJS as, up to that point, we had no experience with it. I mainly worked on the logic in the pages that had to do with an interactive quiz (see the components that have "quiz" in the name).
+This is a group school project which I was a part of in the last semester of 2020/2021 (First Year). The project is hosted on [this website](https://1t3.nl/). The goal of the project was mainly to practice working using the SCRUM Method and to learn to put the things we learnt about communication with clients into practice. We also learnt to use VueJS as, up to that point, we had no experience with it. I mainly worked on the logic in the pages that had to do with an interactive quiz (see the components that have "quiz" in the name).
 
 A demonstration of the quiz component:
 
